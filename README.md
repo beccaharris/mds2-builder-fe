@@ -2,13 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
-## Development server
+## Tool Chain
+angular: 4.1.0
+angular-cli: 1.0.1
+node: 6.9.5
+npm: 3.10.10
 
+
+## Development server
+Run `npm install` to load deps
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Heroku Production Server
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+Run `git push heroku` to after a commit to deploy.
 
 ## Build
 
