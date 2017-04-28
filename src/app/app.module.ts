@@ -5,10 +5,12 @@ import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
+import { PvdmNavIconComponent } from './pvdm-nav-icon/pvdm-nav-icon.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PvdmNavIconComponent
   ],
   imports: [
     BrowserModule,
