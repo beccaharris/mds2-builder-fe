@@ -6,13 +6,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { PvdmNavIconComponent } from './pvdm-nav-icon/pvdm-nav-icon.component';
-import { PvdmHeaderComponent } from './pvdm-header/pvdm-header.component';
+import { PvdmHeaderComponent } from './pvdm-main-header/pvdm-main-header.component';
+import { PvdmLogoComponent } from './pvdm-logo/pvdm-logo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PvdmNavIconComponent,
-    PvdmHeaderComponent
+    PvdmHeaderComponent,
+    PvdmLogoComponent,
   ],
   imports: [
     BrowserModule,

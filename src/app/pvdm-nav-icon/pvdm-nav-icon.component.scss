@@ -1,7 +1,6 @@
 .pvdm-nav-icon {
   height: 50px;
   width: 60px;
-  position: relative;
   float: left;
   cursor: pointer;
   .line {
@@ -10,10 +9,10 @@
     width: 30px;
     height: 3px;
     position: absolute;
-    left: 15px;
-    &.line-1 {top: 16px;}
-    &.line-2 {top: 24px;}
-    &.line-3 {top: 32px;}
+    left: 25px;
+    &.line-1 {top: 18px;}
+    &.line-2 {top: 26px;}
+    &.line-3 {top: 34px;}
     }
   &:hover {
     .line-1,

@@ -1,0 +1,13 @@
+
+.pvdm-logo {
+  float: left;
+  font-size: 1.25em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    text-decoration: none;
+  }
+}
