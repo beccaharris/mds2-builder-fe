@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { PvdmNavIconComponent } from './pvdm-nav-icon/pvdm-nav-icon.component';
 import { PvdmHeaderComponent } from './pvdm-main-header/pvdm-main-header.component';
 import { PvdmLogoComponent } from './pvdm-logo/pvdm-logo.component';
+import { PvdmPageHeaderComponent } from './pvdm-page-header/pvdm-page-header.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { PvdmLogoComponent } from './pvdm-logo/pvdm-logo.component';
     PvdmNavIconComponent,
     PvdmHeaderComponent,
     PvdmLogoComponent,
+    PvdmPageHeaderComponent,
   ],
   imports: [
     BrowserModule,
