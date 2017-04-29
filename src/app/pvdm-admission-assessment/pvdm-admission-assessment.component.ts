@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms'
 
+
+export class Admission {
+    master_no = ''
+}
+
 @Component({
   selector: 'pvdm-admission-assessment',
   templateUrl: './pvdm-admission-assessment.component.html',
