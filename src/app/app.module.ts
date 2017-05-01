@@ -6,20 +6,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { PvdmNavIconComponent } from './pvdm-nav-icon/pvdm-nav-icon.component';
-import { PvdmHeaderComponent } from './pvdm-main-header/pvdm-main-header.component';
-import { PvdmLogoComponent } from './pvdm-logo/pvdm-logo.component';
-import { PvdmPageHeaderComponent } from './pvdm-page-header/pvdm-page-header.component';
-import { PvdmAdmissionAssessmentComponent } from './pvdm-admission-assessment/pvdm-admission-assessment.component';
+import { HeaderComponent } from './main-header/main-header.component';
+import { LogoComponent } from './logo/logo.component';
+import { PageHeaderComponent } from './page-header/page-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PvdmNavIconComponent,
-    PvdmHeaderComponent,
-    PvdmLogoComponent,
-    PvdmPageHeaderComponent,
-    PvdmAdmissionAssessmentComponent,
+    HeaderComponent,
+    LogoComponent,
+    PageHeaderComponent,
   ],
   imports: [
     BrowserModule,
