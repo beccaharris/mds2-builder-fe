@@ -1,0 +1,61 @@
+<form [formGroup]="mdsAssessment" novalidate>
+ 
+  <!-- (master_no) Master No. from CCIM -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (master_no) Master No. from CCIM 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="master_no"
+    >
+  </div>
+ 
+  <!-- (resident_identifier) 10-digit Resident Identifier -->   
+  <div class="form-group">
+    <label
+      class="control-label">
+        (resident_identifier) 10-digit Resident Identifier 
+    </label>
+    <br>
+    <input 
+      type="text" 
+      class="form-field"
+      formControlName="resident_identifier">
+  </div>
+
+  <!-- (AA7) Admission Type -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (AA7) Admission Type
+    </label>
+    <select class="form-control" formControlName="aa7">
+      <option *ngFor="let type of admissionType" 
+        [value]="type.key">{{type.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (AA8) Reason for Assessment -->
+    <div class="form-group">
+    <label
+      class="control-label">
+      (AA8) Reason for Assessment
+    </label>
+    <select class="form-control" formControlName="aa8">
+      <option *ngFor="let reason of assessmentReason" 
+        [value]="reason.key">{{reason.label}}
+      </option>
+    </select>
+  </div>
+</form>
+
+
+
+<br><br><br><br>
+<p>Form value: {{ mdsAssessment.value | json }}</p>
+<p>Form status: {{ mdsAssessment.status | json }}</p>
