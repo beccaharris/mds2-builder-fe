@@ -10,8 +10,7 @@
     <input 
       type="text"
       class="form-field"  
-      formControlName="master_no"
-    >
+      formControlName="master_no">
   </div>
  
   <!-- (resident_identifier) 10-digit Resident Identifier -->   
@@ -52,9 +51,205 @@
       </option>
     </select>
   </div>
+
+  <!-- (AA9) Discharge Type -->
+    <div class="form-group">
+    <label
+      class="control-label">
+      (AA9) Discharge Type
+    </label>
+    <select class="form-control" formControlName="aa9">
+      <option *ngFor="let type of dischargeType" 
+        [value]="type.key">{{type.label}}
+      </option>
+    </select>
+  </div>
+
+  
+  <!-- (AB1) Admission/Re-Entry Date -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (AB1) Admission/Re-Entry Date
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="ab1">
+  </div>
+
+  <!-- (A3) Assessment Reference Date -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (A3) Assessment Reference Date
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="a3">
+  </div>
+
+    <!-- (B1) Comatose -->
+    <div class="form-group">
+    <label
+      class="control-label">
+      (B1) Comatose
+    </label>
+    <select class="form-control" formControlName="b1">
+      <option *ngFor="let state of comatoseState" 
+        [value]="state.key">{{state.label}}
+      </option>
+    </select>
+  </div>
+
+    <!-- (B2a) Short-Term Memory-->
+    <div class="form-group">
+    <label
+      class="control-label">
+      (B2a) Short-Term Memory
+    </label>
+    <select class="form-control" formControlName="b2a">
+      <option *ngFor="let state of memoryState" 
+        [value]="state.key">{{state.label}}
+      </option>
+    </select>
+  </div>
+
+    <!-- (B4) Cognitive Skills for Daily Decision Making -->
+    <div class="form-group">
+    <label
+      class="control-label">
+      (B4) Cognitive Skills for Daily Decision Making
+    </label>
+    <select class="form-control" formControlName="b4">
+      <option *ngFor="let state of independenceState" 
+        [value]="state.key">{{state.label}}
+      </option>
+    </select>
+  </div>
+
+    <!-- (C1) Hearing -->
+    <div class="form-group">
+    <label
+      class="control-label">
+      (C1) Hearing
+    </label>
+    <select class="form-control" formControlName="c1">
+      <option *ngFor="let ability of hearingAbility" 
+        [value]="ability.key">{{ability.label}}
+      </option>
+    </select>
+  </div>
+
+    <!-- (C3b) Writing Messages to Express Needs -->
+    <div class="form-group">
+    <label
+      class="control-label">
+      (C3b) Writing Messages to Express Needs
+    </label>
+    <select class="form-control" formControlName="c3b">
+      <option *ngFor="let answer of yesnoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
+  </div>
+
+    <!-- (C3c) American Sign Language or Braille -->
+    <div class="form-group">
+    <label
+      class="control-label">
+      (C3c) American Sign Language or Braille
+    </label>
+    <select class="form-control" formControlName="c3c">
+      <option *ngFor="let answer of yesnoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
+  </div>
+
+    <!-- (C3d) Signs or Gestures or Sounds -->
+    <div class="form-group">
+    <label
+      class="control-label">
+      (C3d) Signs or Gestures or Sounds
+    </label>
+    <select class="form-control" formControlName="c3d">
+      <option *ngFor="let answer of yesnoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
+  </div>
+
+    <!-- (C3e) Communication Board -->
+    <div class="form-group">
+    <label
+      class="control-label">
+      (C3e) Communication Board
+    </label>
+    <select class="form-control" formControlName="c3e">
+      <option *ngFor="let answer of yesnoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
+  </div>
+
+    <!-- (C3f) Other Mode of Expression -->
+    <div class="form-group">
+    <label
+      class="control-label">
+      (C3f) Other Mode of Expression
+    </label>
+    <select class="form-control" formControlName="c3f">
+      <option *ngFor="let answer of yesnoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
+  </div>
+
+    <!-- (C4) Making Self Understood -->
+    <div class="form-group">
+    <label
+      class="control-label">
+      (C4) Making Self Understood
+    </label>
+    <select class="form-control" formControlName="c4">
+      <option *ngFor="let ability of understoodAbility" 
+        [value]="ability.key">{{ability.label}}
+      </option>
+    </select>
+  </div>
+
+    <!-- (C5) Speech Clarity -->
+    <div class="form-group">
+    <label
+      class="control-label">
+      (C5) Speech Clarity
+    </label>
+    <select class="form-control" formControlName="c5">
+      <option *ngFor="let clarity of speechClarity" 
+        [value]="clarity.key">{{clarity.label}}
+      </option>
+    </select>
+  </div>
+
+    <!-- (C6) Ability to Understand Others -->
+    <div class="form-group">
+    <label
+      class="control-label">
+      (C6) Ability to Understand Others
+    </label>
+    <select class="form-control" formControlName="c6">
+      <option *ngFor="let ability of understandingAbility" 
+        [value]="ability.key">{{ability.label}}
+      </option>
+    </select>
+  </div>
+
+
 </form>
-
-
 
 <br><br><br><br>
 <p>Form value: {{ mdsAssessment.value | json }}</p>

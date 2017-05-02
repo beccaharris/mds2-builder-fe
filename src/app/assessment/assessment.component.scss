@@ -3,11 +3,10 @@
   margin-bottom: 20px;
 }
 .control-label {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 12px;
+  font-family: "Arial";
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 0px;
-  
 }
 .form-field,
 .form-control {
@@ -15,14 +14,13 @@
     height: 25px;
     border-radius: 4px;
     border: 1px solid #ccc;
-    font-size: 12px;
+    font-size: 13.5px;
     color: #464a4c;
 }
 .form-control {
     height: 25px !important;
     border-radius: 4px !important
 }
-
-.text {
-    margin-left: 10px;
+input.form-field {
+  padding: 5px
 }
