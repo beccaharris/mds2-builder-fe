@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-import { AdmissionType, AssessmentReason, DischargeType } from './assessment.constants';
-import { ComatoseState, MemoryState, IndependenceState, HearingAbility } from './assessment.constants'
-import { YesNoAnswer, UnderstoodAbility, SpeechClarity, UnderstandingAbility } from './assessment.constants'
+import { AdmissionType, AssessmentReason, DischargeType, 
+         ComatoseState, MemoryState, IndependenceState, 
+         HearingAbility, YesNoAnswer, UnderstoodAbility, 
+         SpeechClarity, UnderstandingAbility, SeeingAbility,
+         IndicatorPresence, MoodPersistence, BehaviouralSymptoms 
+} from './assessment.constants'
 
 @Component({
   selector: 'assessment',
@@ -25,6 +28,10 @@ export class AssessmentComponent {
   understoodAbility = UnderstoodAbility;
   speechClarity = SpeechClarity;
   understandingAbility = UnderstandingAbility;
+  seeingAbility = SeeingAbility;
+  indicatorPresence = IndicatorPresence;
+  moodPersistence = MoodPersistence;
+  behaviouralSymptoms = BehaviouralSymptoms;
 
   constructor(private formBuilder: FormBuilder) {}
 
@@ -92,6 +99,10 @@ export class AssessmentComponent {
       b5f: '-',
       b6: '-',
       c1: '0',
+      c2a: '-',
+      c2b: '-',
+      c2c: '-',
+      c3a: '-',
       c3b: '0',
       c3c: '0',
       c3d: '0',
@@ -100,6 +111,40 @@ export class AssessmentComponent {
       c4: '0',
       c5: '0',
       c6: '0',
+      c7: '-',
+      d1: '0',
+      d2a: '0',
+      d2b: '0',
+      d3: '0',
+      e1a: '0',
+      e1b: '0',
+      e1c: '0',
+      e1d: '0',
+      e1e: '0',
+      e1f: '0',
+      e1g: '0',
+      e1h: '0',
+      e1i: '0',
+      e1j: '0',
+      e1k: '0',
+      e1l: '0',
+      e1m: '0',
+      e1n: '0',
+      e1o: '0',
+      e1p: '0',
+      e2: '0',
+      e3: '-',
+      e4aa: '0',
+      e4ab: '--',
+      e4ba: '0',
+      e4bb: '--',
+      e4ca: '0',
+      e4cb: '--',
+      e4da: '0',
+      e4db: '--',
+      e4ea: '0',
+      e4eb: '--',
+      e5: '-',
     })
   }
 }

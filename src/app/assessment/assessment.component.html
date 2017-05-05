@@ -691,11 +691,11 @@
       formControlName="b3d">
   </div>
 
-  <!-- (B4) Cognitive Skills for Daily Decision Making -->
+  <!-- (B4) Cognitive skills for daily decision making -->
   <div class="form-group">
     <label
       class="control-label">
-      (B4) Cognitive Skills for Daily Decision Making
+      (B4) Cognitive skills for daily decision making
     </label>
     <select class="form-control" formControlName="b4">
       <option *ngFor="let state of independenceState" 
@@ -808,11 +808,63 @@
     </select>
   </div>
 
-  <!-- (C3b) Writing Messages to Express Needs -->
+  <!-- (C2a) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (C2a) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="c2a">
+  </div>
+
+  <!-- (C2b) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (C2b) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="c2b">
+  </div>
+
+  <!-- (C2c) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (C2c) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="c2c">
+  </div>
+
+  <!-- (C3a) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (C3a) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="c3a">
+  </div>
+
+  <!-- (C3b) Writing messages to express needs -->
   <div class="form-group">
     <label
       class="control-label">
-      (C3b) Writing Messages to Express Needs
+      (C3b) Writing messages to express needs
     </label>
     <select class="form-control" formControlName="c3b">
       <option *ngFor="let answer of yesnoAnswer" 
@@ -834,11 +886,11 @@
     </select>
   </div>
 
-  <!-- (C3d) Signs or Gestures or Sounds -->
+  <!-- (C3d) Signs or gestures or sounds -->
   <div class="form-group">
     <label
       class="control-label">
-      (C3d) Signs or Gestures or Sounds
+      (C3d) Signs or gestures or sounds
     </label>
     <select class="form-control" formControlName="c3d">
       <option *ngFor="let answer of yesnoAnswer" 
@@ -860,11 +912,11 @@
     </select>
   </div>
 
-  <!-- (C3f) Other Mode of Expression -->
+  <!-- (C3f) Other modes of expression -->
   <div class="form-group">
     <label
       class="control-label">
-      (C3f) Other Mode of Expression
+      (C3f) Other modes of expression
     </label>
     <select class="form-control" formControlName="c3f">
       <option *ngFor="let answer of yesnoAnswer" 
@@ -873,11 +925,11 @@
     </select>
   </div>
 
-  <!-- (C4) Making Self Understood -->
+  <!-- (C4) Making self understood -->
   <div class="form-group">
     <label
       class="control-label">
-      (C4) Making Self Understood
+      (C4) Making self understood
     </label>
     <select class="form-control" formControlName="c4">
       <option *ngFor="let ability of understoodAbility" 
@@ -899,11 +951,11 @@
     </select>
   </div>
 
-  <!-- (C6) Ability to Understand Others -->
+  <!-- (C6) Ability to understand others -->
   <div class="form-group">
     <label
       class="control-label">
-      (C6) Ability to Understand Others
+      (C6) Ability to understand others
     </label>
     <select class="form-control" formControlName="c6">
       <option *ngFor="let ability of understandingAbility" 
@@ -911,6 +963,451 @@
       </option>
     </select>
   </div>
+
+  <!-- (C7) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (C7) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="c7">
+  </div>
+
+  <!-- (D1) Vision -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (D1) Vision
+    </label>
+    <select class="form-control" formControlName="d1">
+      <option *ngFor="let ability of seeingAbility" 
+        [value]="ability.key">{{ability.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (D2a) Side vision problems -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (D2a) Side vision problems
+    </label>
+    <select class="form-control" formControlName="d2a">
+      <option *ngFor="let answer of yesnoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (D2b) Sees halos, rings, flashes, curtains -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (D2b) Sees halos, rings, flashes, curtains
+    </label>
+    <select class="form-control" formControlName="d2b">
+      <option *ngFor="let answer of yesnoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (D3) Visual appliances -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (D3) Visual appliances
+    </label>
+    <select class="form-control" formControlName="d3">
+      <option *ngFor="let answer of yesnoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E1a) Negative statements -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E1a) Negative statements
+    </label>
+    <select class="form-control" formControlName="e1a">
+      <option *ngFor="let presence of indicatorPresence" 
+        [value]="presence.key">{{presence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E1b) Repetitive questions -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E1b) Repetitive questions
+    </label>
+    <select class="form-control" formControlName="e1b">
+      <option *ngFor="let presence of indicatorPresence" 
+        [value]="presence.key">{{presence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E1c) Repetitive verbalizations -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E1c) Repetitive verbalizations
+    </label>
+    <select class="form-control" formControlName="e1c">
+      <option *ngFor="let presence of indicatorPresence" 
+        [value]="presence.key">{{presence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E1d) Persistent anger with self/others -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E1d) Persistent anger with self/others
+    </label>
+    <select class="form-control" formControlName="e1d">
+      <option *ngFor="let presence of indicatorPresence" 
+        [value]="presence.key">{{presence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E1e) Self-Deprecation -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E1e) Self-Deprecation
+    </label>
+    <select class="form-control" formControlName="e1e">
+      <option *ngFor="let presence of indicatorPresence" 
+        [value]="presence.key">{{presence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E1f) Expression of unrealistic fears -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E1f) Expression of unrealistic fears
+    </label>
+    <select class="form-control" formControlName="e1f">
+      <option *ngFor="let presence of indicatorPresence" 
+        [value]="presence.key">{{presence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E1g) Recurrent statements - something terrible -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E1g) Recurrent statements - something terrible
+    </label>
+    <select class="form-control" formControlName="e1g">
+      <option *ngFor="let presence of indicatorPresence" 
+        [value]="presence.key">{{presence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E1h) Repetitive health complaints -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E1h) Repetitive health complaints
+    </label>
+    <select class="form-control" formControlName="e1h">
+      <option *ngFor="let presence of indicatorPresence" 
+        [value]="presence.key">{{presence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E1i) Repetitive anxious complaints -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E1i) Repetitive anxious complaints
+    </label>
+    <select class="form-control" formControlName="e1i">
+      <option *ngFor="let presence of indicatorPresence" 
+        [value]="presence.key">{{presence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E1j) Unpleasant mood in morning -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E1j) Unpleasant mood in morning
+    </label>
+    <select class="form-control" formControlName="e1j">
+      <option *ngFor="let presence of indicatorPresence" 
+        [value]="presence.key">{{presence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E1k) Insomnia/Change in sleep patterns -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E1k) Insomnia/Change in sleep patterns
+    </label>
+    <select class="form-control" formControlName="e1k">
+      <option *ngFor="let presence of indicatorPresence" 
+        [value]="presence.key">{{presence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E1l) Sad, pained, or worried facial expressions -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E1l) Sad, pained, or worried facial expressions
+    </label>
+    <select class="form-control" formControlName="e1l">
+      <option *ngFor="let presence of indicatorPresence" 
+        [value]="presence.key">{{presence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E1m) Crying, tearfulness -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E1m) Crying, tearfulness
+    </label>
+    <select class="form-control" formControlName="e1k">
+      <option *ngFor="let presence of indicatorPresence" 
+        [value]="presence.key">{{presence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E1n) Repetitive physical movements -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E1n) Repetitive physical movements
+    </label>
+    <select class="form-control" formControlName="e1n">
+      <option *ngFor="let presence of indicatorPresence" 
+        [value]="presence.key">{{presence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E1o) Withdrawal from activities of interest -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E1o) Withdrawal from activities of interest
+    </label>
+    <select class="form-control" formControlName="e1o">
+      <option *ngFor="let presence of indicatorPresence" 
+        [value]="presence.key">{{presence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E1p) Reduced social interaction -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E1p) Reduced social interaction
+    </label>
+    <select class="form-control" formControlName="e1p">
+      <option *ngFor="let presence of indicatorPresence" 
+        [value]="presence.key">{{presence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E2) Mood Persistence -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E2) Mood Persistence
+    </label>
+    <select class="form-control" formControlName="e2">
+      <option *ngFor="let persistence of moodPersistence" 
+        [value]="persistence.key">{{persistence.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E3) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (E3) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="e3">
+  </div>
+
+  <!-- (E4aA) Wandering Frequency -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E4aA) Wandering Frequency
+    </label>
+    <select class="form-control" formControlName="e4aa">
+      <option *ngFor="let symptoms of behaviouralSymptoms" 
+        [value]="symptoms.key">{{symptoms.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E4aB) -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E4aB)
+    </label>
+    <select class="form-control" formControlName="e4ab">
+      <option *ngFor="let symptoms of behaviouralSymptoms" 
+        [value]="symptoms.key">{{symptoms.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E4bA) Verbally Abusive Frequency -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E4bA) Verbally Abusive Frequency
+    </label>
+    <select class="form-control" formControlName="e4ba">
+      <option *ngFor="let symptoms of behaviouralSymptoms" 
+        [value]="symptoms.key">{{symptoms.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E4bB) -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E4bB)
+    </label>
+    <select class="form-control" formControlName="e4bb">
+      <option *ngFor="let symptoms of behaviouralSymptoms" 
+        [value]="symptoms.key">{{symptoms.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E4cA) Physically Abusive Frequency -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E4cA) Physically Abusive Frequency
+    </label>
+    <select class="form-control" formControlName="e4ca">
+      <option *ngFor="let symptoms of behaviouralSymptoms" 
+        [value]="symptoms.key">{{symptoms.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E4cB) -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E4cB)
+    </label>
+    <select class="form-control" formControlName="e4cb">
+      <option *ngFor="let symptoms of behaviouralSymptoms" 
+        [value]="symptoms.key">{{symptoms.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E4dA) Inappropriate Disruption Frequency -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E4dA) Inappropriate Disruption Frequency
+    </label>
+    <select class="form-control" formControlName="e4da">
+      <option *ngFor="let symptoms of behaviouralSymptoms" 
+        [value]="symptoms.key">{{symptoms.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E4dB)-->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E4dB)
+    </label>
+    <select class="form-control" formControlName="e4db">
+      <option *ngFor="let symptoms of behaviouralSymptoms" 
+        [value]="symptoms.key">{{symptoms.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E4eA) Resists Care Frequency -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E4eA) Resists Care Frequency 
+    </label>
+    <select class="form-control" formControlName="e4ea">
+      <option *ngFor="let symptoms of behaviouralSymptoms" 
+        [value]="symptoms.key">{{symptoms.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E4eB) -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (E4eB) 
+    </label>
+    <select class="form-control" formControlName="e4eb">
+      <option *ngFor="let symptoms of behaviouralSymptoms" 
+        [value]="symptoms.key">{{symptoms.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (E5) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (E5) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="e5">
+  </div>
+
+
+
 
 
 </form>

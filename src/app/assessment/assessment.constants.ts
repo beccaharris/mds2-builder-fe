@@ -65,3 +65,29 @@ export const UnderstandingAbility = [
   { key: '2', label: '2 - Sometimes Understands'},
   { key: '3', label: '3 - Rarely or Never Understands'},
 ]
+export const SeeingAbility = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - Sees Adequately'},
+  { key: '1', label: '1 - Minimal Difficulty'},
+  { key: '2', label: '2 - Sees in special situations only'},
+  { key: '3', label: '3 - Severely Impaired'},
+];
+export const IndicatorPresence = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - Indicator not exhibited in last 30 days'},
+  { key: '0', label: '1 - Indicator of this type exhibited up to five days a week'},
+  { key: '0', label: '2 - Indicator of this type exhibited daily or almost daily'}
+];
+export const MoodPersistence = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - No mood indicators'},
+  { key: '1', label: '1 - Indicators present, easily altered'},
+  { key: '2', label: '2 - Indicators present, not easily altered'}
+];
+export const BehaviouralSymptoms = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - Behavioural symptom was not exhibited in last seven days'},
+  { key: '1', label: '1 - Behavioural symptom occurred 1 to 3 days in the last seven days'},
+  { key: '2', label: '2 - Behavioural symptom occurred 4 to 6 days, but less than daily'},
+  { key: '3', label: '3 - Behavioural symptom occurred daily or more frequently'}
+]
