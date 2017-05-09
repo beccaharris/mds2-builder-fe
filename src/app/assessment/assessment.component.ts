@@ -8,7 +8,9 @@ import { AdmissionType, AssessmentReason, DischargeType,
          IndicatorPresence, MoodPersistence, BehaviouralSymptoms,
          PerformanceState, HelpRequired, MotionRange,
          ContinenceState, ToiletingPlan, BladderRetrainingProgram,
-         SevenDaysOccurrence, PainFrequency, PainIntensity
+         SevenDaysOccurrence, PainFrequency, PainIntensity,
+         CalorieCount, CaloriePercent, UlcerNumber,
+         UlcerStage, EvidenceOfProblems,
 } from './assessment.constants'
 
 @Component({
@@ -44,6 +46,11 @@ export class AssessmentComponent {
   sevendaysOccurrence = SevenDaysOccurrence;
   painFrequency = PainFrequency;
   painIntensity = PainIntensity;
+  caloriePercent = CaloriePercent;
+  calorieCount = CalorieCount;
+  ulcerNumber = UlcerNumber;
+  ulcerStage = UlcerStage;
+  evidenceofProblems = EvidenceOfProblems;
 
   constructor(private formBuilder: FormBuilder) {}
 
@@ -338,6 +345,61 @@ export class AssessmentComponent {
       j5a: '-',
       j5b: '-',
       j5c: '0',
+      k1a: '-',
+      k1b: '-',
+      k1c: '-',
+      k2a: '-',
+      k2b: '-',
+      k3a: '0',
+      k3b: '-',
+      k4a: '-',
+      k4b: '-',
+      k4c: '-',
+      k5a: '0',
+      k5b: '0',
+      k5c: '-',
+      k5d: '-',
+      k5e: '-',
+      k5f: '-',
+      k5g: '-',
+      k5h: '0',
+      k6a: '0',
+      k6b: '--',
+      l1a: '-',
+      l1b: '-',
+      l1c: '0',
+      l1d: '0',
+      l1e: '0',
+      l1f: '-',
+      M1a: '0',
+      M1b: '0',
+      M1c: '0',
+      M1d: '0',
+      M2a: '0',
+      M2b: '-',
+      M3: '0',
+      M4a: '0',
+      M4b: '-',
+      M4c: '0',
+      M4d: '-',
+      M4e: '-',
+      M4f: '-',
+      M4g: '0',
+      M5a: '0',
+      M5b: '0',
+      M5c: '0',
+      M5d: '0',
+      M5e: '0',
+      M5f: '0',
+      M5g: '0',
+      M5h: '0',
+      M5i: '-',
+      M6a: '-',
+      M6b: '0',
+      M6c: '0',
+      M6d: '-',
+      M6e: '-',
+      M6f: '0',
 
 
 

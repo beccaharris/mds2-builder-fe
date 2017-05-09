@@ -3758,6 +3758,731 @@
     </select>
   </div>
 
+  <!-- (K1a) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (K1a) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="k1a">
+  </div>
+
+  <!-- (K1b) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (K1b) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="k1b">
+  </div>
+
+  <!-- (K1c) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (K1c) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="k1c">
+  </div>
+
+  <!-- (K2a) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (K2a) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="k2a">
+  </div>
+
+  <!-- (K2b) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (K2b) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="k2b">
+  </div>
+
+  <!-- (K3a) Weight Loss -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (K3a) Weight Loss
+    </label>
+    <select class="form-control" formControlName="k3a">
+      <option *ngFor="let answer of yesnoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (K3b) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (K3b) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="k3b">
+  </div>
+
+  <!-- (K4a) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (K4a) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="k4a">
+  </div>
+
+  <!-- (K4b) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (K4b) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="k4b">
+  </div>
+
+  <!-- (K4c) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (K4c) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="k4c">
+  </div>
+
+  <!-- (K5a) Parenteral/IV -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (K5a) Parenteral/IV
+    </label>
+    <select class="form-control" formControlName="k5a">
+      <option *ngFor="let answer of yesnoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (K5b) Feeding Tube -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (K5b) Feeding Tube
+    </label>
+    <select class="form-control" formControlName="k5b">
+      <option *ngFor="let answer of yesnoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (K5c) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (K5c) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="k5c">
+  </div>
+
+  <!-- (K5d) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (K5d) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="k5d">
+  </div>
+
+  <!-- (K5e) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (K5e) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="k5e">
+  </div>
+
+  <!-- (K5f) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (K5f) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="k5f">
+  </div>
+
+  <!-- (K5g) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (K5g) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="k5g">
+  </div>
+
+  <!-- (K5h) On a planned weight change program -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (K5h) On a planned weight change program
+    </label>
+    <select class="form-control" formControlName="k5h">
+      <option *ngFor="let answer of yesnoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (K6a) Parenteral/Enteral Intake: Total Calories -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (K6a) Parenteral/Enteral Intake: Total Calories
+    </label>
+    <select class="form-control" formControlName="k6a">
+      <option *ngFor="let percent of caloriePercent" 
+        [value]="percent.key">{{percent.label}}
+      </option>
+    </select>
+  </div> 
+
+  <!-- (K6b) Parenteral/Enteral Intake: Average Intake -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (K6b) Parenteral/Enteral Intake: Average Intake
+    </label>
+    <select class="form-control" formControlName="k6b">
+      <option *ngFor="let count of calorieCount" 
+        [value]="count.key">{{count.label}}
+      </option>
+    </select>
+  </div> 
+
+  <!-- (L1a) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (L1a) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="l1a">
+  </div>
+
+  <!-- (L1b) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (L1b) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="l1b">
+  </div>
+
+  <!-- (L1c) Some or all natural teeth lost -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (L1c) Some or all natural teeth lost
+    </label>
+    <select class="form-control" formControlName="l1c">
+      <option *ngFor="let answer of yesnoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (L1d) Broken, loose, or carious teeth -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (L1d) Broken, loose, or carious teeth 
+    </label>
+    <select class="form-control" formControlName="l1d">
+      <option *ngFor="let answer of yesnoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (L1e) Inflamed gums, oral acesses, etc. -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (L1e) Inflamed gums, oral acesses, etc.
+    </label>
+    <select class="form-control" formControlName="l1e">
+      <option *ngFor="let answer of yesnoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (L1f) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (L1f) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="l1f">
+  </div>
+
+  <!-- (M1a) Number of Stage 1 Ulcers -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M1a) Number of Stage 1 Ulcers
+    </label>
+    <select class="form-control" formControlName="M1a">
+      <option *ngFor="let number of ulcerNumber" 
+        [value]="number.key">{{number.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M1b) Number of Stage 2 Ulcers -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M1b) Number of Stage 2 Ulcers
+    </label>
+    <select class="form-control" formControlName="M1b">
+      <option *ngFor="let number of ulcerNumber" 
+        [value]="number.key">{{number.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M1c) Number of Stage 3 Ulcers -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M1c) Number of Stage 3 Ulcers
+    </label>
+    <select class="form-control" formControlName="M1c">
+      <option *ngFor="let number of ulcerNumber" 
+        [value]="number.key">{{number.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M1d) Number of Stage 4 Ulcers -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M1d) Number of Stage 4 Ulcers
+    </label>
+    <select class="form-control" formControlName="M1d">
+      <option *ngFor="let number of ulcerNumber" 
+        [value]="number.key">{{number.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M2a) Stage of Pressure Ulcer -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M2a) Stage of Pressure Ulcer
+    </label>
+    <select class="form-control" formControlName="M2a">
+      <option *ngFor="let stage of ulcerStage" 
+        [value]="stage.key">{{stage.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M2b) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (M2b) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="M2b">
+  </div>
+
+  <!-- (M3) History of Resolved/Cured Ulcers -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M3) History of Resolved/Cured Ulcers
+    </label>
+    <select class="form-control" formControlName="M3">
+      <option *ngFor="let answer of yesnoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M4a) Burns (Second or Third Degree) -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M4a) Burns (Second or Third Degree)
+    </label>
+    <select class="form-control" formControlName="M4a">
+      <option *ngFor="let problems of evidenceofProblems" 
+        [value]="problems.key">{{problems.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M4b) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (M4b) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="M4b">
+  </div>
+
+  <!-- (M4c) Open lesions (other than ulcers, rashes, cuts) -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M4c) Open lesions (other than ulcers, rashes, cuts)
+    </label>
+    <select class="form-control" formControlName="M4c">
+      <option *ngFor="let problems of evidenceofProblems" 
+        [value]="problems.key">{{problems.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M4d) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (M4d) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="M4d">
+  </div>
+
+  <!-- (M4e) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (M4e) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="M4e">
+  </div>
+
+  <!-- (M4f) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (M4f) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="M4f">
+  </div>
+
+  <!-- (M4g) Surgical Wounds -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M4g) Surgical Wounds
+    </label>
+    <select class="form-control" formControlName="M4g">
+      <option *ngFor="let problems of evidenceofProblems" 
+        [value]="problems.key">{{problems.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M5a) Pressure relieving device(s) for chair  -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M5a) Pressure relieving device(s) for chair
+    </label>
+    <select class="form-control" formControlName="M5a">
+      <option *ngFor="let problems of evidenceofProblems" 
+        [value]="problems.key">{{problems.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M5b) Pressure relieving device(s) for bed  -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M5b) Pressure relieving device(s) for bed
+    </label>
+    <select class="form-control" formControlName="M5b">
+      <option *ngFor="let problems of evidenceofProblems" 
+        [value]="problems.key">{{problems.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M5c) Turning or repositioning program  -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M5c) Turning or repositioning program
+    </label>
+    <select class="form-control" formControlName="M5c">
+      <option *ngFor="let problems of evidenceofProblems" 
+        [value]="problems.key">{{problems.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M5d) Nurtrition/Hydration Intervention  -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M5d) Nurtrition/Hydration Intervention
+    </label>
+    <select class="form-control" formControlName="M5d">
+      <option *ngFor="let problems of evidenceofProblems" 
+        [value]="problems.key">{{problems.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M5e) Ulcer Care  -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M5e) Ulcer Care
+    </label>
+    <select class="form-control" formControlName="M5e">
+      <option *ngFor="let problems of evidenceofProblems" 
+        [value]="problems.key">{{problems.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M5f) Surgical Wound Care  -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M5f) Surgical Wound Care
+    </label>
+    <select class="form-control" formControlName="M5f">
+      <option *ngFor="let problems of evidenceofProblems" 
+        [value]="problems.key">{{problems.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M5g) Application of dressing(s) (except to feet) -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M5g) Application of dressing(s) (except to feet)
+    </label>
+    <select class="form-control" formControlName="M5g">
+      <option *ngFor="let problems of evidenceofProblems" 
+        [value]="problems.key">{{problems.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M5h) Ointments/Medications (except to feet) -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M5h) Ointments/Medications (except to feet)
+    </label>
+    <select class="form-control" formControlName="M5h">
+      <option *ngFor="let problems of evidenceofProblems" 
+        [value]="problems.key">{{problems.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M5i) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (M5i) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="M5i">
+  </div>
+
+  <!-- (M6a) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (M6a) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="M6a">
+  </div>
+
+  <!-- (M6b) Infection of the foot -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M6b) Infection of the foot
+    </label>
+    <select class="form-control" formControlName="M6b">
+      <option *ngFor="let problems of evidenceofProblems" 
+        [value]="problems.key">{{problems.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M6c) Open lesions on the foot -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M6c) Open lesions on the foot
+    </label>
+    <select class="form-control" formControlName="M6c">
+      <option *ngFor="let problems of evidenceofProblems" 
+        [value]="problems.key">{{problems.label}}
+      </option>
+    </select>
+  </div>
+
+  <!-- (M6d) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (M6d) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="M6d">
+  </div>
+
+  <!-- (M6e) -->
+  <div class="form-group">
+    <label 
+      class="control-label">
+        (M6e) 
+    </label>
+    <br>
+    <input 
+      type="text"
+      class="form-field"  
+      formControlName="M6e">
+  </div>
+
+  <!-- (M6f) Application of dressings to the foot -->
+  <div class="form-group">
+    <label
+      class="control-label">
+      (M6f) Application of dressings to the foot
+    </label>
+    <select class="form-control" formControlName="M6f">
+      <option *ngFor="let problems of evidenceofProblems" 
+        [value]="problems.key">{{problems.label}}
+      </option>
+    </select>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+
   
 
 

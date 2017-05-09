@@ -55,7 +55,7 @@ export const HearingAbility = [
 ];
 
 /* ---- For C3b, C3c, C3d, C3e, C3f, D2a, D2b, D3, H2d, H3d, H3i, I1a, I1s, I1t, I1w, 
-        I2f, I2h, I2k, J4a, J4c, J4d, J5c ---- */
+        I2f, I2h, I2k, J4a, J4c, J4d, J5c, K5a, K5b, K5h ---- */
 export const YesNoAnswer = [
   { key: '--', label: '--'},
   { key: '0', label: '0 - No'},
@@ -196,4 +196,57 @@ export const PainIntensity = [
   { key: '1', label: '1 - Mild pain'},
   { key: '2', label: '2 - Moderate pain'},
   { key: '3', label: '3 - Times when pain is horrible or excruciating'}
+];
+
+/* ---- For K6a ---- */
+export const CaloriePercent = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - None'},
+  { key: '1', label: '1 - 1% to 25%'},
+  { key: '2', label: '2 - 26% to 50%'},
+  { key: '3', label: '3 - 51% to 75%'},
+  { key: '4', label: '4 - 76% to 100%'} 
+];
+
+/* ---- For K6b ---- */
+export const CalorieCount = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - None'},
+  { key: '1', label: '1 - 1 to 500 cc/day'},
+  { key: '2', label: '2 - 501 to 1000 cc/day'},
+  { key: '3', label: '3 - 1001 to 1500 cc/day'},
+  { key: '4', label: '4 - 1501 to 2000 cc/day'},
+  { key: '5', label: '5 - 2001 or more cc/day'} 
+];
+
+/* ---- For M1a, M1b, M1c, M1d ---- */
+export const UlcerNumber = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - None'},
+  { key: '1', label: '1 - 1 ulcer'},
+  { key: '2', label: '2 - 2 ulcers'},
+  { key: '3', label: '3 - 3 ulcers'},
+  { key: '4', label: '4 - 4 ulcers'},
+  { key: '5', label: '5 - 5 ulcers'},
+  { key: '6', label: '6 - 6 ulcers'},
+  { key: '7', label: '7 - 7 ulcers'},
+  { key: '8', label: '8 - 8 ulcers'},
+  { key: '9', label: '9 - 9 or more ulcers'} 
+];
+
+/* ---- For M2a ---- */
+export const UlcerStage = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - None'},
+  { key: '1', label: '1 - Stage 1'},
+  { key: '2', label: '2 - Stage 2'},
+  { key: '3', label: '3 - Stage 3'},
+  { key: '4', label: '4 - Stage 4'},
+];
+
+/* ---- For M4a, M5b, M5c, M5d, M5e ---- */
+export const EvidenceOfProblems = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - None'},
+  { key: '1', label: '1 - Evidence of such problem(s) in last seven days'}
 ];
