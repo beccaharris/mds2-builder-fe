@@ -90,4 +90,50 @@ export const BehaviouralSymptoms = [
   { key: '1', label: '1 - Behavioural symptom occurred 1 to 3 days in the last seven days'},
   { key: '2', label: '2 - Behavioural symptom occurred 4 to 6 days, but less than daily'},
   { key: '3', label: '3 - Behavioural symptom occurred daily or more frequently'}
-]
+];
+export const PerformanceState = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - Independent'},
+  { key: '1', label: '1 - Supervision'},
+  { key: '2', label: '2 - Limited Assistance'},
+  { key: '3', label: '3 - Extensive Assistance'},
+  { key: '4', label: '4 - Total Dependence'},
+  { key: '8', label: '8 - Activity did not occur during the entire 7-day period'}
+];
+export const HelpRequired = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - No setup or physical help from staff'},
+  { key: '1', label: '1 - Setup help only'},
+  { key: '2', label: '2 - One person physical assist'},
+  { key: '3', label: '3 - Two+ persons physical assist'},
+  { key: '8', label: '8 - ADL activity did not occur during the entire 7-day period'}
+];
+export const MotionRange = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - No limitation'},
+  { key: '1', label: '1 - Limitation on one side'},
+  { key: '2', label: '2 - Limitation on both sides'}
+];
+export const ContinenceState = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - Continent'},
+  { key: '1', label: '1 - Usually Continent'},
+  { key: '2', label: '2 - Occasionally Incontinent'},
+  { key: '3', label: '3 - Frequently Incontinent'},
+  { key: '4', label: '4 - Incontinent'}
+];
+export const ToiletingPlan = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - None'},
+  { key: '1', label: '1 - Toileting plan used'}
+];
+export const BladderRetrainingProgram = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - None'},
+  { key: '1', label: '1 - Bladder retraining program used'}
+];
+export const SevenDaysOccurrence = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - Did not occur'},
+  { key: '1', label: '1 - Occurred within the past seven days'}
+];
