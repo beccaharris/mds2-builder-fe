@@ -137,3 +137,15 @@ export const SevenDaysOccurrence = [
   { key: '0', label: '0 - Did not occur'},
   { key: '1', label: '1 - Occurred within the past seven days'}
 ];
+export const PainFrequency  = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - No pain'},
+  { key: '1', label: '1 - Pain less than daily'},
+  { key: '2', label: '2 - Pain Daily'}
+];
+export const PainIntensity = [
+  { key: '--', label: '--'},
+  { key: '1', label: '1 - Mild pain'},
+  { key: '2', label: '2 - Moderate pain'},
+  { key: '3', label: '3 - Times when pain is horrible or excruciating'}
+];

@@ -8,7 +8,7 @@ import { AdmissionType, AssessmentReason, DischargeType,
          IndicatorPresence, MoodPersistence, BehaviouralSymptoms,
          PerformanceState, HelpRequired, MotionRange,
          ContinenceState, ToiletingPlan, BladderRetrainingProgram,
-         SevenDaysOccurrence
+         SevenDaysOccurrence, PainFrequency, PainIntensity
 } from './assessment.constants'
 
 @Component({
@@ -42,6 +42,8 @@ export class AssessmentComponent {
   toiletingPlan = ToiletingPlan;
   bladderretrainingProgram = BladderRetrainingProgram;
   sevendaysOccurrence = SevenDaysOccurrence;
+  painFrequency = PainFrequency;
+  painIntensity = PainIntensity;
 
   constructor(private formBuilder: FormBuilder) {}
 
@@ -317,7 +319,26 @@ export class AssessmentComponent {
       j1m: '-',
       j1n: '-',
       j1o: '0',
-      
+      j2a: '0',
+      j2b: '--',
+      j3a: '-',
+      j3b: '-',
+      j3c: '-',
+      j3d: '-',
+      j3e: '-',
+      j3f: '-',
+      j3g: '-',
+      j3h: '-',
+      j3i: '-',
+      j3j: '-',
+      j4a: '0',
+      j4b: '-',
+      j4c: '0',
+      j4d: '0',
+      j5a: '-',
+      j5b: '-',
+      j5c: '0',
+
 
 
     })
