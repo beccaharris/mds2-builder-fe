@@ -46,7 +46,7 @@
       (AA7) Admission Type
     </label>
     <select class="form-control" formControlName="AA7">
-      <option *ngFor="let type of dropdownOptions.admissionType" 
+      <option *ngFor="let type of options.admissionType" 
         [value]="type.key">{{type.label}}
       </option>
     </select>
@@ -59,7 +59,7 @@
       (AA8) Reason for Assessment
     </label>
     <select class="form-control" formControlName="AA8">
-      <option *ngFor="let reason of dropdownOptions.assessmentReason" 
+      <option *ngFor="let reason of options.assessmentReason" 
         [value]="reason.key">{{reason.label}}
       </option>
     </select>
@@ -72,7 +72,7 @@
       (AA9) Discharge Type
     </label>
     <select class="form-control" formControlName="AA9">
-      <option *ngFor="let type of dischargeType" 
+      <option *ngFor="let type of options.dischargeType" 
         [value]="type.key">{{type.label}}
       </option>
     </select>
@@ -607,7 +607,7 @@
       (B1) Comatose
     </label>
     <select class="form-control" formControlName="B1">
-      <option *ngFor="let state of comatoseState" 
+      <option *ngFor="let state of options.comatoseState" 
         [value]="state.key">{{state.label}}
       </option>
     </select>
@@ -620,7 +620,7 @@
       (B2a) Short-Term Memory
     </label>
     <select class="form-control" formControlName="B2a">
-      <option *ngFor="let state of memoryState" 
+      <option *ngFor="let state of options.memoryState" 
         [value]="state.key">{{state.label}}
       </option>
     </select>
@@ -698,7 +698,7 @@
       (B4) Cognitive Skills: Daily Decision Making
     </label>
     <select class="form-control" formControlName="B4">
-      <option *ngFor="let state of independenceState" 
+      <option *ngFor="let state of options.independenceState" 
         [value]="state.key">{{state.label}}
       </option>
     </select>
@@ -802,7 +802,7 @@
       (C1) Hearing
     </label>
     <select class="form-control" formControlName="C1">
-      <option *ngFor="let ability of hearingAbility" 
+      <option *ngFor="let ability of options.hearingAbility" 
         [value]="ability.key">{{ability.label}}
       </option>
     </select>
@@ -867,7 +867,7 @@
       (C3b) Writing messages to express needs
     </label>
     <select class="form-control" formControlName="C3b">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -880,7 +880,7 @@
       (C3c) American Sign Language or Braille
     </label>
     <select class="form-control" formControlName="C3c">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -893,7 +893,7 @@
       (C3d) Signs/Gestures/Sounds
     </label>
     <select class="form-control" formControlName="C3d">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -906,7 +906,7 @@
       (C3e) Communication Board
     </label>
     <select class="form-control" formControlName="C3e">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -919,7 +919,7 @@
       (C3f) Other modes of expression
     </label>
     <select class="form-control" formControlName="C3f">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -932,7 +932,7 @@
       (C4) Making Self Understood
     </label>
     <select class="form-control" formControlName="C4">
-      <option *ngFor="let ability of understoodAbility" 
+      <option *ngFor="let ability of options.understoodAbility" 
         [value]="ability.key">{{ability.label}}
       </option>
     </select>
@@ -945,7 +945,7 @@
       (C5) Speech Clarity
     </label>
     <select class="form-control" formControlName="C5">
-      <option *ngFor="let clarity of speechClarity" 
+      <option *ngFor="let clarity of options.speechClarity" 
         [value]="clarity.key">{{clarity.label}}
       </option>
     </select>
@@ -958,7 +958,7 @@
       (C6) Ability to understand others
     </label>
     <select class="form-control" formControlName="C6">
-      <option *ngFor="let ability of understandingAbility" 
+      <option *ngFor="let ability of options.understandingAbility" 
         [value]="ability.key">{{ability.label}}
       </option>
     </select>
@@ -984,7 +984,7 @@
       (D1) Vision
     </label>
     <select class="form-control" formControlName="D1">
-      <option *ngFor="let ability of seeingAbility" 
+      <option *ngFor="let ability of options.seeingAbility" 
         [value]="ability.key">{{ability.label}}
       </option>
     </select>
@@ -997,7 +997,7 @@
       (D2a) Side Vision Problems
     </label>
     <select class="form-control" formControlName="D2a">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -1010,7 +1010,7 @@
       (D2b) Sees halos, rings, flashes, curtains
     </label>
     <select class="form-control" formControlName="D2b">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -1023,7 +1023,7 @@
       (D3) Visual Appliances
     </label>
     <select class="form-control" formControlName="D3">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -1036,7 +1036,7 @@
       (E1a) Negative Statements
     </label>
     <select class="form-control" formControlName="E1a">
-      <option *ngFor="let presence of indicatorPresence" 
+      <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
     </select>
@@ -1049,7 +1049,7 @@
       (E1b) Repetitive Questions
     </label>
     <select class="form-control" formControlName="E1b">
-      <option *ngFor="let presence of indicatorPresence" 
+      <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
     </select>
@@ -1062,7 +1062,7 @@
       (E1c) Repetitive Verbalizations
     </label>
     <select class="form-control" formControlName="E1c">
-      <option *ngFor="let presence of indicatorPresence" 
+      <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
     </select>
@@ -1075,7 +1075,7 @@
       (E1d) Persistent anger with self/others
     </label>
     <select class="form-control" formControlName="E1d">
-      <option *ngFor="let presence of indicatorPresence" 
+      <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
     </select>
@@ -1088,7 +1088,7 @@
       (E1e) Self-Deprecation
     </label>
     <select class="form-control" formControlName="E1e">
-      <option *ngFor="let presence of indicatorPresence" 
+      <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
     </select>
@@ -1101,7 +1101,7 @@
       (E1f) Expression of unrealistic fears
     </label>
     <select class="form-control" formControlName="E1f">
-      <option *ngFor="let presence of indicatorPresence" 
+      <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
     </select>
@@ -1114,7 +1114,7 @@
       (E1g) Recurrent Statements: something terrible
     </label>
     <select class="form-control" formControlName="E1g">
-      <option *ngFor="let presence of indicatorPresence" 
+      <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
     </select>
@@ -1127,7 +1127,7 @@
       (E1h) Repetitive health complaints
     </label>
     <select class="form-control" formControlName="E1h">
-      <option *ngFor="let presence of indicatorPresence" 
+      <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
     </select>
@@ -1140,7 +1140,7 @@
       (E1i) Repetitive anxious complaints
     </label>
     <select class="form-control" formControlName="E1i">
-      <option *ngFor="let presence of indicatorPresence" 
+      <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
     </select>
@@ -1153,7 +1153,7 @@
       (E1j) Unpleasant mood in morning
     </label>
     <select class="form-control" formControlName="E1j">
-      <option *ngFor="let presence of indicatorPresence" 
+      <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
     </select>
@@ -1166,7 +1166,7 @@
       (E1k) Insomnia/Change in sleep patterns
     </label>
     <select class="form-control" formControlName="E1k">
-      <option *ngFor="let presence of indicatorPresence" 
+      <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
     </select>
@@ -1179,7 +1179,7 @@
       (E1l) Sad, pained, or worried facial expressions
     </label>
     <select class="form-control" formControlName="E1l">
-      <option *ngFor="let presence of indicatorPresence" 
+      <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
     </select>
@@ -1192,7 +1192,7 @@
       (E1m) Crying, tearfulness
     </label>
     <select class="form-control" formControlName="E1k">
-      <option *ngFor="let presence of indicatorPresence" 
+      <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
     </select>
@@ -1205,7 +1205,7 @@
       (E1n) Repetitive physical movements
     </label>
     <select class="form-control" formControlName="E1n">
-      <option *ngFor="let presence of indicatorPresence" 
+      <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
     </select>
@@ -1218,7 +1218,7 @@
       (E1o) Withdrawal from activities of interest
     </label>
     <select class="form-control" formControlName="E1o">
-      <option *ngFor="let presence of indicatorPresence" 
+      <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
     </select>
@@ -1231,7 +1231,7 @@
       (E1p) Reduced social interaction
     </label>
     <select class="form-control" formControlName="E1p">
-      <option *ngFor="let presence of indicatorPresence" 
+      <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
     </select>
@@ -1244,7 +1244,7 @@
       (E2) Mood Persistence
     </label>
     <select class="form-control" formControlName="E2">
-      <option *ngFor="let persistence of moodPersistence" 
+      <option *ngFor="let persistence of options.moodPersistence" 
         [value]="persistence.key">{{persistence.label}}
       </option>
     </select>
@@ -1270,7 +1270,7 @@
       (E4aA) Wandering Frequency
     </label>
     <select class="form-control" formControlName="E4aA">
-      <option *ngFor="let symptoms of behaviouralSymptoms" 
+      <option *ngFor="let symptoms of options.behaviouralSymptoms" 
         [value]="symptoms.key">{{symptoms.label}}
       </option>
     </select>
@@ -1296,7 +1296,7 @@
       (E4bA) Verbally Abusive Frequency
     </label>
     <select class="form-control" formControlName="E4bA">
-      <option *ngFor="let symptoms of behaviouralSymptoms" 
+      <option *ngFor="let symptoms of options.behaviouralSymptoms" 
         [value]="symptoms.key">{{symptoms.label}}
       </option>
     </select>
@@ -1322,7 +1322,7 @@
       (E4cA) Physically Abusive Frequency
     </label>
     <select class="form-control" formControlName="E4cA">
-      <option *ngFor="let symptoms of behaviouralSymptoms" 
+      <option *ngFor="let symptoms of options.behaviouralSymptoms" 
         [value]="symptoms.key">{{symptoms.label}}
       </option>
     </select>
@@ -1348,7 +1348,7 @@
       (E4dA) Inappropriate Disruption Frequency
     </label>
     <select class="form-control" formControlName="E4dA">
-      <option *ngFor="let symptoms of behaviouralSymptoms" 
+      <option *ngFor="let symptoms of options.behaviouralSymptoms" 
         [value]="symptoms.key">{{symptoms.label}}
       </option>
     </select>
@@ -1373,7 +1373,7 @@
       (E4eA) Resists Care Frequency 
     </label>
     <select class="form-control" formControlName="E4eA">
-      <option *ngFor="let symptoms of behaviouralSymptoms" 
+      <option *ngFor="let symptoms of options.behaviouralSymptoms" 
         [value]="symptoms.key">{{symptoms.label}}
       </option>
     </select>
@@ -1620,7 +1620,7 @@
       (G1aA) Bed Mobility: Self-Performance 
     </label>
     <select class="form-control" formControlName="G1aA">
-      <option *ngFor="let state of performanceState" 
+      <option *ngFor="let state of options.performanceState" 
         [value]="state.key">{{state.label}}
       </option>
     </select>
@@ -1646,7 +1646,7 @@
       (G1bA) Transfer: Self-Performance
     </label>
     <select class="form-control" formControlName="G1bA">
-      <option *ngFor="let state of performanceState" 
+      <option *ngFor="let state of options.performanceState" 
         [value]="state.key">{{state.label}}
       </option>
     </select>
@@ -1659,7 +1659,7 @@
       (G1bB) Transfer: Support Provided
     </label>
     <select class="form-control" formControlName="G1bB">
-      <option *ngFor="let required of helpRequired" 
+      <option *ngFor="let required of options.helpRequired" 
         [value]="required.key">{{required.label}}
       </option>
     </select>
@@ -1711,7 +1711,7 @@
       (G1eA) Locomotion on Unit: Self-Performance
     </label>
     <select class="form-control" formControlName="G1eA">
-      <option *ngFor="let state of performanceState" 
+      <option *ngFor="let state of options.performanceState" 
         [value]="state.key">{{state.label}}
       </option>
     </select>
@@ -1763,7 +1763,7 @@
       (G1gA) Dressing: Self-Performance
     </label>
     <select class="form-control" formControlName="G1gA">
-      <option *ngFor="let state of performanceState" 
+      <option *ngFor="let state of options.performanceState" 
         [value]="state.key">{{state.label}}
       </option>
     </select>
@@ -1789,7 +1789,7 @@
       (G1hA) Eating: Self-Performance
     </label>
     <select class="form-control" formControlName="G1hA">
-      <option *ngFor="let state of performanceState" 
+      <option *ngFor="let state of options.performanceState" 
         [value]="state.key">{{state.label}}
       </option>
     </select>
@@ -1815,7 +1815,7 @@
       (G1iA) Toilet Use: Self-Performance
     </label>
     <select class="form-control" formControlName="G1iA">
-      <option *ngFor="let state of performanceState" 
+      <option *ngFor="let state of options.performanceState" 
         [value]="state.key">{{state.label}}
       </option>
     </select>
@@ -1919,7 +1919,7 @@
       (G4aA) Neck: Range of Motion
     </label>
     <select class="form-control" formControlName="G4aA">
-      <option *ngFor="let range of motionRange" 
+      <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
     </select>
@@ -1945,7 +1945,7 @@
       (G4bA) Arm: Range of Motion
     </label>
     <select class="form-control" formControlName="G4bA">
-      <option *ngFor="let range of motionRange" 
+      <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
     </select>
@@ -1971,7 +1971,7 @@
       (G4cA) Hands: Range of Motion
     </label>
     <select class="form-control" formControlName="G4cA">
-      <option *ngFor="let range of motionRange" 
+      <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
     </select>
@@ -1997,7 +1997,7 @@
       (G4dA) Legs: Range of Motion
     </label>
     <select class="form-control" formControlName="G4dA">
-      <option *ngFor="let range of motionRange" 
+      <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
     </select>
@@ -2023,7 +2023,7 @@
       (G4eA) Feet: Range of Motion
     </label>
     <select class="form-control" formControlName="G4eA">
-      <option *ngFor="let range of motionRange" 
+      <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
     </select>
@@ -2049,7 +2049,7 @@
       (G4fA) Other limitations/loss of range of motion
     </label>
     <select class="form-control" formControlName="G4fA">
-      <option *ngFor="let range of motionRange" 
+      <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
     </select>
@@ -2270,7 +2270,7 @@
       (H1a) Bowel Continence
     </label>
     <select class="form-control" formControlName="H1a">
-      <option *ngFor="let state of continenceState" 
+      <option *ngFor="let state of options.continenceState" 
         [value]="state.key">{{state.label}}
       </option>
     </select>
@@ -2283,7 +2283,7 @@
       (H1b) Bladder Continence
     </label>
     <select class="form-control" formControlName="H1b">
-      <option *ngFor="let state of continenceState" 
+      <option *ngFor="let state of options.continenceState" 
         [value]="state.key">{{state.label}}
       </option>
     </select>
@@ -2335,7 +2335,7 @@
       (H2d) Fecal Impaction
     </label>
     <select class="form-control" formControlName="H2d">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -2348,7 +2348,7 @@
       (H3a) Scheduled Toileting Plan
     </label>
     <select class="form-control" formControlName="H3a">
-      <option *ngFor="let plan of toiletingPlan" 
+      <option *ngFor="let plan of options.toiletingPlan" 
         [value]="plan.key">{{plan.label}}
       </option>
     </select>
@@ -2361,7 +2361,7 @@
       (H3b) Bladder Retraining Program
     </label>
     <select class="form-control" formControlName="H3b">
-      <option *ngFor="let program of bladderretrainingProgram" 
+      <option *ngFor="let program of options.bladderRetrainingProgram" 
         [value]="program.key">{{program.label}}
       </option>
     </select>
@@ -2387,7 +2387,7 @@
       (H3d) Indwelling Catheter
     </label>
     <select class="form-control" formControlName="H3d">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -2452,7 +2452,7 @@
       (H3i) Ostomy Present
     </label>
     <select class="form-control" formControlName="H3i">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -2478,7 +2478,7 @@
       (I1a) Diabetes Mellitus
     </label>
     <select class="form-control" formControlName="I1a">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -2946,7 +2946,7 @@
       (I1s) Asphasia
     </label>
     <select class="form-control" formControlName="I1s">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -2972,7 +2972,7 @@
       (I1t) Cerebral Palsy
     </label>
     <select class="form-control" formControlName="I1t">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -3037,7 +3037,7 @@
       (I1w) Hemiplegia/Hemiparesis
     </label>
     <select class="form-control" formControlName="I1w">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -3141,7 +3141,7 @@
       (I2f) Pneumonia
     </label>
     <select class="form-control" formControlName="I2f">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -3154,7 +3154,7 @@
       (I2g) Respiratory Infection
     </label>
     <select class="form-control" formControlName="I2g">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -3167,7 +3167,7 @@
       (I2h) Septicemia
     </label>
     <select class="form-control" formControlName="I2h">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -3206,7 +3206,7 @@
       (I2k) Urinary Tract Infection
     </label>
     <select class="form-control" formControlName="I2k">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -3349,7 +3349,7 @@
       (J1c) Dehydrated
     </label>
     <select class="form-control" formControlName="J1c">
-      <option *ngFor="let occurrence of sevendaysOccurrence" 
+      <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
     </select>
@@ -3375,7 +3375,7 @@
       (J1e) Delusions
     </label>
     <select class="form-control" formControlName="J1e">
-      <option *ngFor="let occurrence of sevendaysOccurrence" 
+      <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
     </select>
@@ -3414,7 +3414,7 @@
       (J1h) Fever
     </label>
     <select class="form-control" formControlName="J1h">
-      <option *ngFor="let occurrence of sevendaysOccurrence" 
+      <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
     </select>
@@ -3427,7 +3427,7 @@
       (J1i) Hallucinations
     </label>
     <select class="form-control" formControlName="J1i">
-      <option *ngFor="let occurrence of sevendaysOccurrence" 
+      <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
     </select>
@@ -3440,7 +3440,7 @@
       (J1j) Internal Bleeding
     </label>
     <select class="form-control" formControlName="J1j">
-      <option *ngFor="let occurrence of sevendaysOccurrence" 
+      <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
     </select>
@@ -3505,7 +3505,7 @@
       (J1o) Vomiting
     </label>
     <select class="form-control" formControlName="J1o">
-      <option *ngFor="let occurrence of sevendaysOccurrence" 
+      <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
     </select>
@@ -3518,7 +3518,7 @@
       (J2a) Pain Symptoms: Frequency
     </label>
     <select class="form-control" formControlName="J2a">
-      <option *ngFor="let frequency of painFrequency" 
+      <option *ngFor="let frequency of options.painFrequency" 
         [value]="frequency.key">{{frequency.label}}
       </option>
     </select>
@@ -3531,7 +3531,7 @@
       (J2b) Pain Symptoms: Intensity
     </label>
     <select class="form-control" formControlName="J2b">
-      <option *ngFor="let intensity of painIntensity" 
+      <option *ngFor="let intensity of options.painIntensity" 
         [value]="intensity.key">{{intensity.label}}
       </option>
     </select>
@@ -3674,7 +3674,7 @@
       (J4a) Fell in past 30 days
     </label>
     <select class="form-control" formControlName="J4a">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -3700,7 +3700,7 @@
       (J4c) Hip fracture in last 180 days
     </label>
     <select class="form-control" formControlName="J4c">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -3713,7 +3713,7 @@
       (J4d) Other fracture in last 180 days
     </label>
     <select class="form-control" formControlName="J4d">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -3752,7 +3752,7 @@
       (J5c) End-Stage Disease
     </label>
     <select class="form-control" formControlName="J5c">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -3830,7 +3830,7 @@
       (K3a) Weight Loss
     </label>
     <select class="form-control" formControlName="K3a">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -3895,7 +3895,7 @@
       (K5a) Parenteral/IV
     </label>
     <select class="form-control" formControlName="K5a">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -3908,7 +3908,7 @@
       (K5b) Feeding Tube
     </label>
     <select class="form-control" formControlName="K5b">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -3986,7 +3986,7 @@
       (K5h) On a planned weight change program
     </label>
     <select class="form-control" formControlName="K5h">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -3999,7 +3999,7 @@
       (K6a) Parenteral/Enteral Intake: Total Calories
     </label>
     <select class="form-control" formControlName="K6a">
-      <option *ngFor="let percent of caloriePercent" 
+      <option *ngFor="let percent of options.caloriePercent" 
         [value]="percent.key">{{percent.label}}
       </option>
     </select>
@@ -4012,7 +4012,7 @@
       (K6b) Parenteral/Enteral Intake: Average Intake
     </label>
     <select class="form-control" formControlName="K6b">
-      <option *ngFor="let count of calorieCount" 
+      <option *ngFor="let count of options.calorieCount" 
         [value]="count.key">{{count.label}}
       </option>
     </select>
@@ -4051,7 +4051,7 @@
       (L1c) Some or all natural teeth lost
     </label>
     <select class="form-control" formControlName="L1c">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -4064,7 +4064,7 @@
       (L1d) Broken, loose, or carious teeth 
     </label>
     <select class="form-control" formControlName="L1d">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -4077,7 +4077,7 @@
       (L1e) Inflamed gums, oral acesses, etc.
     </label>
     <select class="form-control" formControlName="L1e">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -4103,7 +4103,7 @@
       (M1a) Number of Stage 1 Ulcers
     </label>
     <select class="form-control" formControlName="M1a">
-      <option *ngFor="let number of ulcerNumber" 
+      <option *ngFor="let number of options.ulcerNumber" 
         [value]="number.key">{{number.label}}
       </option>
     </select>
@@ -4116,7 +4116,7 @@
       (M1b) Number of Stage 2 Ulcers
     </label>
     <select class="form-control" formControlName="M1b">
-      <option *ngFor="let number of ulcerNumber" 
+      <option *ngFor="let number of options.ulcerNumber" 
         [value]="number.key">{{number.label}}
       </option>
     </select>
@@ -4129,7 +4129,7 @@
       (M1c) Number of Stage 3 Ulcers
     </label>
     <select class="form-control" formControlName="M1c">
-      <option *ngFor="let number of ulcerNumber" 
+      <option *ngFor="let number of options.ulcerNumber" 
         [value]="number.key">{{number.label}}
       </option>
     </select>
@@ -4142,7 +4142,7 @@
       (M1d) Number of Stage 4 Ulcers
     </label>
     <select class="form-control" formControlName="M1d">
-      <option *ngFor="let number of ulcerNumber" 
+      <option *ngFor="let number of options.ulcerNumber" 
         [value]="number.key">{{number.label}}
       </option>
     </select>
@@ -4155,7 +4155,7 @@
       (M2a) Stage of Pressure Ulcer
     </label>
     <select class="form-control" formControlName="M2a">
-      <option *ngFor="let stage of ulcerStage" 
+      <option *ngFor="let stage of options.ulcerStage" 
         [value]="stage.key">{{stage.label}}
       </option>
     </select>
@@ -4181,7 +4181,7 @@
       (M3) History of Resolved/Cured Ulcers
     </label>
     <select class="form-control" formControlName="M3">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -4194,7 +4194,7 @@
       (M4a) Burns (Second or Third Degree)
     </label>
     <select class="form-control" formControlName="M4a">
-      <option *ngFor="let problems of evidenceofProblems" 
+      <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
     </select>
@@ -4220,7 +4220,7 @@
       (M4c) Open lesions (other than ulcers, rashes, cuts)
     </label>
     <select class="form-control" formControlName="M4c">
-      <option *ngFor="let problems of evidenceofProblems" 
+      <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
     </select>
@@ -4272,7 +4272,7 @@
       (M4g) Surgical Wounds
     </label>
     <select class="form-control" formControlName="M4g">
-      <option *ngFor="let problems of evidenceofProblems" 
+      <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
     </select>
@@ -4285,7 +4285,7 @@
       (M5a) Pressure relieving device(s) for chair
     </label>
     <select class="form-control" formControlName="M5a">
-      <option *ngFor="let problems of evidenceofProblems" 
+      <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
     </select>
@@ -4298,7 +4298,7 @@
       (M5b) Pressure relieving device(s) for bed
     </label>
     <select class="form-control" formControlName="M5b">
-      <option *ngFor="let problems of evidenceofProblems" 
+      <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
     </select>
@@ -4311,7 +4311,7 @@
       (M5c) Turning or repositioning program
     </label>
     <select class="form-control" formControlName="M5c">
-      <option *ngFor="let problems of evidenceofProblems" 
+      <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
     </select>
@@ -4324,7 +4324,7 @@
       (M5d) Nurtrition/Hydration Intervention
     </label>
     <select class="form-control" formControlName="M5d">
-      <option *ngFor="let problems of evidenceofProblems" 
+      <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
     </select>
@@ -4337,7 +4337,7 @@
       (M5e) Ulcer Care
     </label>
     <select class="form-control" formControlName="M5e">
-      <option *ngFor="let problems of evidenceofProblems" 
+      <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
     </select>
@@ -4350,7 +4350,7 @@
       (M5f) Surgical Wound Care
     </label>
     <select class="form-control" formControlName="M5f">
-      <option *ngFor="let problems of evidenceofProblems" 
+      <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
     </select>
@@ -4363,7 +4363,7 @@
       (M5g) Application of dressing(s) (except to feet)
     </label>
     <select class="form-control" formControlName="M5g">
-      <option *ngFor="let problems of evidenceofProblems" 
+      <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
     </select>
@@ -4376,7 +4376,7 @@
       (M5h) Ointments/Medications (except to feet)
     </label>
     <select class="form-control" formControlName="M5h">
-      <option *ngFor="let problems of evidenceofProblems" 
+      <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
     </select>
@@ -4415,7 +4415,7 @@
       (M6b) Infection of the foot
     </label>
     <select class="form-control" formControlName="M6b">
-      <option *ngFor="let problems of evidenceofProblems" 
+      <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
     </select>
@@ -4428,7 +4428,7 @@
       (M6c) Open lesions on the foot
     </label>
     <select class="form-control" formControlName="M6c">
-      <option *ngFor="let problems of evidenceofProblems" 
+      <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
     </select>
@@ -4467,7 +4467,7 @@
       (M6f) Application of dressings to the foot
     </label>
     <select class="form-control" formControlName="M6f">
-      <option *ngFor="let problems of evidenceofProblems" 
+      <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
     </select>
@@ -4480,7 +4480,7 @@
       (N1a) Time Awake: Morning
     </label>
     <select class="form-control" formControlName="N1a">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -4493,7 +4493,7 @@
       (N1b) Time Awake: Afternoon
     </label>
     <select class="form-control" formControlName="N1b">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -4506,7 +4506,7 @@
       (N1c) Time Awake: Evening
     </label>
     <select class="form-control" formControlName="N1c">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -4519,7 +4519,7 @@
       (N2) Average time involved in activities
     </label>
     <select class="form-control" formControlName="N2">
-      <option *ngFor="let time of activityTime" 
+      <option *ngFor="let time of options.activityTime" 
         [value]="time.key">{{time.label}}
       </option>
     </select>
@@ -5065,7 +5065,7 @@
       (P1aO) Hospice Care
     </label>
     <select class="form-control" formControlName="P1aO">
-      <option *ngFor="let answer of yesnoAnswer" 
+      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
     </select>
@@ -5507,7 +5507,7 @@
       (P4c) Trunk Restraint
     </label>
     <select class="form-control" formControlName="P4c">
-      <option *ngFor="let used of timeUsed" 
+      <option *ngFor="let used of options.timeUsed" 
         [value]="used.key">{{used.label}}
       </option>
     </select>
@@ -5520,7 +5520,7 @@
       (P4d) Limb Restraint
     </label>
     <select class="form-control" formControlName="P4d">
-      <option *ngFor="let used of timeUsed" 
+      <option *ngFor="let used of options.timeUsed" 
         [value]="used.key">{{used.label}}
       </option>
     </select>
@@ -5715,7 +5715,7 @@
       (R3a) Discharged to Facility/Level of Care
     </label>
     <select class="form-control" formControlName="P4d">
-      <option *ngFor="let to of dischargedTo" 
+      <option *ngFor="let to of options.dischargedTo" 
         [value]="to.key">{{to.label}}
       </option>
     </select>
