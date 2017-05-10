@@ -259,3 +259,28 @@ export const ActivityTime = [
   { key: '2', label: '2 - Little: less than 1/3 of the time'},
   { key: '3', label: '3 - None'},
 ];
+
+/* ---- For P4c, P4d, P4e ---- */
+export const TimeUsed = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - Not used'},
+  { key: '1', label: '1 - Used less than daily'},
+  { key: '2', label: '2 - Used daily'}
+];
+
+/* ---- For R3a ---- */
+export const DischargedTo = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - Ambulatory Health Service'},
+  { key: '1', label: '1 - Inpatient Acute Care Service'},
+  { key: '2', label: '2 - Inpatient Rehabilitation Service (General)'},
+  { key: '3', label: '3 - Inpatient Continuing Care Service'},
+  { key: '4', label: '4 - Residential Care Service (24-Hour Nursing Care)'},
+  { key: '5', label: '5 - Inpatient Psychiatry Service'},
+  { key: '6', label: '6 - Other/Unclassified Service'},
+  { key: '7', label: '7 - Inpatient Rehabilitation Service (Specialized)'},
+  { key: '8', label: '8 - Home Care Service'},
+  { key: '9', label: '9 - Residential Care Service (Board and Care)'}, 
+  { key: '10', label: '10 - Private Home (No Home Care)'},
+  { key: '11', label: '11 - Deceased'} 
+];
