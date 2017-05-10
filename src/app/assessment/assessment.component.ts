@@ -1,18 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-import { AdmissionType, AssessmentReason, DischargeType, 
-         ComatoseState, MemoryState, IndependenceState, 
-         HearingAbility, YesNoAnswer, UnderstoodAbility, 
-         SpeechClarity, UnderstandingAbility, SeeingAbility,
-         IndicatorPresence, MoodPersistence, BehaviouralSymptoms,
-         PerformanceState, HelpRequired, MotionRange,
-         ContinenceState, ToiletingPlan, BladderRetrainingProgram,
-         SevenDaysOccurrence, PainFrequency, PainIntensity,
-         CalorieCount, CaloriePercent, UlcerNumber,
-         UlcerStage, EvidenceOfProblems, ActivityTime,
-         TimeUsed, DischargedTo
-} from './assessment.constants'
+import { AdmissionType, AssessmentReason, DischargeType, ComatoseState, MemoryState, IndependenceState, 
+         HearingAbility, YesNoAnswer, UnderstoodAbility, SpeechClarity, UnderstandingAbility, SeeingAbility,
+         IndicatorPresence, MoodPersistence, BehaviouralSymptoms, PerformanceState, HelpRequired, MotionRange,
+         ContinenceState, ToiletingPlan, BladderRetrainingProgram, SevenDaysOccurrence, PainFrequency, PainIntensity,
+         CalorieCount, CaloriePercent, UlcerNumber, UlcerStage, EvidenceOfProblems, ActivityTime,
+         TimeUsed, DischargedTo} from './assessment.constants'
 
 @Component({
   selector: 'assessment',

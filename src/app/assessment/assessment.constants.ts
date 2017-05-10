@@ -55,7 +55,8 @@ export const HearingAbility = [
 ];
 
 /* ---- For C3b, C3c, C3d, C3e, C3f, D2a, D2b, D3, H2d, H3d, H3i, I1a, I1s, I1t, I1w, 
-        I2f, I2h, I2k, J4a, J4c, J4d, J5c, K5a, K5b, K5h ---- */
+        I2f, I2h, I2k, J4a, J4c, J4d, J5c, K5a, K5b, K5h, L1c, L1d, L1e, M3, N1a, N1b, 
+        N1c, P1aO ---- */
 export const YesNoAnswer = [
   { key: '--', label: '--'},
   { key: '0', label: '0 - No'},
