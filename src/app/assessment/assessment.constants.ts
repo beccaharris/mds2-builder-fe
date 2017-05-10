@@ -1,4 +1,5 @@
 export const DropdownOptions = {
+
   /* ---- For AA7 ---- */
   admissionType: [
     { key: '01', label: '01 - Admission'},
@@ -28,7 +29,7 @@ export const DropdownOptions = {
     { key: '--', label: '--'},
     { key: '0', label: '0 - Not comatose or semi-comatose'},
     { key: '1', label: '1 - Comatose or in a persistent vegetative state'}
-],
+  ],
 
   /* ---- For B2a ---- */
   memoryState: [
