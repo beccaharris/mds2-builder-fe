@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-import { AdmissionType, AssessmentReason, DischargeType, ComatoseState, MemoryState, IndependenceState, 
+import { DropdownOptions, DischargeType, ComatoseState, MemoryState, IndependenceState, 
          HearingAbility, YesNoAnswer, UnderstoodAbility, SpeechClarity, UnderstandingAbility, SeeingAbility,
          IndicatorPresence, MoodPersistence, BehaviouralSymptoms, PerformanceState, HelpRequired, MotionRange,
          ContinenceState, ToiletingPlan, BladderRetrainingProgram, SevenDaysOccurrence, PainFrequency, PainIntensity,
@@ -17,8 +17,8 @@ import { AdmissionType, AssessmentReason, DischargeType, ComatoseState, MemorySt
 export class AssessmentComponent {
   
   mdsAssessment: FormGroup;
-  admissionType = AdmissionType;
-  assessmentReason = AssessmentReason;
+  dropdownOptions = DropdownOptions
+  
   dischargeType = DischargeType;
   comatoseState = ComatoseState;
   memoryState = MemoryState;

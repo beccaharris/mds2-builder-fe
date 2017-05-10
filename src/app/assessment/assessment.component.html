@@ -46,7 +46,7 @@
       (AA7) Admission Type
     </label>
     <select class="form-control" formControlName="AA7">
-      <option *ngFor="let type of admissionType" 
+      <option *ngFor="let type of dropdownOptions.admissionType" 
         [value]="type.key">{{type.label}}
       </option>
     </select>
@@ -59,7 +59,7 @@
       (AA8) Reason for Assessment
     </label>
     <select class="form-control" formControlName="AA8">
-      <option *ngFor="let reason of assessmentReason" 
+      <option *ngFor="let reason of dropdownOptions.assessmentReason" 
         [value]="reason.key">{{reason.label}}
       </option>
     </select>
