@@ -244,9 +244,18 @@ export const UlcerStage = [
   { key: '4', label: '4 - Stage 4'},
 ];
 
-/* ---- For M4a, M5b, M5c, M5d, M5e ---- */
+/* ---- For M4a, M5b, M5c, M5d, M5f ---- */
 export const EvidenceOfProblems = [
   { key: '--', label: '--'},
   { key: '0', label: '0 - None'},
   { key: '1', label: '1 - Evidence of such problem(s) in last seven days'}
+];
+
+/* ---- For N2 ---- */
+export const ActivityTime = [
+  { key: '--', label: '--'},
+  { key: '0', label: '0 - Most: more than 2/3 of the time'},
+  { key: '1', label: '1 - Some: from 1/3 to 2/3 of the time'},
+  { key: '2', label: '2 - Little: less than 1/3 of the time'},
+  { key: '3', label: '3 - None'},
 ];

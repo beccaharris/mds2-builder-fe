@@ -10,7 +10,7 @@ import { AdmissionType, AssessmentReason, DischargeType,
          ContinenceState, ToiletingPlan, BladderRetrainingProgram,
          SevenDaysOccurrence, PainFrequency, PainIntensity,
          CalorieCount, CaloriePercent, UlcerNumber,
-         UlcerStage, EvidenceOfProblems,
+         UlcerStage, EvidenceOfProblems, ActivityTime
 } from './assessment.constants'
 
 @Component({
@@ -51,6 +51,7 @@ export class AssessmentComponent {
   ulcerNumber = UlcerNumber;
   ulcerStage = UlcerStage;
   evidenceofProblems = EvidenceOfProblems;
+  activityTime = ActivityTime;
 
   constructor(private formBuilder: FormBuilder) {}
 
@@ -400,6 +401,31 @@ export class AssessmentComponent {
       M6d: '-',
       M6e: '-',
       M6f: '0',
+      N1a: '0',
+      N1b: '0',
+      N1c: '0',
+      N2: '0',
+      N3a: '-',
+      N3b: '-',
+      N3c: '-',
+      N3d: '-',
+      N4a: '-',
+      N4b: '-',
+      N4c: '-',
+      N4d: '-',
+      N4e: '-',
+      N4f: '-',
+      N4g: '-',
+      N4h: '-',
+      N4i: '-',
+      N4j: '-',
+      N4k: '-',
+      N4l: '-',
+      N5a: '-',
+      N5b: '-',
+      
+
+
 
 
 
