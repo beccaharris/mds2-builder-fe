@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { AssessmentService } from '../services/assessment-service/assessment.service';
+import { CsvService } from '../services/csv-service/csv.service';
+
+
 @Component({
   selector: 'page-header',
   templateUrl: './page-header.component.html',
@@ -7,9 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageHeaderComponent implements OnInit {
 
-  constructor() { }
+  data: any;
+
+  constructor(private assessmentService: AssessmentService,
+              private csvService: CsvService) { }
 
   ngOnInit() {
   }
 
+  download() {
+    this.data = this.assessmentService.setData();
+    this.assessmentService.convertToArray(this.data);
+    this.csvService.download(this.data,'Filename')
+  }
 }

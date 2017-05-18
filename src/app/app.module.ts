@@ -9,6 +9,8 @@ import { HeaderComponent } from './main-header/main-header.component';
 import { LogoComponent } from './logo/logo.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
 import { AssessmentComponent } from './assessment/assessment.component';
+import { CsvService } from './services/csv-service/csv.service';
+import { AssessmentService } from './services/assessment-service/assessment.service'
 
 @NgModule({
   declarations: [
@@ -24,7 +26,10 @@ import { AssessmentComponent } from './assessment/assessment.component';
     NgbModule.forRoot(),
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    CsvService,
+    AssessmentService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

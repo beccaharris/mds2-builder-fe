@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-import { DropdownOptions } from './assessment.constants'
+import { DropdownOptions } from './assessment.constants';
+import { AssessmentService } from '../services/assessment-service/assessment.service'
 
 @Component({
   selector: 'assessment',
@@ -10,13 +11,15 @@ import { DropdownOptions } from './assessment.constants'
 })
 
 export class AssessmentComponent {
-  
+  /* data = yourForm.value; */
   mdsAssessment: FormGroup;
   options = DropdownOptions
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, 
+              private assessmentService: AssessmentService) {}
 
   ngOnInit() {
+  
     this.mdsAssessment = this.formBuilder.group({
       Master_No: ['1234', Validators.required],
       Resident_Identifier: '1234567890',
@@ -465,6 +468,10 @@ export class AssessmentComponent {
       IAR_1: '2013',
       Org_ID: '--',
       Assessment_ID: '--'
-    })
-  }
+    });
+    this.assessmentService.getData(this.mdsAssessment.value);
+    this.mdsAssessment.valueChanges.subscribe( (data) => {
+      this.assessmentService.getData(data);
+    });
+  };
 }
