@@ -21,7 +21,6 @@ export class PageHeaderComponent implements OnInit {
 
   download() {
     this.data = this.assessmentService.setData();
-    this.assessmentService.convertToArray(this.data);
     this.csvService.download(this.data,'Filename')
   }
 }

@@ -14,5 +14,4 @@ export class AssessmentService {
   setData(){
     return this._data;
   };
-  convertToArray(data){}
 }
