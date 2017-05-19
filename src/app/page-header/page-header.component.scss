@@ -13,8 +13,14 @@
   }
   
 .d-inline-block {
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.d-inline-block-2 {
   float: right;
-  margin-top: 8px;
+  margin-top: 10px;
   margin-right: 20px;
 }
 
