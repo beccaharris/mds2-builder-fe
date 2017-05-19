@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class AssessmentService {
 
   _data: any;
-  _dataArray: Array<any>;
+  _dataArray: Array<any> = [];
 
   constructor() { }
 
@@ -12,6 +12,7 @@ export class AssessmentService {
     this._data = data;
   };
   setData(){
-    return this._data;
+    this._dataArray.push(this._data)
+    return this._dataArray;
   };
 }

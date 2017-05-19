@@ -36,7 +36,7 @@ export class  CsvService {
     var str = '';
     var row = "";
     
-    for (var index in objArray) {
+    for (var index in objArray[0]) {
        //Now convert each value to string and pipe-delimited
        row += index + '|';
     }
@@ -47,9 +47,9 @@ export class  CsvService {
     for (var i = 0; i < array.length; i++) {
       var line = '';
       for (var index in array[i]) {
-        if (line != '') line += ','
+        if (line != '') line += '|'
   
-        line += '"'+array[i][index]+'"';
+        line += array[i][index];
       }
       str += line + '\r\n';
     }
