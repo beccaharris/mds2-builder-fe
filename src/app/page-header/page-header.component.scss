@@ -11,7 +11,15 @@
     margin-right: -30px!important;
     }*/
   }
-  
+.form-control {
+  display: table-cell;
+  margin-top: 4.2px;
+  border-right: none !important;
+  height: 41px;
+  border: 1px solid #06a2a2;
+  border-radius: 0px;
+}
+
 .d-inline-block {
   float: left;
   margin-top: 10px;
@@ -26,10 +34,13 @@
 
 .btn {
   background-color:#06a2a2;
+  float: right;
+  border-radius: 0px;
+  cursor: pointer;
 }
 
 .btn-outline-primary {
-  border: 1px solid white;
+  border: 1px solid #06a2a2;
   margin-bottom: 4px;
   margin-top: 4px;
   color: white;
