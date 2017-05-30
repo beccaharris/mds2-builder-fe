@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import * as moment from 'moment/moment';
 
 import { DropdownOptions } from './assessment.constants';
 import { AssessmentService } from '../services/assessment-service/assessment.service'
@@ -23,11 +24,11 @@ export class AssessmentComponent {
     this.mdsAssessment = this.formBuilder.group({
       Master_No: ['1234', Validators.required],
       Resident_Identifier: '1234567890',
-      A3: '20170422',
+      A3: moment().subtract(30, "days").format('YYYYMMDD'),
       AA7: '01',
       AA8: '01', 
       AA9: '--',
-      AB1: '20170422',
+      AB1: moment().subtract(30, "days").format('YYYYMMDD'),
       AB10a: '--',
       AB10b: '--',
       AB10c: '--',
