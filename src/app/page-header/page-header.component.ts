@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import * as moment from 'moment/moment';
+
 
 import { AssessmentService } from '../services/assessment-service/assessment.service';
 import { CsvService } from '../services/csv-service/csv.service';
@@ -11,6 +13,7 @@ import { CsvService } from '../services/csv-service/csv.service';
 })
 export class PageHeaderComponent implements OnInit {
 
+  filename = "1111111111";
   data: any;
 
   constructor(private assessmentService: AssessmentService,
@@ -21,6 +24,8 @@ export class PageHeaderComponent implements OnInit {
 
   download() {
     this.data = this.assessmentService.setData();
-    this.csvService.download(this.data,'Filename')
+    this.filename = this.filename+"_CCIM_"+moment().format("YYYYMMDD")+".csv";
+    this.csvService.download(this.data,this.filename);
   }
+
 }

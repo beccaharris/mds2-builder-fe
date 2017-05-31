@@ -24,7 +24,7 @@ import { AssessmentService } from './services/assessment-service/assessment.serv
     BrowserModule,
     HttpModule,
     NgbModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
     CsvService,
