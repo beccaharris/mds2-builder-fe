@@ -2,26 +2,26 @@ export const DropdownOptions = {
 
   /* ---- For AA7 ---- */
   admissionType: [
-    { key: '01', label: '01 - Admission'},
-    { key: '09', label: '09 - Re-Entry'}
+    { key: '1', label: '1 - Admission'},
+    { key: '9', label: '9 - Re-Entry'}
   ],
   
   /* ---- For AA8 ---- */
   assessmentReason: [
-    { key: '01', label: '01 - Admission'},
-    { key: '02', label: '02 - Annual'},
-    { key: '03', label: '03 - Significant Change in Status'},
-    { key: '04', label: '04 - Significant Change of Prior Full Assessment'},
-    { key: '05', label: '05 - Quarterly Review Assessment'},
+    { key: '1', label: '1 - Admission'},
+    { key: '2', label: '2 - Annual'},
+    { key: '3', label: '3 - Significant Change in Status'},
+    { key: '4', label: '4 - Significant Change of Prior Full Assessment'},
+    { key: '5', label: '5 - Quarterly Review Assessment'},
     { key: '10', label: '10 - Significant Change of Prior Quarterly Assessment'}
   ],
 
   /* ---- For AA9 ---- */
   dischargeType: [
     { key: '--', label: '--'},
-    { key: '06', label: '06 - Discharge — Return Not Anticipated'},
-    { key: '07', label: '07 - Discharge — Return Anticipated'},
-    { key: '08', label: '08 - Discharged Prior to Completing Initial Assessment'},
+    { key: '6', label: '6 - Discharge — Return Not Anticipated'},
+    { key: '7', label: '7 - Discharge — Return Anticipated'},
+    { key: '8', label: '8 - Discharged Prior to Completing Initial Assessment'},
   ],
 
   /* ---- For B1 ---- */

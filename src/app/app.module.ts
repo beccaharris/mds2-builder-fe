@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './main-header/main-header.component';
@@ -25,6 +25,7 @@ import { AssessmentService } from './services/assessment-service/assessment.serv
     HttpModule,
     NgbModule.forRoot(),
     ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     CsvService,

@@ -24,7 +24,7 @@ export class PageHeaderComponent implements OnInit {
 
   download() {
     this.data = this.assessmentService.setData();
-    this.filename = this.filename+"_CCIM_"+moment().format("YYYYMMDD")+".csv";
+    this.filename = this.filename+"_CCIM_"+moment().format("YYYYMMDD");
     this.csvService.download(this.data,this.filename);
   }
 
