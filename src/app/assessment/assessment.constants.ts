@@ -196,6 +196,7 @@ export const DropdownOptions = {
   /* ---- For J2b ---- */
   painIntensity: [
     { key: '--', label: '--'},
+    { key: '0', label: '0 - No pain'},
     { key: '1', label: '1 - Mild pain'},
     { key: '2', label: '2 - Moderate pain'},
     { key: '3', label: '3 - Times when pain is horrible or excruciating'}
