@@ -13,7 +13,8 @@ import { PageHeaderComponent } from './page-header/page-header.component';
 import { AssessmentComponent } from './assessment/assessment.component';
 import { CsvService } from './services/csv-service/csv.service';
 import { AssessmentService } from './services/assessment-service/assessment.service';
-import { TabsComponent } from './tabs/tabs.component'
+import { TabsComponent } from './tabs/tabs.component';
+import { BatchComponent } from './batch/batch.component'
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { TabsComponent } from './tabs/tabs.component'
     PageHeaderComponent,
     AssessmentComponent,
     TabsComponent,
+    BatchComponent,
   ],
   imports: [
     BrowserModule,

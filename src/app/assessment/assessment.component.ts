@@ -25,7 +25,7 @@ export class AssessmentComponent {
       "Master No": ['1234', Validators.required],
       "Resident Identifier": '1234567890',
       A3: moment().subtract(30, "days").format('YYYYMMDD'),
-      AA7: '1',
+      AA7: '',
       AA8: '1', 
       AA9: '',
       AB1: moment().subtract(30, "days").format('YYYYMMDD'),

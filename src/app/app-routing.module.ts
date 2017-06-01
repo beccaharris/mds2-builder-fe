@@ -2,17 +2,29 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AssessmentComponent } from './assessment/assessment.component';
+import { BatchComponent } from './batch/batch.component';
+import { AppComponent } from "app/app.component";
+import { PageHeaderComponent } from "app/page-header/page-header.component";
 
 const appRoutes: Routes = [
-  { path: 'single_assessment',
-    component: AssessmentComponent
-  },{ 
+  {
     path: '',
-    redirectTo: '/single_assessment',
-    pathMatch: 'full'
+    children: [
+      {
+       path: '',
+       redirectTo: '/single_assessment',
+       pathMatch: 'full'
+      },{ 
+       path: 'single_assessment',
+       component: AssessmentComponent
+      },{ 
+       path: 'batch',
+       component: BatchComponent
+      }
+    ]
   },{
     path: '**',
-    redirectTo: '/single_assessment',
+    redirectTo: '',
     pathMatch: 'full'
   }
 ]
