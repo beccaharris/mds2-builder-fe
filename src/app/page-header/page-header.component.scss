@@ -15,7 +15,7 @@
   display: table-cell;
   margin-top: 4.2px;
   border-right: none !important;
-  height: 41px;
+  height: 2.35em;
   border: 1px solid #06a2a2;
   border-radius: 0px;
   width: 130px;
@@ -45,11 +45,15 @@
   margin-bottom: 4px;
   margin-top: 4px;
   color: white;
-  font-size: 1.2em;
+  font-size: 1em;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-weight: 200;
 }
 
 .dropdown-menu {
-  font-size: 14px;  
+  font-size: 1em;  
+}
+
+.dropdown-item {
+  font-size: 1em
 }
