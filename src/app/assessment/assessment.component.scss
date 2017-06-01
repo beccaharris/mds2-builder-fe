@@ -1,12 +1,18 @@
 .form-group {
-  margin-left: 70px;
   margin-bottom: 20px;
+  margin-left: 70px;
+}
+.assessment-title {
+  margin: 25px 0 20px 70px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 25px;
 }
 .control-label {
   font-family: "Arial";
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   margin-bottom: 0px;
+  color: #282710;
 }
 .control-label-b {
   color: #9c9999;

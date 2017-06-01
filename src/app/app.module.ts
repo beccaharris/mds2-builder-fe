@@ -4,13 +4,16 @@ import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
+import { AppRoutingModule } from './app-routing.module'
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './main-header/main-header.component';
 import { LogoComponent } from './logo/logo.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
 import { AssessmentComponent } from './assessment/assessment.component';
 import { CsvService } from './services/csv-service/csv.service';
-import { AssessmentService } from './services/assessment-service/assessment.service'
+import { AssessmentService } from './services/assessment-service/assessment.service';
+import { TabsComponent } from './tabs/tabs.component'
 
 @NgModule({
   declarations: [
@@ -19,13 +22,15 @@ import { AssessmentService } from './services/assessment-service/assessment.serv
     LogoComponent,
     PageHeaderComponent,
     AssessmentComponent,
+    TabsComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     NgbModule.forRoot(),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [
     CsvService,

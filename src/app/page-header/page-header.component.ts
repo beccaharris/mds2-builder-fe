@@ -13,8 +13,9 @@ import { CsvService } from '../services/csv-service/csv.service';
 })
 export class PageHeaderComponent implements OnInit {
 
-  filename = "1111111111";
+  facility_name = "1111111111";
   data: any;
+  filename: string;
 
   constructor(private assessmentService: AssessmentService,
               private csvService: CsvService) { }
@@ -24,7 +25,7 @@ export class PageHeaderComponent implements OnInit {
 
   download() {
     this.data = this.assessmentService.setData();
-    this.filename = this.filename+"_CCIM_"+moment().format("YYYYMMDD");
+    this.filename = this.facility_name+"_CCIM_"+moment().format("YYYYMMDD");
     this.csvService.download(this.data,this.filename);
   }
 
