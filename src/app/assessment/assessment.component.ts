@@ -3,7 +3,8 @@ import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 import * as moment from 'moment/moment';
 
 import { DropdownOptions } from './assessment.constants';
-import { AssessmentService } from '../services/assessment-service/assessment.service'
+import { AssessmentService } from '../services/assessment-service/assessment.service';
+import { IAssessment } from './assessment.types'
 
 @Component({
   selector: 'assessment',
