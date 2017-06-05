@@ -13,7 +13,8 @@ import { PageHeaderComponent } from './page-header/page-header.component';
 import { AssessmentComponent } from './assessment/assessment.component';
 import { CsvService } from './services/csv-service/csv.service';
 import { AssessmentService } from './services/assessment-service/assessment.service';
-import { BatchComponent } from './batch/batch.component'
+import { BatchComponent } from './batch/batch.component';
+import { RecordsComponent } from './records/records.component'
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { BatchComponent } from './batch/batch.component'
     PageHeaderComponent,
     AssessmentComponent,
     BatchComponent,
+    RecordsComponent,
   ],
   imports: [
     BrowserModule,

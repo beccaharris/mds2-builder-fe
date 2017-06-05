@@ -1,2 +1,45 @@
-<p>Batch works!</p>
+<form name="batchForm">
+  <!--Number of Residents -->
+  <div
+    class="form-group">
+    <label
+      class="control-label"
+      for="num-residents">
+        <span>Number of Residents</span>
+    </label>
+    <input required
+      id="num-residents"
+      name="num_residents"
+      type="text"
+      class="form-control"
+      autocomplete="off"
+      maxlength="3">
+  </div>
+  <!--Assessment Types -->
+  <div class="form-group">
+    <label
+      class="control-label">
+        <span translate>Choose Assessment Types</span>
+    </label><br>
+    <label class="checkbox-inline">
+      <input type="checkbox" class="checkbox">
+          Admission</label>
+    <label class="checkbox-inline">
+      <input type="checkbox" class="checkbox">
+        Annual</label><br>
+    <label class="checkbox-inline" style="margin-right:8px">
+      <input type="checkbox" class="checkbox">
+        Quarterly</label>
+    <label class="checkbox-inline">
+      <input type="checkbox" class="checkbox">
+        Discharge</label>
+  </div>
 
+  <div class="form-group">
+    <button
+      type="button"
+      class="btn-default">
+        <span translate>Add Batch to List</span>
+    </button>
+  </div>
+</form>

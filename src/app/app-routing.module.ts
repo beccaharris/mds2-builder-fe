@@ -5,6 +5,7 @@ import { AssessmentComponent } from './assessment/assessment.component';
 import { BatchComponent } from './batch/batch.component';
 import { AppComponent } from "app/app.component";
 import { PageHeaderComponent } from "app/page-header/page-header.component";
+import { RecordsComponent } from "app/records/records.component";
 
 const appRoutes: Routes = [
   {
@@ -20,8 +21,10 @@ const appRoutes: Routes = [
       },{ 
        path: 'batch',
        component: BatchComponent
-      }
-    ]
+      },{
+       path: 'records',
+       component: RecordsComponent
+      }]
   },{
     path: '**',
     redirectTo: '',
