@@ -1,56 +1,65 @@
+<form novalidate #f="ngForm">
 
-<form [formGroup]="mdsAssessment" novalidate>
+<div class="assessment-head">
+  <h3 class="assessment-title">
+    Admission Assessment 
+  </h3>
+  <button type="button" class="add-record-btn">
+    Add Record
+  </button>
+</div>
 
-<h3 class="assessment-title">
-  Admission Assessment 
-</h3>
- 
   <!-- (master_no) Master No. from CCIM -->
   <div class="form-group">
-    <label 
-      class="control-label">
-        (master_no) Master No. from CCIM 
+    <label class="control-label">
+      (master_no) Master No. from CCIM
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="Master No">
+    <div>
+      <input 
+       class="form-field"
+       type="text"
+       name="Master No"
+       [ngModel]=assessment.Master_No>
+    </div>
   </div>
- 
+  
   <!-- (resident_identifier) 10-digit Resident Identifier -->   
   <div class="form-group">
-    <label
-      class="control-label">
-        (resident_identifier) 10-digit Resident Identifier 
+    <label class="control-label">
+      (resident_identifier) 10-digit Resident Identifier
     </label>
-    <br>
-    <input 
-      type="text" 
-      class="form-field"
-      formControlName="Resident Identifier">
+    <div>
+      <input 
+       class="form-field"
+       type="text"
+       name="Resident Identifier"
+       [ngModel]=assessment.Resident_Identifier>
+    </div>
   </div>
-
+  
   <!-- (A3) Assessment Reference Date -->
   <div class="form-group">
-    <label 
-      class="control-label">
-        (A3) Assessment Reference Date
+    <label class="control-label">
+      (A3) Assessment Reference Date
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="A3">
+    <div>
+      <input 
+       class="form-field"
+       type="text"
+       name="A3"
+       [ngModel]=assessment.A3>
+    </div>
   </div>
 
   <!-- (AA7) Admission Type -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (AA7) Admission Type
     </label>
-    <select class="form-control" formControlName="AA7">
+    <select 
+     class="form-control"
+     name="AA7"
+     [ngModel]=assessment.AA7>
       <option *ngFor="let type of options.admissionType" 
         [value]="type.key">{{type.label}}
       </option>
@@ -58,12 +67,14 @@
   </div>
 
   <!-- (AA8) Reason for Assessment -->
-    <div class="form-group">
-    <label
-      class="control-label">
+  <div class="form-group">
+    <label class="control-label">
       (AA8) Reason for Assessment
     </label>
-    <select class="form-control" formControlName="AA8">
+    <select 
+     class="form-control"
+     name="AA8"
+     [ngModel]=assessment.AA8>
       <option *ngFor="let reason of options.assessmentReason" 
         [value]="reason.key">{{reason.label}}
       </option>
@@ -71,547 +82,589 @@
   </div>
 
   <!-- (AA9) Discharge Type -->
-    <div class="form-group">
-    <label
-      class="control-label">
+  <div class="form-group">
+    <label class="control-label">
       (AA9) Discharge Type
     </label>
-    <select class="form-control" formControlName="AA9">
+    <select 
+     class="form-control"
+     name="AA9"
+     [ngModel]=assessment.AA9>
       <option *ngFor="let type of options.dischargeType" 
         [value]="type.key">{{type.label}}
       </option>
     </select>
   </div>
 
-  
   <!-- (AB1) Admission/Re-Entry Date -->
   <div class="form-group">
-    <label 
-      class="control-label">
-        (AB1) Admission/Re-Entry Date
+    <label class="control-label">
+      (AB1) Admission/Re-Entry Date
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="AB1">
+    <div>
+      <input 
+       class="form-field"
+       type="text"
+       name="AB1"
+       [ngModel]=assessment.AB1>
+    </div>
   </div>
 
   <!-- (AB10a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
-        (AB10a) 
+    <label class="control-label-b">
+        (AB10a)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB10a">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB10a"
+       [ngModel]=assessment.AB10a>
+    </div>
   </div>
 
   <!-- (AB10b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AB10b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB10b">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB10b"
+       [ngModel]=assessment.AB10b>
+    </div>
   </div>
 
   <!-- (AB10c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AB10c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB10c">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB10c"
+       [ngModel]=assessment.AB10c>
+    </div>
   </div>
 
   <!-- (AB10d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AB10d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB10d">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB10d"
+       [ngModel]=assessment.AB10d>
+    </div>
   </div>
 
   <!-- (AB10e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AB10e) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB10e">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB10e"
+       [ngModel]=assessment.AB10e>
+    </div>
   </div>
 
   <!-- (AB10f) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AB10f) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB10f">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB10f"
+       [ngModel]=assessment.AB10f>
+    </div>
   </div>
 
   <!-- (AB2a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AB2a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB2a">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB2a"
+       [ngModel]=assessment.AB2a>
+    </div>
   </div>
 
   <!-- (AB2b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AB2b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB2b">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB2b"
+       [ngModel]=assessment.AB2b>
+    </div>
   </div>
 
   <!-- (AB3) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AB3) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB3">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB3"
+       [ngModel]=assessment.AB3>
+    </div>
   </div>
 
   <!-- (AB5a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AB5a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB5a">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB5a"
+       [ngModel]=assessment.AB5a>
+    </div>
   </div>
 
   <!-- (AB5b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AB5b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB5b">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB5b"
+       [ngModel]=assessment.AB5b>
+    </div>
   </div>
 
   <!-- (AB5c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AB5c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB5c">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB5c"
+       [ngModel]=assessment.AB5c>
+    </div>
   </div>
 
   <!-- (AB5d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AB5d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB5d">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB5d"
+       [ngModel]=assessment.AB5d>
+    </div>
   </div>
 
   <!-- (AB5e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AB5e) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB5e">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB5e"
+       [ngModel]=assessment.AB5e>
+    </div>
   </div>
 
   <!-- (AB7) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AB7) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB7">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB7"
+       [ngModel]=assessment.AB7>
+    </div>
   </div>
 
   <!-- (AB8) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AB8) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB8">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB8"
+       [ngModel]=assessment.AB8>
+    </div>
   </div>
 
   <!-- (AB9) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AB9) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AB9">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AB9"
+       [ngModel]=assessment.AB9>
+    </div>
   </div>
 
   <!-- (AC1a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1a">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1a"
+       [ngModel]=assessment.AC1a>
+    </div>
   </div>
 
   <!-- (AC1b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1b">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1b"
+       [ngModel]=assessment.AC1b>
+    </div>
   </div>
 
   <!-- (AC1c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1c">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1c"
+       [ngModel]=assessment.AC1c>
+    </div>
   </div>
 
   <!-- (AC1d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1d">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1d"
+       [ngModel]=assessment.AC1d>
+    </div>
   </div>
 
   <!-- (AC1e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1e) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1e">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1e"
+       [ngModel]=assessment.AC1e>
+    </div>
   </div>
 
   <!-- (AC1f) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1f) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1f">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1f"
+       [ngModel]=assessment.AC1f>
+    </div>
   </div>
 
   <!-- (AC1g) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1g) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1g">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1g"
+       [ngModel]=assessment.AC1g>
+    </div>
   </div>
 
   <!-- (AC1i) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1i) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1i">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1i"
+       [ngModel]=assessment.AC1i>
+    </div>
   </div>
 
   <!-- (AC1j) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1j) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1j">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1j"
+       [ngModel]=assessment.AC1j>
+    </div>
   </div>
 
   <!-- (AC1k) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1k) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1k">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1k"
+       [ngModel]=assessment.AC1k>
+    </div>
   </div>
 
   <!-- (AC1m) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1m) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1m">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1m"
+       [ngModel]=assessment.AC1m>
+    </div>
   </div>
 
   <!-- (AC1n) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1n) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1n">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1n"
+       [ngModel]=assessment.AC1n>
+    </div>
   </div>
 
   <!-- (AC1o) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1o) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1o">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1o"
+       [ngModel]=assessment.AC1o>
+    </div>
   </div>
 
   <!-- (AC1p) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1p) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1p">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1p"
+       [ngModel]=assessment.AC1p>
+    </div>
   </div>
 
   <!-- (AC1q) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1q) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1q">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1q"
+       [ngModel]=assessment.AC1q>
+    </div>
   </div>
 
   <!-- (AC1s) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1s) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1s">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1s"
+       [ngModel]=assessment.AC1s>
+    </div>
   </div>
 
   <!-- (AC1t) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1t) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1t">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1t"
+       [ngModel]=assessment.AC1t>
+    </div>
   </div>
 
   <!-- (AC1u) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1u) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1u">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1u"
+       [ngModel]=assessment.AC1u>
+    </div>
   </div>
 
   <!-- (AC1v) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1v) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1v">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1v"
+       [ngModel]=assessment.AC1v>
+    </div>
   </div>
 
   <!-- (AC1w) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AC1w) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AC1w">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AC1w"
+       [ngModel]=assessment.AC1w>
+    </div>
   </div>
 
   <!-- (AD1) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AD1) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AD1">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="AD1"
+       [ngModel]=assessment.AD1>
+    </div>
   </div>
 
   <!-- (AD2) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (AD2) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="AD2">
+    <div>
+      <input
+       class="form-field-b"
+       type="text"
+       name="AD2"
+       [ngModel]=assessment.AD2>
+    </div>
   </div>
-
 
   <!-- (B1) Comatose -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (B1) Comatose
     </label>
-    <select class="form-control" formControlName="B1">
+    <select 
+     class="form-control"
+     name="B1"
+     [ngModel]=assessment.B1>
       <option *ngFor="let state of options.comatoseState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -620,89 +673,98 @@
 
   <!-- (B2a) Short-Term Memory-->
   <div class="form-group">
-    <label
-      class="control-label">
-      (B2a) Short-Term Memory
+    <label class="control-label">
+      <span>(B2a) Short-Term Memory</span>
     </label>
-    <select class="form-control" formControlName="B2a">
+    <select 
+     class="form-control" 
+     name="B2a"
+     [ngModel]=assessment.B2a>
       <option *ngFor="let state of options.memoryState" 
         [value]="state.key">{{state.label}}
       </option>
     </select>
   </div>
 
-  <!-- (B2b) -->
+   <!-- (B2b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (B2b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="B2b">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="B2b"
+       [ngModel]=assessment.B2b>
+    </div>
   </div>
 
   <!-- (B3a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (B3a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="B3a">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="B3a"
+       [ngModel]=assessment.B3a>
+    </div>
   </div>
 
   <!-- (B3b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (B3b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="B3b">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="B3b"
+       [ngModel]=assessment.B3b>
+    </div>
   </div>
 
   <!-- (B3c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (B3c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="B3c">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="B3c"
+       [ngModel]=assessment.B3c>
+    </div>
   </div>
 
   <!-- (B3d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
-        (B3d) 
+    <label class="control-label-b">
+      (B3d)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="B3d">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="B3d"
+       [ngModel]=assessment.B3d>
+    </div>
   </div>
 
   <!-- (B4) Cognitive Skills: Daily Decision Making -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (B4) Cognitive Skills: Daily Decision Making
     </label>
-    <select class="form-control" formControlName="B4">
+    <select 
+     class="form-control"
+     name="B4"
+     [ngModel]=assessment.B4>
       <option *ngFor="let state of options.independenceState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -711,102 +773,111 @@
 
   <!-- (B5a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (B5a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="B5a">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="B5a"
+       [ngModel]=assessment.B5a>
+    </div>
   </div>
 
   <!-- (B5b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (B5b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="B5b">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="B5b"
+       [ngModel]=assessment.B5b>
+    </div>
   </div>
 
   <!-- (B5c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (B5c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="B5c">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="B5c"
+       [ngModel]=assessment.B5c>
+    </div>
   </div>
 
   <!-- (B5d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (B5d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="B5d">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="B5d"
+       [ngModel]=assessment.B5d>
+    </div>
   </div>
 
   <!-- (B5e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (B5e) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="B5e">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="B5e"
+       [ngModel]=assessment.B5e>
+    </div>
   </div>
 
   <!-- (B5f) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (B5f) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="B5f">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="B5f"
+       [ngModel]=assessment.B5f>
+    </div>
   </div>
 
   <!-- (B6) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (B6) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="B6">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="B6"
+       [ngModel]=assessment.B6>
+    </div>
   </div>
 
-  <!-- (C1) Hearing -->
+   <!-- (C1) Hearing -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (C1) Hearing
     </label>
-    <select class="form-control" formControlName="C1">
+    <select 
+     class="form-control"
+     name="C1"
+     [ngModel]=assessment.C1>
       <option *ngFor="let ability of options.hearingAbility" 
         [value]="ability.key">{{ability.label}}
       </option>
@@ -815,63 +886,69 @@
 
   <!-- (C2a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (C2a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="C2a">
+    <div>
+      <input 
+       class="form-field-b"
+       type="text"
+       name="C2a"
+      [ngModel]=assessment.C2a>
+    </div>
   </div>
 
   <!-- (C2b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (C2b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="C2b">
+    <div>
+      <input 
+       class="form-field-b"
+       type="text"
+       name="C2b"
+      [ngModel]=assessment.C2b>
+    </div>
   </div>
 
   <!-- (C2c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (C2c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="C2c">
+    <div>
+      <input 
+       class="form-field-b"
+       type="text"
+       name="C2c"
+      [ngModel]=assessment.C2c>
+    </div>
   </div>
 
   <!-- (C3a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (C3a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="C3a">
+    <div>
+      <input 
+       class="form-field-b"
+       type="text"
+       name="C3a"
+      [ngModel]=assessment.C3a>
+    </div>
   </div>
 
   <!-- (C3b) Writing messages to express needs -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (C3b) Writing messages to express needs
     </label>
-    <select class="form-control" formControlName="C3b">
+    <select 
+     class="form-control"
+     name="C3b"
+     [ngModel]=assessment.C3b>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -880,11 +957,13 @@
 
   <!-- (C3c) American Sign Language or Braille -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (C3c) American Sign Language or Braille
     </label>
-    <select class="form-control" formControlName="C3c">
+    <select 
+     class="form-control"
+     name="C3c"
+     [ngModel]=assessment.C3c>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -893,24 +972,28 @@
 
   <!-- (C3d) Signs/Gestures/Sounds -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (C3d) Signs/Gestures/Sounds
     </label>
-    <select class="form-control" formControlName="C3d">
-      <option *ngFor="let answer of options.yesNoAnswer" 
+    <select 
+     class="form-control"
+     name="C3d"
+     [ngModel]=assessment.C3d>
+     <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
-      </option>
+     </option>
     </select>
   </div>
 
   <!-- (C3e) Communication Board -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (C3e) Communication Board
     </label>
-    <select class="form-control" formControlName="C3e">
+    <select 
+     class="form-control"
+     name="C3e"
+     [ngModel]=assessment.C3e>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -919,11 +1002,13 @@
 
   <!-- (C3f) Other modes of expression -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (C3f) Other modes of expression
     </label>
-    <select class="form-control" formControlName="C3f">
+    <select 
+     class="form-control"
+     name="C3f"
+     [ngModel]=assessment.C3f>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -932,11 +1017,13 @@
 
   <!-- (C4) Making Self Understood -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (C4) Making Self Understood
     </label>
-    <select class="form-control" formControlName="C4">
+    <select 
+     class="form-control"
+     name="C4"
+     [ngModel]=assessment.C4>
       <option *ngFor="let ability of options.understoodAbility" 
         [value]="ability.key">{{ability.label}}
       </option>
@@ -945,12 +1032,15 @@
 
   <!-- (C5) Speech Clarity -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (C5) Speech Clarity
     </label>
-    <select class="form-control" formControlName="C5">
-      <option *ngFor="let clarity of options.speechClarity" 
+    <select 
+     class="form-control"
+     name="C5"
+     [ngModel]=assessment.C5>
+      <option *ngFor="let
+       clarity of options.speechClarity" 
         [value]="clarity.key">{{clarity.label}}
       </option>
     </select>
@@ -958,11 +1048,13 @@
 
   <!-- (C6) Ability to understand others -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (C6) Ability to understand others
     </label>
-    <select class="form-control" formControlName="C6">
+    <select 
+     class="form-control"
+     name="C6"
+     [ngModel]=assessment.C6>
       <option *ngFor="let ability of options.understandingAbility" 
         [value]="ability.key">{{ability.label}}
       </option>
@@ -971,24 +1063,27 @@
 
   <!-- (C7) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (C7) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="C7">
+    <div>
+      <input 
+       class="form-field-b"
+       type="text"
+       name="C7"
+      [ngModel]=assessment.C7>
+    </div>
   </div>
 
   <!-- (D1) Vision -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (D1) Vision
     </label>
-    <select class="form-control" formControlName="D1">
+    <select 
+     class="form-control"
+     name="D1"
+     [ngModel]=assessment.D1>
       <option *ngFor="let ability of options.seeingAbility" 
         [value]="ability.key">{{ability.label}}
       </option>
@@ -997,11 +1092,13 @@
 
   <!-- (D2a) Side Vision Problems -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (D2a) Side Vision Problems
     </label>
-    <select class="form-control" formControlName="D2a">
+    <select 
+     class="form-control"
+     name="D2a"
+     [ngModel]=assessment.D2a>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -1010,11 +1107,13 @@
 
   <!-- (D2b) Sees halos, rings, flashes, curtains -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (D2b) Sees halos, rings, flashes, curtains
     </label>
-    <select class="form-control" formControlName="D2b">
+    <select 
+     class="form-control"
+     name="D2b"
+     [ngModel]=assessment.D2b>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -1023,11 +1122,13 @@
 
   <!-- (D3) Visual Appliances -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (D3) Visual Appliances
     </label>
-    <select class="form-control" formControlName="D3">
+    <select 
+     class="form-control"
+     name="D3"
+     [ngModel]=assessment.D3>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -1036,11 +1137,13 @@
 
   <!-- (E1a) Negative Statements -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E1a) Negative Statements
     </label>
-    <select class="form-control" formControlName="E1a">
+    <select 
+     class="form-control"
+     name="E1a"
+     [ngModel]=assessment.E1a>
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1049,11 +1152,13 @@
 
   <!-- (E1b) Repetitive Questions -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E1b) Repetitive Questions
     </label>
-    <select class="form-control" formControlName="E1b">
+    <select 
+     class="form-control"
+     name="E1b"
+     [ngModel]=assessment.E1b>
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1062,11 +1167,13 @@
 
   <!-- (E1c) Repetitive Verbalizations -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E1c) Repetitive Verbalizations
     </label>
-    <select class="form-control" formControlName="E1c">
+    <select 
+     class="form-control"
+     name="E1c"
+     [ngModel]=assessment.E1c>
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1075,11 +1182,13 @@
 
   <!-- (E1d) Persistent anger with self/others -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E1d) Persistent anger with self/others
     </label>
-    <select class="form-control" formControlName="E1d">
+    <select 
+     class="form-control"
+     name="E1d"
+     [ngModel]=assessment.E1d>
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1088,11 +1197,13 @@
 
   <!-- (E1e) Self-Deprecation -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E1e) Self-Deprecation
     </label>
-    <select class="form-control" formControlName="E1e">
+    <select 
+     class="form-control"
+     name="E1e"
+     [ngModel]=assessment.E1e>
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1101,11 +1212,13 @@
 
   <!-- (E1f) Expression of unrealistic fears -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E1f) Expression of unrealistic fears
     </label>
-    <select class="form-control" formControlName="E1f">
+    <select 
+     class="form-control"
+     name="E1f"
+     [ngModel]=assessment.E1f>
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1114,11 +1227,13 @@
 
   <!-- (E1g) Recurrent Statements: something terrible -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E1g) Recurrent Statements: something terrible
     </label>
-    <select class="form-control" formControlName="E1g">
+    <select 
+     class="form-control"
+     name="E1g"
+     [ngModel]=assessment.E1g>
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1127,11 +1242,13 @@
 
   <!-- (E1h) Repetitive health complaints -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E1h) Repetitive health complaints
     </label>
-    <select class="form-control" formControlName="E1h">
+    <select 
+     class="form-control"
+     name="E1h"
+     [ngModel]=assessment.E1h>
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1140,11 +1257,13 @@
 
   <!-- (E1i) Repetitive anxious complaints -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E1i) Repetitive anxious complaints
     </label>
-    <select class="form-control" formControlName="E1i">
+    <select 
+     class="form-control"
+     name="E1i"
+     [ngModel]=assessment.E1i>
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1153,11 +1272,13 @@
 
   <!-- (E1j) Unpleasant mood in morning -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E1j) Unpleasant mood in morning
     </label>
-    <select class="form-control" formControlName="E1j">
+    <select 
+     class="form-control"
+     name="E1j"
+     [ngModel]=assessment.E1j>
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1166,11 +1287,13 @@
 
   <!-- (E1k) Insomnia/Change in sleep patterns -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E1k) Insomnia/Change in sleep patterns
     </label>
-    <select class="form-control" formControlName="E1k">
+    <select 
+     class="form-control"
+     name="E1k"
+     [ngModel]=assessment.E1k>
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1179,11 +1302,13 @@
 
   <!-- (E1l) Sad, pained, or worried facial expressions -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E1l) Sad, pained, or worried facial expressions
     </label>
-    <select class="form-control" formControlName="E1l">
+    <select 
+     class="form-control"
+     name="E1l"
+     [ngModel]=assessment.E1l>
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1192,11 +1317,13 @@
 
   <!-- (E1m) Crying, tearfulness -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E1m) Crying, tearfulness
     </label>
-    <select class="form-control" formControlName="E1k">
+    <select 
+     class="form-control"
+     name="E1m"
+     [ngModel]=assessment.E1m>
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1205,11 +1332,13 @@
 
   <!-- (E1n) Repetitive physical movements -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E1n) Repetitive physical movements
     </label>
-    <select class="form-control" formControlName="E1n">
+    <select 
+     class="form-control"
+     name="E1n"
+     [ngModel]=assessment.E1n>
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1218,11 +1347,13 @@
 
   <!-- (E1o) Withdrawal from activities of interest -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E1o) Withdrawal from activities of interest
     </label>
-    <select class="form-control" formControlName="E1o">
+    <select 
+     class="form-control"
+     name="E1o"
+     [ngModel]=assessment.E1o>
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1231,11 +1362,13 @@
 
   <!-- (E1p) Reduced social interaction -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E1p) Reduced social interaction
     </label>
-    <select class="form-control" formControlName="E1p">
+    <select 
+     class="form-control"
+     name="E1p"
+     [ngModel]=assessment.E1p>
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1244,11 +1377,13 @@
 
   <!-- (E2) Mood Persistence -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E2) Mood Persistence
     </label>
-    <select class="form-control" formControlName="E2">
+    <select 
+     class="form-control"
+     name="E2"
+     [ngModel]=assessment.E2>
       <option *ngFor="let persistence of options.moodPersistence" 
         [value]="persistence.key">{{persistence.label}}
       </option>
@@ -1257,24 +1392,27 @@
 
   <!-- (E3) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (E3) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="E3">
+    <div>
+      <input 
+       class="form-field-b" 
+       type="text"
+       name="E3"
+       [ngModel]=assessment.E3>
+    </div>
   </div>
 
   <!-- (E4aA) Wandering Frequency -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E4aA) Wandering Frequency
     </label>
-    <select class="form-control" formControlName="E4aA">
+    <select 
+     class="form-control"
+     name="E4aA"
+     [ngModel]=assessment.E4aA>
       <option *ngFor="let symptoms of options.behaviouralSymptoms" 
         [value]="symptoms.key">{{symptoms.label}}
       </option>
@@ -1283,24 +1421,27 @@
 
   <!-- (E4aB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (E4aB)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="E4aB">
+    <div>
+      <input 
+       class="form-field-b" 
+       type="text" 
+       name="E4aB"
+       [ngModel]=assessment.E4aB>
+    </div>
   </div>
 
   <!-- (E4bA) Verbally Abusive Frequency -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E4bA) Verbally Abusive Frequency
     </label>
-    <select class="form-control" formControlName="E4bA">
+    <select 
+     class="form-control"
+     name="E4bA"
+     [ngModel]=assessment.E4bA>
       <option *ngFor="let symptoms of options.behaviouralSymptoms" 
         [value]="symptoms.key">{{symptoms.label}}
       </option>
@@ -1309,24 +1450,27 @@
 
   <!-- (E4bB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (E4bB)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="E4bB">
+    <div>
+     <input 
+       class="form-field-b"
+       type="text" 
+       name="E4bB"
+       [ngModel]=assessment.E4bB>
+    </div>
   </div>
 
   <!-- (E4cA) Physically Abusive Frequency -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E4cA) Physically Abusive Frequency
     </label>
-    <select class="form-control" formControlName="E4cA">
+    <select 
+     class="form-control"
+     name="E4cA"
+     [ngModel]=assessment.E4cA>
       <option *ngFor="let symptoms of options.behaviouralSymptoms" 
         [value]="symptoms.key">{{symptoms.label}}
       </option>
@@ -1335,49 +1479,56 @@
 
   <!-- (E4cB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (E4cB)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="E4cB">
+    <div>
+      <input 
+        type="text"
+        class="form-field-b"  
+        name="E4cB"
+        [ngModel]=assessment.E4cB>
+    </div>
   </div>
 
   <!-- (E4dA) Inappropriate Disruption Frequency -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E4dA) Inappropriate Disruption Frequency
     </label>
-    <select class="form-control" formControlName="E4dA">
+    <select 
+     class="form-control"
+     name="E4dA"
+     [ngModel]=assessment.E4dA>
       <option *ngFor="let symptoms of options.behaviouralSymptoms" 
         [value]="symptoms.key">{{symptoms.label}}
       </option>
     </select>
   </div>
-
+  
+  <!-- (E4dB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (E4dB)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="E4dB">
+    <div>
+      <input 
+        type="text"
+        class="form-field-b"  
+        name="E4dB"
+        [ngModel]=assessment.E4dB>
+    </div>
   </div>
 
   <!-- (E4eA) Resists Care Frequency -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (E4eA) Resists Care Frequency 
     </label>
-    <select class="form-control" formControlName="E4eA">
+    <select 
+     class="form-control"
+     name="E4eA"
+     [ngModel]=assessment.E4eA>
       <option *ngFor="let symptoms of options.behaviouralSymptoms" 
         [value]="symptoms.key">{{symptoms.label}}
       </option>
@@ -1386,271 +1537,294 @@
 
   <!-- (E4eB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (E4eB)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="E4eB">
+    <div>
+      <input 
+        type="text"
+        class="form-field-b"  
+        name="E4eB"
+        [ngModel]=assessment.E4eB>
+    </div>
   </div>
 
   <!-- (E5) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (E5) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="E5">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="E5"
+       [ngModel]=assessment.E5>
+    </div>
   </div>
 
   <!-- (F1a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (F1a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="F1a">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="F1a"
+       [ngModel]=assessment.F1a>
+    </div>
   </div>
 
   <!-- (F1b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (F1b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="F1b">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="F1b"
+       [ngModel]=assessment.F1b>
+    </div>
   </div>
 
   <!-- (F1c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (F1c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="F1c">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="F1c"
+       [ngModel]=assessment.F1c>
+    </div>
   </div>
 
   <!-- (F1d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (F1d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="F1d">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="F1d"
+       [ngModel]=assessment.F1d>
+    </div>
   </div>
 
   <!-- (F1e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (F1e) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="F1e">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="F1e"
+       [ngModel]=assessment.F1e>
+    </div>
   </div>
 
   <!-- (F1f) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (F1f) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="F1f">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="F1f"
+       [ngModel]=assessment.F1f>
+    </div>
   </div>
 
   <!-- (F2a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (F2a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="F2a">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="F2a"
+       [ngModel]=assessment.F2a>
+    </div>
   </div>
 
   <!-- (F2b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (F2b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="F2b">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="F2b"
+       [ngModel]=assessment.F2b>
+    </div>
   </div>
 
   <!-- (F2c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (F2c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="F2c">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="F2c"
+       [ngModel]=assessment.F2c>
+    </div>
   </div>
 
   <!-- (F2d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (F2d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="F2d">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="F2d"
+       [ngModel]=assessment.F2d>
+    </div>
   </div>
 
   <!-- (F2e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (F2e) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="F2e">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="F2e"
+       [ngModel]=assessment.F2e>
+    </div>
   </div>
 
   <!-- (F2f) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (F2f) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="F2f">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="F2f"
+       [ngModel]=assessment.F2f>
+    </div>
   </div>
 
   <!-- (F2g) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (F2g) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="F2g">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="F2g"
+       [ngModel]=assessment.F2g>
+    </div>
   </div>
 
   <!-- (F3a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (F3a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="F3a">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="F3a"
+       [ngModel]=assessment.F3a>
+    </div>
   </div>
 
   <!-- (F3b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (F3b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="F3b">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="F3b"
+       [ngModel]=assessment.F3b>
+    </div>
   </div>
 
   <!-- (F3c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (F3c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="F3c">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="F3c"
+       [ngModel]=assessment.F3c>
+    </div>
   </div>
 
   <!-- (G1aA) Bed Mobility: Self-Performance  -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (G1aA) Bed Mobility: Self-Performance 
     </label>
-    <select class="form-control" formControlName="G1aA">
+    <select
+     class="form-control" 
+     name="G1aA"
+     [ngModel]=assessment.G1aA>
       <option *ngFor="let state of options.performanceState" 
-        [value]="state.key">{{state.label}}
+       [value]="state.key">{{state.label}}
       </option>
     </select>
   </div>
 
   <!-- (G1aB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G1aB) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G1aB">
+    <div>
+      <input
+       class="form-field"
+       type="text"
+       name="G1aB"
+       [ngModel]=assessment.G1aB>
+    </div>
   </div>
 
   <!-- (G1bA) Transfer: Self-Performance -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (G1bA) Transfer: Self-Performance
     </label>
-    <select class="form-control" formControlName="G1bA">
+    <select
+     class="form-control" 
+     name="G1bA"
+     [ngModel]=assessment.G1bA>
       <option *ngFor="let state of options.performanceState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -1659,11 +1833,13 @@
 
   <!-- (G1bB) Transfer: Support Provided -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (G1bB) Transfer: Support Provided
     </label>
-    <select class="form-control" formControlName="G1bB">
+    <select 
+     class="form-control" 
+     name="G1bB"
+     [ngModel]=assessment.G1bB>
       <option *ngFor="let required of options.helpRequired" 
         [value]="required.key">{{required.label}}
       </option>
@@ -1672,63 +1848,69 @@
 
   <!-- (G1cA) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G1cA) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G1cA">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G1cA"
+       [ngModel]=assessment.G1cA>
+    </div>
   </div>
 
   <!-- (G1cB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G1cB) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G1cB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G1cB"
+       [ngModel]=assessment.G1cB>
+    </div>
   </div>
 
   <!-- (G1dA) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G1dA) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G1dA">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G1dA"
+       [ngModel]=assessment.G1dA>
+    </div>
   </div>
 
   <!-- (G1dB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G1dB) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G1dB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G1dB"
+       [ngModel]=assessment.G1dB>
+    </div>
   </div>
 
   <!-- (G1eA) Locomotion on Unit: Self-Performance -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (G1eA) Locomotion on Unit: Self-Performance
     </label>
-    <select class="form-control" formControlName="G1eA">
+    <select 
+     class="form-control" 
+     name="G1eA"
+     [ngModel]=assessment.G1eA>
       <option *ngFor="let state of options.performanceState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -1737,50 +1919,55 @@
 
   <!-- (G1eB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G1eB) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G1eB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G1eB"
+       [ngModel]=assessment.G1eB>
+    </div>
   </div>
 
   <!-- (G1fA) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G1fA) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G1fA">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G1fA"
+       [ngModel]=assessment.G1fA>
+    </div>
   </div>
 
   <!-- (G1fB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G1fB) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G1fB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G1fB"
+       [ngModel]=assessment.G1fB>
+    </div>
   </div>
 
   <!-- (G1gA) Dressing: Self-Performance -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (G1gA) Dressing: Self-Performance
     </label>
-    <select class="form-control" formControlName="G1gA">
+    <select 
+     class="form-control" 
+     name="G1gA"
+     [ngModel]=assessment.G1gA>
       <option *ngFor="let state of options.performanceState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -1789,24 +1976,27 @@
 
   <!-- (G1gB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G1gB) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G1gB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G1gB"
+       [ngModel]=assessment.G1gB>
+    </div>
   </div>
 
   <!-- (G1hA) Eating: Self-Performance -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (G1hA) Eating: Self-Performance
     </label>
-    <select class="form-control" formControlName="G1hA">
+    <select 
+     class="form-control" 
+     name="G1hA"
+     [ngModel]=assessment.G1hA>
       <option *ngFor="let state of options.performanceState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -1815,24 +2005,27 @@
 
   <!-- (G1hB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G1hB) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G1hB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G1hB"
+       [ngModel]=assessment.G1hB>
+    </div>
   </div>
 
   <!-- (G1iA) Toilet Use: Self-Performance -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (G1iA) Toilet Use: Self-Performance
     </label>
-    <select class="form-control" formControlName="G1iA">
+    <select 
+     class="form-control" 
+     name="G1iA"
+     [ngModel]=assessment.G1iA>
       <option *ngFor="let state of options.performanceState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -1841,102 +2034,111 @@
 
   <!-- (G1iB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G1iB) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G1iB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G1iB"
+       [ngModel]=assessment.G1iB>
+    </div>
   </div>
 
   <!-- (G1jA) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G1jA) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G1jA">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G1jA"
+       [ngModel]=assessment.G1jA>
+    </div>
   </div>
 
   <!-- (G1jB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G1jB) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G1jB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G1jB"
+       [ngModel]=assessment.G1jB>
+    </div>
   </div>
 
   <!-- (G2A) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
-        (G2A) 
+    <label class="control-label-b">
+        (G2a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G2a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G2a"
+       [ngModel]=assessment.G2a>
+    </div>
   </div>
 
   <!-- (G2B) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
-        (G2B) 
+    <label class="control-label-b">
+        (G2b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G2b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G2B"
+       [ngModel]=assessment.G2b>
+    </div>
   </div>
 
   <!-- (G3a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
-        (G3A) 
+    <label class="control-label-b">
+        (G3a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G3a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G3A"
+       [ngModel]=assessment.G3a>
+    </div>
   </div>
 
   <!-- (G3b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G3b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G3b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G3b"
+       [ngModel]=assessment.G3b>
+    </div>
   </div>
 
   <!-- (G4aA) Neck: Range of Motion -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (G4aA) Neck: Range of Motion
     </label>
-    <select class="form-control" formControlName="G4aA">
+    <select 
+     class="form-control" 
+     name="G4aA"
+     [ngModel]=assessment.G4aA>
       <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
@@ -1945,24 +2147,27 @@
 
   <!-- (G4aB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G4aB) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G4aB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G4aB"
+       [ngModel]=assessment.G4aB>
+    </div>
   </div>
 
   <!-- (G4bA) Arm: Range of Motion -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (G4bA) Arm: Range of Motion
     </label>
-    <select class="form-control" formControlName="G4bA">
+    <select 
+     class="form-control" 
+     name="G4bA"
+     [ngModel]=assessment.G4bA>
       <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
@@ -1971,24 +2176,27 @@
 
   <!-- (G4bB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G4bB) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G4bB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G4bB"
+       [ngModel]=assessment.G4bB>
+    </div>
   </div>
 
   <!-- (G4cA) Hands: Range of Motion -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (G4cA) Hands: Range of Motion
     </label>
-    <select class="form-control" formControlName="G4cA">
+    <select 
+     class="form-control" 
+     name="G4cA"
+     [ngModel]=assessment.G4cA>
       <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
@@ -1997,24 +2205,27 @@
 
   <!-- (G4cB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G4cB) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G4aB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G4cB"
+       [ngModel]=assessment.G4cB>
+    </div>
   </div>
 
   <!-- (G4dA) Legs: Range of Motion -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (G4dA) Legs: Range of Motion
     </label>
-    <select class="form-control" formControlName="G4dA">
+    <select 
+     class="form-control" 
+     name="G4dA"
+     [ngModel]=assessment.G4dA>
       <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
@@ -2023,24 +2234,27 @@
 
   <!-- (G4dB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G4dB) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G4dB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G4dB"
+       [ngModel]=assessment.G4dB>
+    </div>
   </div>
 
   <!-- (G4eA) Feet: Range of Motion -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (G4eA) Feet: Range of Motion
     </label>
-    <select class="form-control" formControlName="G4eA">
+    <select 
+     class="form-control" 
+     name="G4eA"
+     [ngModel]=assessment.G4eA>
       <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
@@ -2049,24 +2263,27 @@
 
   <!-- (G4eB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G4eB) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G4eB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G4eB"
+       [ngModel]=assessment.G4eB>
+    </div>
   </div>
 
   <!-- (G4fA) Other limitations/loss of range of motion -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (G4fA) Other limitations/loss of range of motion
     </label>
-    <select class="form-control" formControlName="G4fA">
+    <select 
+     class="form-control" 
+     name="G4fA"
+     [ngModel]=assessment.G4fA>
       <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
@@ -2075,219 +2292,237 @@
 
   <!-- (G4fB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G4fB) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G4fB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G4fB"
+       [ngModel]=assessment.G4fB>
+    </div>
   </div>
 
   <!-- (G5a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G5a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G5a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G5a"
+       [ngModel]=assessment.G5a>
+    </div>
   </div>
 
   <!-- (G5b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G5b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G5b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G5b"
+       [ngModel]=assessment.G5b>
+    </div>
   </div>
 
   <!-- (G5c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G5c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G5c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="g5c"
+       [ngModel]=assessment.G5c>
+    </div>
   </div>
 
   <!-- (G5d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G5d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G5d">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G5d"
+       [ngModel]=assessment.G5d>
+    </div>
   </div>
 
   <!-- (G6a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G6a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G6a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G6a"
+       [ngModel]=assessment.G6a>
+    </div>
   </div>
 
   <!-- (G6b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G6b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G6b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G6b"
+       [ngModel]=assessment.G6b>
+    </div>
   </div>
 
   <!-- (G6c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G6c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G6c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G6c"
+       [ngModel]=assessment.G6c>
+    </div>
   </div>
 
   <!-- (G6d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G6d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G6d">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G6d"
+       [ngModel]=assessment.G6d>
+    </div>
   </div>
 
   <!-- (G6e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G6e) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G6e">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G6e"
+       [ngModel]=assessment.G6e>
+    </div>
   </div>
 
   <!-- (G7) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G7) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G7">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G7"
+       [ngModel]=assessment.G7>
+    </div>
   </div>
 
   <!-- (G8a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G8a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G8a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="g8a"
+       [ngModel]=assessment.G8a>
+    </div>
   </div>
 
   <!-- (G8b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G8b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G8b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G8b"
+       [ngModel]=assessment.G8b>
+    </div>
   </div>
 
   <!-- (G8c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G8c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G8c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G8c"
+       [ngModel]=assessment.G8c>
+    </div>
   </div>
 
   <!-- (G8d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G8d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G8d">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G8d"
+       [ngModel]=assessment.G8d>
+    </div>
   </div>
 
   <!-- (G9) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (G9) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="G9">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="G9"
+       [ngModel]=assessment.G9>
+    </div>
   </div>
 
   <!-- (H1a) Bowel Continence -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (H1a) Bowel Continence
     </label>
-    <select class="form-control" formControlName="H1a">
+    <select 
+     class="form-control" 
+     name="H1a"
+     [ngModel]=assessment.H1a>
       <option *ngFor="let state of options.continenceState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -2296,11 +2531,13 @@
 
   <!-- (H1b) Bladder Continence -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (H1b) Bladder Continence
     </label>
-    <select class="form-control" formControlName="H1b">
+    <select 
+     class="form-control" 
+     name="H1b"
+     [ngModel]=assessment.H1b>
       <option *ngFor="let state of options.continenceState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -2309,50 +2546,55 @@
 
   <!-- (H2a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (H2a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="H2a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="H2a"
+       [ngModel]=assessment.H2a>
+    </div>
   </div>
 
   <!-- (H2b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (H2b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="H2b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="H2b"
+       [ngModel]=assessment.H2b>
+    </div>
   </div>
 
   <!-- (H2c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (H2c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="H2c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="H2c"
+       [ngModel]=assessment.H2c>
+    </div>
   </div>
 
   <!-- (H2d) Fecal Impaction -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (H2d) Fecal Impaction
     </label>
-    <select class="form-control" formControlName="H2d">
+    <select 
+     class="form-control" 
+     name="H2d"
+     [ngModel]=assessment.H2d>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -2361,11 +2603,13 @@
 
    <!-- (H3a) Scheduled Toileting Plan -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (H3a) Scheduled Toileting Plan
     </label>
-    <select class="form-control" formControlName="H3a">
+    <select 
+     class="form-control" 
+     name="H3a"
+     [ngModel]=assessment.H3a>
       <option *ngFor="let plan of options.toiletingPlan" 
         [value]="plan.key">{{plan.label}}
       </option>
@@ -2374,11 +2618,13 @@
 
   <!-- (H3b) Bladder Retraining Program -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (H3b) Bladder Retraining Program
     </label>
-    <select class="form-control" formControlName="H3b">
+    <select 
+     class="form-control" 
+     name="H3b"
+     [ngModel]=assessment.H3b>
       <option *ngFor="let program of options.bladderRetrainingProgram" 
         [value]="program.key">{{program.label}}
       </option>
@@ -2387,24 +2633,27 @@
 
   <!-- (H3c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (H3c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="H3c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="H3c"
+       [ngModel]=assessment.H3c>
+    </div>
   </div>
 
   <!-- (H3d) Indwelling Catheter -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (H3d) Indwelling Catheter
     </label>
-    <select class="form-control" formControlName="H3d">
+    <select 
+     class="form-control" 
+     name="H3d"
+     [ngModel]=assessment.H3d>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -2413,63 +2662,69 @@
 
   <!-- (H3e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (H3e) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="H3e">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="H3e"
+       [ngModel]=assessment.H3e>
+    </div>
   </div>
 
   <!-- (H3f) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (H3f) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="H3f">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="H3f"
+       [ngModel]=assessment.H3f>
+    </div>
   </div>
 
   <!-- (H3g) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (H3g) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="H3g">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="H3g"
+       [ngModel]=assessment.H3g>
+    </div>
   </div>
 
   <!-- (H3h) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (H3h) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="H3h">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="H3h"
+       [ngModel]=assessment.H3h>
+    </div>
   </div>
 
   <!-- (H3i) Ostomy Present -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (H3i) Ostomy Present
     </label>
-    <select class="form-control" formControlName="H3i">
+    <select
+     class="form-control" 
+     name="H3i"
+     [ngModel]=assessment.H3i>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -2478,24 +2733,27 @@
 
   <!-- (H4) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (H4) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="H4">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="H4"
+       [ngModel]=assessment.H4>
+    </div>
   </div>
 
   <!-- (I1a) Diabetes Mellitus -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (I1a) Diabetes Mellitus
     </label>
-    <select class="form-control" formControlName="I1a">
+    <select
+     class="form-control" 
+     name="I1a"
+     [ngModel]=assessment.I1a>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -2504,466 +2762,501 @@
 
   <!-- (I1aA) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1aA) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1aA">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1aA"
+       [ngModel]=assessment.I1aA>
+    </div>
   </div>
 
   <!-- (I1b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1b"
+       [ngModel]=assessment.I1b>
+    </div>
   </div>
 
   <!-- (I1bB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1bB) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1bB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1bB"
+       [ngModel]=assessment.I1bB>
+    </div>
   </div>
-
   <!-- (I1c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1c"
+       [ngModel]=assessment.I1c>
+    </div>
   </div>
 
   <!-- (I1cC) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1cC) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1cC">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1cC"
+       [ngModel]=assessment.I1cC>
+    </div>
   </div>
 
   <!-- (I1d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1d">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1d"
+       [ngModel]=assessment.I1d>
+    </div>
   </div>
 
   <!-- (I1dD) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1dD) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1dD">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1dD"
+       [ngModel]=assessment.I1dD>
+    </div>
   </div>
 
   <!-- (I1e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1e) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1e">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1e"
+       [ngModel]=assessment.I1e>
+    </div>
   </div>
 
   <!-- (I1eE) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1eE) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1eE">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1eE"
+       [ngModel]=assessment.I1eE>
+    </div>
   </div>
 
   <!-- (I1f) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1f) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1f">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1f"
+       [ngModel]=assessment.I1f>
+    </div>
   </div>
 
   <!-- (I1fF) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1fF) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1fF">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1fF"
+       [ngModel]=assessment.I1fF>
+    </div>
   </div>
 
   <!-- (I1g) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1g) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1g">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1g"
+       [ngModel]=assessment.I1g>
+    </div>
   </div>
 
   <!-- (I1gG) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1gg) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1gG">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1gG"
+       [ngModel]=assessment.I1gG>
+    </div>
   </div>
 
   <!-- (I1h) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1h) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1h">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1h"
+       [ngModel]=assessment.I1h>
+    </div>
   </div>
 
   <!-- (I1hH) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1hH) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1hH">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1hH"
+       [ngModel]=assessment.I1hH>
+    </div>
   </div>
 
   <!-- (I1i) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1i) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1i">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1i"
+       [ngModel]=assessment.I1i>
+    </div>
   </div>
 
   <!-- (I1iI) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
-        (I1ii) 
+    <label class="control-label-b">
+        (I1iI) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1iI">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1iI"
+       [ngModel]=assessment.I1iI>
+    </div>
   </div>
 
   <!-- (I1j) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1j) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1j">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1j"
+       [ngModel]=assessment.I1j>
+    </div>
   </div>
 
   <!-- (I1jJ) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
-        (I1jj) 
+    <label class="control-label-b">
+        (I1jJ) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1jJ">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1jJ"
+       [ngModel]=assessment.I1jJ>
+    </div>
   </div>
 
   <!-- (I1k) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1k) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1k">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1k"
+       [ngModel]=assessment.I1k>
+    </div>
   </div>
-
   <!-- (I1kK) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
-        (I1kk) 
+    <label class="control-label-b">
+        (I1kK) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1kK">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1kK"
+       [ngModel]=assessment.I1kK>
+    </div>
   </div>
 
   <!-- (I1l) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1l) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1l">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1l"
+       [ngModel]=assessment.I1l>
+    </div>
   </div>
 
   <!-- (I1lL) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1lL) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1lL">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1lL"
+       [ngModel]=assessment.I1lL>
+    </div>
   </div>
 
   <!-- (I1m) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1m) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1m">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1m"
+       [ngModel]=assessment.I1m>
+    </div>
   </div>
 
   <!-- (I1mM) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1mm) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1mM">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1mM"
+       [ngModel]=assessment.I1mM>
+    </div>
   </div>
 
   <!-- (I1n) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1n) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1n">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1n"
+       [ngModel]=assessment.I1n>
+    </div>
   </div>
 
   <!-- (I1nN) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1nN) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1nN">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1nN"
+       [ngModel]=assessment.I1nN>
+    </div>
   </div>
 
   <!-- (I1o) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1o) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1o">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1o"
+       [ngModel]=assessment.I1o>
+    </div>
   </div>
 
   <!-- (I1oO) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1oO) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1oO">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1oO"
+       [ngModel]=assessment.I1oO>
+    </div>
   </div>
 
   <!-- (I1p) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1p) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1p">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1p"
+       [ngModel]=assessment.I1p>
+    </div>
   </div>
 
   <!-- (I1pP) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1pP) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1pP">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1pP"
+       [ngModel]=assessment.I1pP>
+    </div>
   </div>
 
   <!-- (I1q) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1q) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1q">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1q"
+       [ngModel]=assessment.I1q>
+    </div>
   </div>
 
   <!-- (I1qQ) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1qQ) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1qQ">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1qQ"
+       [ngModel]=assessment.I1qQ>
+    </div>
   </div>
 
   <!-- (I1r) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1r) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1r">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1r"
+       [ngModel]=assessment.I1r>
+    </div>
   </div>
 
   <!-- (I1rR) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1rR) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1rR">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1rR"
+       [ngModel]=assessment.I1rR>
+    </div>
   </div>
 
   <!-- (I1s) Asphasia -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (I1s) Asphasia
     </label>
-    <select class="form-control" formControlName="I1s">
+    <select
+     class="form-control" 
+     name="I1s"
+     [ngModel]=assessment.I1s>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -2972,24 +3265,27 @@
 
   <!-- (I1sS) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1sS) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1sS">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1sS"
+       [ngModel]=assessment.I1sS>
+    </div>
   </div>
 
   <!-- (I1t) Cerebral Palsy -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (I1t) Cerebral Palsy
     </label>
-    <select class="form-control" formControlName="I1t">
+    <select
+     class="form-control" 
+     name="I1t"
+     [ngModel]=assessment.I1t>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -2998,63 +3294,69 @@
 
   <!-- (I1tT) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1tT) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1tT">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1tT"
+       [ngModel]=assessment.I1tT>
+    </div>
   </div>
 
   <!-- (I1u) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1u) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1u">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1u"
+       [ngModel]=assessment.I1u>
+    </div>
   </div>
 
   <!-- (I1uU) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1uU) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1uU">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1uU"
+       [ngModel]=assessment.I1uU>
+    </div>
   </div>
 
   <!-- (I1v) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1v) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1v">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1v"
+       [ngModel]=assessment.I1v>
+    </div>
   </div>
 
   <!-- (I1w) Hemiplegia/Hemiparesis -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (I1w) Hemiplegia/Hemiparesis
     </label>
-    <select class="form-control" formControlName="I1w">
+    <select
+     class="form-control" 
+     name="I1w"
+     [ngModel]=assessment.I1w>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3063,115 +3365,125 @@
 
   <!-- (I1x) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1x) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1x">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1x"
+       [ngModel]=assessment.I1x>
+    </div>
   </div>
 
   <!-- (I1y) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1y) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1y">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1y"
+       [ngModel]=assessment.I1y>
+    </div>
   </div>
 
   <!-- (I1z) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I1z) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I1z">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I1z"
+       [ngModel]=assessment.I1z>
+    </div>
   </div>
 
   <!-- (I2a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I2a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I2a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I2a"
+       [ngModel]=assessment.I2a>
+    </div>
   </div>
 
   <!-- (I2b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I2b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I2b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I2b"
+       [ngModel]=assessment.I2b>
+    </div>
   </div>
 
   <!-- (I2c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I2c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I2c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I2c"
+       [ngModel]=assessment.I2c>
+    </div>
   </div>
 
   <!-- (I2d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I2d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I2d">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I2d"
+       [ngModel]=assessment.I2d>
+    </div>
   </div>
 
   <!-- (I2e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I2e) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I2e">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I2e"
+       [ngModel]=assessment.I2e>
+    </div>
   </div>
 
   <!-- (I2f) Pneumonia -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (I2f) Pneumonia
     </label>
-    <select class="form-control" formControlName="I2f">
+    <select
+     class="form-control" 
+     name="I2f"
+     [ngModel]=assessment.I2f>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3180,11 +3492,13 @@
 
   <!-- (I2g) Respiratory Infection -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (I2g) Respiratory Infection
     </label>
-    <select class="form-control" formControlName="I2g">
+    <select
+     class="form-control" 
+     name="I2g"
+     [ngModel]=assessment.I2g>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3193,11 +3507,13 @@
 
   <!-- (I2h) Septicemia -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (I2h) Septicemia
     </label>
-    <select class="form-control" formControlName="I2h">
+    <select
+     class="form-control" 
+     name="I2h"
+     [ngModel]=assessment.I2h>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3206,37 +3522,41 @@
 
   <!-- (I2i) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I2i) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I2i">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I2i"
+       [ngModel]=assessment.I2i>
+    </div>
   </div>
 
   <!-- (I2j) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I2j) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I2j">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I2j"
+       [ngModel]=assessment.I2j>
+    </div>
   </div>
 
   <!-- (I2k) Urinary Tract Infection -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (I2k) Urinary Tract Infection
     </label>
-    <select class="form-control" formControlName="I2k">
+    <select
+     class="form-control" 
+     name="I2k"
+     [ngModel]=assessment.I2k>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3245,141 +3565,153 @@
 
   <!-- (I2l) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I2l) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I2l">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I2l"
+       [ngModel]=assessment.I2l>
+    </div>
   </div>
 
   <!-- (I2m) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I2m) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I2m">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I2m"
+       [ngModel]=assessment.I2m>
+    </div>
   </div>
 
   <!-- (I3a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I3a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I3a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I3a"
+       [ngModel]=assessment.I3a>
+    </div>
   </div>
 
   <!-- (I3b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I3b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I3b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I3b"
+       [ngModel]=assessment.I3b>
+    </div>
   </div>
 
   <!-- (I3c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I3c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I3c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I3c"
+       [ngModel]=assessment.I3c>
+    </div>
   </div>
 
   <!-- (I3d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I3d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I3d">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I3d"
+       [ngModel]=assessment.I3d>
+    </div>
   </div>
 
   <!-- (I3e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I3e) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I3e">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I3e"
+       [ngModel]=assessment.I3e>
+    </div>
   </div>
 
   <!-- (I3f) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (I3f) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="I3f">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="I3f"
+       [ngModel]=assessment.I3f>
+    </div>
   </div>
 
   <!-- (J1a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J1a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J1a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J1a"
+       [ngModel]=assessment.J1a>
+    </div>
   </div>
 
   <!-- (J1b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J1b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J1b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J1b"
+       [ngModel]=assessment.J1b>
+    </div>
   </div>
 
   <!-- (J1c) Dehydrated -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (J1c) Dehydrated
     </label>
-    <select class="form-control" formControlName="J1c">
+    <select
+     class="form-control" 
+     name="J1c"
+     [ngModel]=assessment.J1c>
       <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
@@ -3388,24 +3720,27 @@
 
   <!-- (J1d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J1d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J1d">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J1d"
+       [ngModel]=assessment.J1d>
+    </div>
   </div>
 
   <!-- (J1e) Delusions -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (J1e) Delusions
     </label>
-    <select class="form-control" formControlName="J1e">
+    <select
+     class="form-control" 
+     name="J1e"
+     [ngModel]=assessment.J1e>
       <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
@@ -3414,37 +3749,41 @@
 
   <!-- (J1f) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J1f) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J1f">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J1f"
+       [ngModel]=assessment.J1f>
+    </div>
   </div>
 
   <!-- (J1g) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J1g) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J1g">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J1g"
+       [ngModel]=assessment.J1g>
+    </div>
   </div>
 
   <!-- (J1h) Fever -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (J1h) Fever
     </label>
-    <select class="form-control" formControlName="J1h">
+    <select
+     class="form-control" 
+     name="J1h"
+     [ngModel]=assessment.J1h>
       <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
@@ -3453,11 +3792,13 @@
 
   <!-- (J1i) Hallucinations -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (J1i) Hallucinations
     </label>
-    <select class="form-control" formControlName="J1i">
+    <select
+     class="form-control" 
+     name="J1i"
+     [ngModel]=assessment.J1i>
       <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
@@ -3466,11 +3807,13 @@
 
   <!-- (J1j) Internal Bleeding -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (J1j) Internal Bleeding
     </label>
-    <select class="form-control" formControlName="J1j">
+    <select
+     class="form-control" 
+     name="J1j"
+     [ngModel]=assessment.J1j>
       <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
@@ -3479,63 +3822,69 @@
 
   <!-- (J1k) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J1k) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J1k">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J1k"
+       [ngModel]=assessment.J1k>
+    </div>
   </div>
 
   <!-- (J1l) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J1l) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J1l">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J1l"
+       [ngModel]=assessment.J1l>
+    </div>
   </div>
 
   <!-- (J1m) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J1m) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J1m">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J1m"
+       [ngModel]=assessment.J1m>
+    </div>
   </div>
 
   <!-- (J1n) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J1n) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J1n">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J1n"
+       [ngModel]=assessment.J1n>
+    </div>
   </div>
 
   <!-- (J1o) Vomiting -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (J1o) Vomiting
     </label>
-    <select class="form-control" formControlName="J1o">
+    <select
+     class="form-control" 
+     name="J1o"
+     [ngModel]=assessment.J1o>
       <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
@@ -3544,11 +3893,13 @@
 
   <!-- (J2a) Pain Symptoms: Frequency -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (J2a) Pain Symptoms: Frequency
     </label>
-    <select class="form-control" formControlName="J2a">
+    <select
+     class="form-control" 
+     name="J2a"
+     [ngModel]=assessment.J2a>
       <option *ngFor="let frequency of options.painFrequency" 
         [value]="frequency.key">{{frequency.label}}
       </option>
@@ -3557,11 +3908,13 @@
 
   <!-- (J2b) Pain Symptoms: Intensity -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (J2b) Pain Symptoms: Intensity
     </label>
-    <select class="form-control" formControlName="J2b">
+    <select
+     class="form-control" 
+     name="J2b"
+     [ngModel]=assessment.J2b>
       <option *ngFor="let intensity of options.painIntensity" 
         [value]="intensity.key">{{intensity.label}}
       </option>
@@ -3570,141 +3923,153 @@
 
   <!-- (J3a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J3a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J3a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J3a"
+       [ngModel]=assessment.J3a>
+    </div>
   </div>
 
   <!-- (J3b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J3b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J3b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J3b"
+       [ngModel]=assessment.J3b>
+    </div>
   </div>
 
   <!-- (J3c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J3c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J3c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J3c"
+       [ngModel]=assessment.J3c>
+    </div>
   </div>
 
   <!-- (J3d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J3d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J3d">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J3d"
+       [ngModel]=assessment.J3d>
+    </div>
   </div>
 
   <!-- (J3e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J3e) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J3e">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J3e"
+       [ngModel]=assessment.J3e>
+    </div>
   </div>
 
   <!-- (J3f) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J3f) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J3f">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J3f"
+       [ngModel]=assessment.J3f>
+    </div>
   </div>
 
   <!-- (J3g) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J3g) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J3g">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J3g"
+       [ngModel]=assessment.J3g>
+    </div>
   </div>
 
   <!-- (J3h) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J3h) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J3h">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J3h"
+       [ngModel]=assessment.J3h>
+    </div>
   </div>
 
   <!-- (J3i) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J3i) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J3i">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J3i"
+       [ngModel]=assessment.J3i>
+    </div>
   </div>
 
   <!-- (J3j) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J3j) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J3j">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J3j"
+       [ngModel]=assessment.J3j>
+    </div>
   </div>
 
   <!-- (J4a) Fell in past 30 days -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (J4a) Fell in past 30 days
     </label>
-    <select class="form-control" formControlName="J4a">
+    <select
+     class="form-control" 
+     name="J4a"
+     [ngModel]=assessment.J4a>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3713,24 +4078,27 @@
 
   <!-- (J4b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J4b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J4b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J4b"
+       [ngModel]=assessment.J4b>
+    </div>
   </div>
 
   <!-- (J4c) Hip fracture in last 180 days -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (J4c) Hip fracture in last 180 days
     </label>
-    <select class="form-control" formControlName="J4c">
+    <select
+     class="form-control" 
+     name="J4c"
+     [ngModel]=assessment.J4c>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3739,11 +4107,13 @@
 
   <!-- (J4d) Other fracture in last 180 days -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (J4d) Other fracture in last 180 days
     </label>
-    <select class="form-control" formControlName="J4d">
+    <select
+     class="form-control" 
+     name="J4d"
+     [ngModel]=assessment.J4d>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3752,37 +4122,41 @@
 
   <!-- (J5a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J5a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J5a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J5a"
+       [ngModel]=assessment.J5a>
+    </div>
   </div>
 
   <!-- (J5b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (J5b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="J5b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="J5b"
+       [ngModel]=assessment.J5b>
+    </div>
   </div>
 
   <!-- (J5c) End-Stage Disease -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (J5c) End-Stage Disease
     </label>
-    <select class="form-control" formControlName="J5c">
+    <select
+     class="form-control" 
+     name="J5c"
+     [ngModel]=assessment.J5c>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3791,76 +4165,83 @@
 
   <!-- (K1a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (K1a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="K1a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="K1a"
+       [ngModel]=assessment.K1a>
+    </div>
   </div>
 
   <!-- (K1b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (K1b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="K1b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="K1b"
+       [ngModel]=assessment.K1b>
+    </div>
   </div>
 
   <!-- (K1c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (K1c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="K1c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="K1c"
+       [ngModel]=assessment.K1c>
+    </div>
   </div>
 
   <!-- (K2a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (K2a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="K2a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="K2a"
+       [ngModel]=assessment.K2a>
+    </div>
   </div>
 
   <!-- (K2b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (K2b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="K2b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="K2b"
+       [ngModel]=assessment.K2b>
+    </div>
   </div>
 
   <!-- (K3a) Weight Loss -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (K3a) Weight Loss
     </label>
-    <select class="form-control" formControlName="K3a">
+    <select
+     class="form-control" 
+     name="K3a"
+     [ngModel]=assessment.K3a>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3869,63 +4250,68 @@
 
   <!-- (K3b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (K3b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="K3b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="K3b"
+       [ngModel]=assessment.K3b>
+    </div>
   </div>
 
   <!-- (K4a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (K4a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="K4a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="K4a"
+       [ngModel]=assessment.K4a>
+    </div>
   </div>
-
   <!-- (K4b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (K4b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="K4b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="K4b"
+       [ngModel]=assessment.K4b>
+    </div>
   </div>
 
   <!-- (K4c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (K4c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="K4c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="K4c"
+       [ngModel]=assessment.K4c>
+    </div>
   </div>
 
   <!-- (K5a) Parenteral/IV -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (K5a) Parenteral/IV
     </label>
-    <select class="form-control" formControlName="K5a">
+    <select
+     class="form-control" 
+     name="K5a"
+     [ngModel]=assessment.K5a>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3934,11 +4320,13 @@
 
   <!-- (K5b) Feeding Tube -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (K5b) Feeding Tube
     </label>
-    <select class="form-control" formControlName="K5b">
+    <select
+     class="form-control" 
+     name="K5b"
+     [ngModel]=assessment.K5b>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3947,76 +4335,83 @@
 
   <!-- (K5c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (K5c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="K5c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="K5c"
+       [ngModel]=assessment.K5c>
+    </div>
   </div>
 
   <!-- (K5d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (K5d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="K5d">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="K5d"
+       [ngModel]=assessment.K5d>
+    </div>
   </div>
 
   <!-- (K5e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (K5e) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="K5e">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="K5e"
+       [ngModel]=assessment.K5e>
+    </div>
   </div>
 
   <!-- (K5f) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (K5f) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="K5f">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="K5f"
+       [ngModel]=assessment.K5f>
+    </div>
   </div>
 
   <!-- (K5g) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (K5g) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="K5g">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="K5g"
+       [ngModel]=assessment.K5g>
+    </div>
   </div>
 
   <!-- (K5h) On a planned weight change program -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (K5h) On a planned weight change program
     </label>
-    <select class="form-control" formControlName="K5h">
+    <select
+     class="form-control" 
+     name="K5h"
+     [ngModel]=assessment.K5h>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4025,11 +4420,13 @@
 
   <!-- (K6a) Parenteral/Enteral Intake: Total Calories -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (K6a) Parenteral/Enteral Intake: Total Calories
     </label>
-    <select class="form-control" formControlName="K6a">
+    <select
+     class="form-control" 
+     name="K6a"
+     [ngModel]=assessment.K6a>
       <option *ngFor="let percent of options.caloriePercent" 
         [value]="percent.key">{{percent.label}}
       </option>
@@ -4038,11 +4435,13 @@
 
   <!-- (K6b) Parenteral/Enteral Intake: Average Intake -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (K6b) Parenteral/Enteral Intake: Average Intake
     </label>
-    <select class="form-control" formControlName="K6b">
+    <select
+     class="form-control" 
+     name="K6b"
+     [ngModel]=assessment.K6b>
       <option *ngFor="let count of options.calorieCount" 
         [value]="count.key">{{count.label}}
       </option>
@@ -4051,37 +4450,41 @@
 
   <!-- (L1a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (L1a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="L1a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="L1a"
+       [ngModel]=assessment.L1a>
+    </div>
   </div>
 
   <!-- (L1b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (L1b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="L1b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="L1b"
+       [ngModel]=assessment.L1b>
+    </div>
   </div>
 
   <!-- (L1c) Some or all natural teeth lost -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (L1c) Some or all natural teeth lost
     </label>
-    <select class="form-control" formControlName="L1c">
+    <select
+     class="form-control" 
+     name="L1c"
+     [ngModel]=assessment.L1c>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4090,11 +4493,13 @@
 
   <!-- (L1d) Broken, loose, or carious teeth -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (L1d) Broken, loose, or carious teeth 
     </label>
-    <select class="form-control" formControlName="L1d">
+    <select
+     class="form-control" 
+     name="L1d"
+     [ngModel]=assessment.L1d>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4103,11 +4508,13 @@
 
   <!-- (L1e) Inflamed gums, oral acesses, etc. -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (L1e) Inflamed gums, oral acesses, etc.
     </label>
-    <select class="form-control" formControlName="L1e">
+    <select
+     class="form-control" 
+     name="L1e"
+     [ngModel]=assessment.L1e>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4116,24 +4523,27 @@
 
   <!-- (L1f) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (L1f) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="L1f">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="L1f"
+       [ngModel]=assessment.L1f>
+    </div>
   </div>
 
   <!-- (M1a) Number of Stage 1 Ulcers -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M1a) Number of Stage 1 Ulcers
     </label>
-    <select class="form-control" formControlName="M1a">
+    <select
+     class="form-control" 
+     name="M1a"
+     [ngModel]=assessment.M1a>
       <option *ngFor="let number of options.ulcerNumber" 
         [value]="number.key">{{number.label}}
       </option>
@@ -4142,11 +4552,13 @@
 
   <!-- (M1b) Number of Stage 2 Ulcers -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M1b) Number of Stage 2 Ulcers
     </label>
-    <select class="form-control" formControlName="M1b">
+    <select
+     class="form-control" 
+     name="M1b"
+     [ngModel]=assessment.M1b>
       <option *ngFor="let number of options.ulcerNumber" 
         [value]="number.key">{{number.label}}
       </option>
@@ -4155,11 +4567,13 @@
 
   <!-- (M1c) Number of Stage 3 Ulcers -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M1c) Number of Stage 3 Ulcers
     </label>
-    <select class="form-control" formControlName="M1c">
+    <select
+     class="form-control" 
+     name="M1c"
+     [ngModel]=assessment.M1c>
       <option *ngFor="let number of options.ulcerNumber" 
         [value]="number.key">{{number.label}}
       </option>
@@ -4168,11 +4582,13 @@
 
   <!-- (M1d) Number of Stage 4 Ulcers -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M1d) Number of Stage 4 Ulcers
     </label>
-    <select class="form-control" formControlName="M1d">
+    <select
+     class="form-control" 
+     name="M1d"
+     [ngModel]=assessment.M1d>
       <option *ngFor="let number of options.ulcerNumber" 
         [value]="number.key">{{number.label}}
       </option>
@@ -4181,11 +4597,13 @@
 
   <!-- (M2a) Stage of Pressure Ulcer -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M2a) Stage of Pressure Ulcer
     </label>
-    <select class="form-control" formControlName="M2a">
+    <select
+     class="form-control" 
+     name="M2a"
+     [ngModel]=assessment.M2a>
       <option *ngFor="let stage of options.ulcerStage" 
         [value]="stage.key">{{stage.label}}
       </option>
@@ -4194,24 +4612,27 @@
 
   <!-- (M2b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (M2b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="M2b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="M2b"
+       [ngModel]=assessment.M2b>
+    </div>
   </div>
 
   <!-- (M3) History of Resolved/Cured Ulcers -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M3) History of Resolved/Cured Ulcers
     </label>
-    <select class="form-control" formControlName="M3">
+    <select
+     class="form-control" 
+     name="M3"
+     [ngModel]=assessment.M3>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4220,11 +4641,13 @@
 
   <!-- (M4a) Burns (Second or Third Degree) -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M4a) Burns (Second or Third Degree)
     </label>
-    <select class="form-control" formControlName="M4a">
+    <select
+     class="form-control" 
+     name="M4a"
+     [ngModel]=assessment.M4a>
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4233,24 +4656,27 @@
 
   <!-- (M4b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (M4b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="M4b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="M4b"
+       [ngModel]=assessment.M4b>
+    </div>
   </div>
 
   <!-- (M4c) Open lesions (other than ulcers, rashes, cuts) -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M4c) Open lesions (other than ulcers, rashes, cuts)
     </label>
-    <select class="form-control" formControlName="M4c">
+    <select
+     class="form-control" 
+     name="M4c"
+     [ngModel]=assessment.M4c>
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4259,50 +4685,55 @@
 
   <!-- (M4d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (M4d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="M4d">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="M4d"
+       [ngModel]=assessment.M4d>
+    </div>
   </div>
 
   <!-- (M4e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (M4e) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="M4e">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="M4e"
+       [ngModel]=assessment.M4e>
+    </div>
   </div>
 
   <!-- (M4f) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (M4f) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="M4f">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="M4f"
+       [ngModel]=assessment.M4f>
+    </div>
   </div>
 
   <!-- (M4g) Surgical Wounds -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M4g) Surgical Wounds
     </label>
-    <select class="form-control" formControlName="M4g">
+    <select
+     class="form-control" 
+     name="M4g"
+     [ngModel]=assessment.M4g>
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4311,11 +4742,13 @@
 
   <!-- (M5a) Pressure relieving device(s) for chair  -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M5a) Pressure relieving device(s) for chair
     </label>
-    <select class="form-control" formControlName="M5a">
+    <select
+     class="form-control" 
+     name="M5a"
+     [ngModel]=assessment.M5a>
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4324,11 +4757,13 @@
 
   <!-- (M5b) Pressure relieving device(s) for bed  -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M5b) Pressure relieving device(s) for bed
     </label>
-    <select class="form-control" formControlName="M5b">
+    <select
+     class="form-control" 
+     name="M5b"
+     [ngModel]=assessment.M5b>
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4337,11 +4772,13 @@
 
   <!-- (M5c) Turning or repositioning program  -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M5c) Turning or repositioning program
     </label>
-    <select class="form-control" formControlName="M5c">
+    <select
+     class="form-control" 
+     name="M5c"
+     [ngModel]=assessment.M5c>
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4350,11 +4787,13 @@
 
   <!-- (M5d) Nurtrition/Hydration Intervention  -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M5d) Nurtrition/Hydration Intervention
     </label>
-    <select class="form-control" formControlName="M5d">
+    <select
+     class="form-control" 
+     name="M5d"
+     [ngModel]=assessment.M5d>
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4363,11 +4802,13 @@
 
   <!-- (M5e) Ulcer Care  -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M5e) Ulcer Care
     </label>
-    <select class="form-control" formControlName="M5e">
+    <select
+     class="form-control" 
+     name="M5e"
+     [ngModel]=assessment.M5e>
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4376,11 +4817,13 @@
 
   <!-- (M5f) Surgical Wound Care  -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M5f) Surgical Wound Care
     </label>
-    <select class="form-control" formControlName="M5f">
+    <select
+     class="form-control" 
+     name="M5f"
+     [ngModel]=assessment.M5f>
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4389,11 +4832,13 @@
 
   <!-- (M5g) Application of dressing(s) (except to feet) -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M5g) Application of dressing(s) (except to feet)
     </label>
-    <select class="form-control" formControlName="M5g">
+    <select
+     class="form-control" 
+     name="M5g"
+     [ngModel]=assessment.M5g>
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4402,11 +4847,13 @@
 
   <!-- (M5h) Ointments/Medications (except to feet) -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M5h) Ointments/Medications (except to feet)
     </label>
-    <select class="form-control" formControlName="M5h">
+    <select
+     class="form-control" 
+     name="M5h"
+     [ngModel]=assessment.M5h>
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4415,37 +4862,41 @@
 
   <!-- (M5i) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (M5i) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="M5i">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="M5i"
+       [ngModel]=assessment.M5i>
+    </div>
   </div>
 
   <!-- (M6a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (M6a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="M6a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="M6a"
+       [ngModel]=assessment.M6a>
+    </div>
   </div>
 
   <!-- (M6b) Infection of the foot -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M6b) Infection of the foot
     </label>
-    <select class="form-control" formControlName="M6b">
+    <select
+     class="form-control" 
+     name="M6b"
+     [ngModel]=assessment.M6b>
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4454,11 +4905,13 @@
 
   <!-- (M6c) Open lesions on the foot -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M6c) Open lesions on the foot
     </label>
-    <select class="form-control" formControlName="M6c">
+    <select
+     class="form-control"
+     name="M6c"
+     [ngModel]=assessment.M6c>
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4467,37 +4920,41 @@
 
   <!-- (M6d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (M6d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="M6d">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="M6d"
+       [ngModel]=assessment.M6d>
+    </div>
   </div>
 
   <!-- (M6e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (M6e) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="M6e">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="M6d"
+       [ngModel]=assessment.M6d>
+    </div>
   </div>
 
   <!-- (M6f) Application of dressings to the foot -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (M6f) Application of dressings to the foot
     </label>
-    <select class="form-control" formControlName="M6f">
+    <select
+     class="form-control" 
+     name="M6f"
+     [ngModel]=assessment.M6f>
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4506,11 +4963,13 @@
 
   <!-- (N1a) Time Awake: Morning -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (N1a) Time Awake: Morning
     </label>
-    <select class="form-control" formControlName="N1a">
+    <select
+     class="form-control" 
+     name="N1a"
+     [ngModel]=assessment.N1a>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4519,11 +4978,13 @@
 
   <!-- (N1b) Time Awake: Afternoon -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (N1b) Time Awake: Afternoon
     </label>
-    <select class="form-control" formControlName="N1b">
+    <select
+     class="form-control" 
+     name="N1b"
+     [ngModel]=assessment.N1b>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4532,11 +4993,13 @@
 
   <!-- (N1c) Time Awake: Evening -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (N1c) Time Awake: Evening
     </label>
-    <select class="form-control" formControlName="N1c">
+    <select
+     class="form-control" 
+     name="N1c"
+     [ngModel]=assessment.N1c>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4545,11 +5008,13 @@
 
   <!-- (N2) Average time involved in activities -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (N2) Average time involved in activities
     </label>
-    <select class="form-control" formControlName="N2">
+    <select
+     class="form-control" 
+     name="N2"
+     [ngModel]=assessment.N2>
       <option *ngFor="let time of options.activityTime" 
         [value]="time.key">{{time.label}}
       </option>
@@ -4558,544 +5023,587 @@
 
   <!-- (N3a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N3a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N3a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N3a"
+       [ngModel]=assessment.N3a>
+    </div>
   </div>
 
   <!-- (N3b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N3b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N3b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N3b"
+       [ngModel]=assessment.N3b>
+    </div>
   </div>
 
   <!-- (N3c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N3c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N3c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N3c"
+       [ngModel]=assessment.N3c>
+    </div>
   </div>
 
   <!-- (N3d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N3d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N3d">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N3d"
+       [ngModel]=assessment.N3d>
+    </div>
   </div>
 
   <!-- (N4a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N4a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N4a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N4a"
+       [ngModel]=assessment.N4a>
+    </div>
   </div>
 
   <!-- (N4b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N4b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N4b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N4b"
+       [ngModel]=assessment.N4b>
+    </div>
   </div>
 
   <!-- (N4c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N4c) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N4c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N4c"
+       [ngModel]=assessment.N4c>
+    </div>
   </div>
 
   <!-- (N4d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N4d) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N4d">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N4d"
+       [ngModel]=assessment.N4d>
+    </div>
   </div>
 
   <!-- (N4e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N4e) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N4e">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N4e"
+       [ngModel]=assessment.N4e>
+    </div>
   </div>
 
   <!-- (N4f) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N4f) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N4f">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N4f"
+       [ngModel]=assessment.N4f>
+    </div>
   </div>
 
   <!-- (N4g) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N4g) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N4g">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N4g"
+       [ngModel]=assessment.N4g>
+    </div>
   </div>
 
   <!-- (N4h) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N4h) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N4h">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N4h"
+       [ngModel]=assessment.N4h>
+    </div>
   </div>
 
   <!-- (N4i) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N4i) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N4i">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N4i"
+       [ngModel]=assessment.N4i>
+    </div>
   </div>
 
   <!-- (N4j) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N4j) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N4j">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N4j"
+       [ngModel]=assessment.N4j>
+    </div>
   </div>
 
   <!-- (N4k) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N4k) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N4k">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N4k"
+       [ngModel]=assessment.N4k>
+    </div>
   </div>
 
   <!-- (N4l) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N4l) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N4l">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N4l"
+       [ngModel]=assessment.N4l>
+    </div>
   </div>
 
   <!-- (N5a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N5a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N5a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N5a"
+       [ngModel]=assessment.N5a>
+    </div>
   </div>
 
   <!-- (N5b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (N5b) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="N5b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="N5b"
+       [ngModel]=assessment.N5b>
+    </div>
   </div>
 
   <!-- (O1) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (O1) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="O1">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="O1"
+       [ngModel]=assessment.O1>
+    </div>
   </div>
 
   <!-- (O2) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (O2) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="O2">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="O2"
+       [ngModel]=assessment.O2>
+    </div>
   </div>
 
   <!-- (O3) Injections -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (O3) Injections
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="O3">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="O3"
+       [ngModel]=assessment.O3>
+    </div>
   </div>
 
   <!-- (O4a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (O4a) 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="O4a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="O4a"
+       [ngModel]=assessment.O4a>
+    </div>
   </div>
 
   <!-- (O4b) Days Received: Antianxiety -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (O4b) Days Received: Antianxiety 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="O4b">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="O4b"
+       [ngModel]=assessment.O4b>
+    </div>
   </div>
 
   <!-- (O4c) Days Received: Antidepressant -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (O4c) Days Received: Antidepressant 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="O4c">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="O4c"
+       [ngModel]=assessment.O4c>
+    </div>
   </div>
 
   <!-- (O4d) Days Received: Hypnotic -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (O4d) Days Received: Hypnotic 
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="O4d">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="O4d"
+       [ngModel]=assessment.O4d>
+    </div>
   </div>
 
   <!-- (O4e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (O4e)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="O4e">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="O4e"
+       [ngModel]=assessment.O4e>
+    </div>
   </div>
 
   <!-- (O4f) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (O4f)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="O4f">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="O4f"
+       [ngModel]=assessment.O4f>
+    </div>
   </div>
 
   <!-- (P1aA) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aA)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aA">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aA"
+       [ngModel]=assessment.P1aA>
+    </div>
   </div>
 
   <!-- (P1aB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aB)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aB"
+       [ngModel]=assessment.P1aB>
+    </div>
   </div>
 
   <!-- (P1aC) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aC)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aC">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aC"
+       [ngModel]=assessment.P1aC>
+    </div>
   </div>
 
   <!-- (P1aD) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aD)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aD">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aD"
+       [ngModel]=assessment.P1aD>
+    </div>
   </div>
 
   <!-- (P1aE) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aE)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aE">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aE"
+       [ngModel]=assessment.P1aE>
+    </div>
   </div>
 
   <!-- (P1aF) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aF)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aF">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aF"
+       [ngModel]=assessment.P1aF>
+    </div>
   </div>
 
   <!-- (P1aG) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aG)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aG">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aG"
+       [ngModel]=assessment.P1aG>
+    </div>
   </div>
 
   <!-- (P1aH) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aH)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aH">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aH"
+       [ngModel]=assessment.P1aH>
+    </div>
   </div>
 
   <!-- (P1aI) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aI)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aI">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aI"
+       [ngModel]=assessment.P1aI>
+    </div>
   </div>
 
   <!-- (P1aJ) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aJ)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aJ">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aJ"
+       [ngModel]=assessment.P1aJ>
+    </div>
   </div>
 
   <!-- (P1aK) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aK)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aK">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aK"
+       [ngModel]=assessment.P1aK>
+    </div>
   </div>
 
   <!-- (P1aL) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aL)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aL">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aL"
+       [ngModel]=assessment.P1aL>
+    </div>
   </div>
 
   <!-- (P1aM) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aM)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aM">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aM"
+       [ngModel]=assessment.P1aM>
+    </div>
   </div>
 
   <!-- (P1aN) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aN)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aN">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aN"
+       [ngModel]=assessment.P1aN>
+    </div>
   </div>
 
   <!-- (P1aO) Hospice Care -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (P1aO) Hospice Care
     </label>
-    <select class="form-control" formControlName="P1aO">
+    <select
+     class="form-control" 
+     name="P1aO"
+     [ngModel]=assessment.P1aO>
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -5104,440 +5612,475 @@
 
   <!-- (P1aP) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aP)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aP">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aP"
+       [ngModel]=assessment.P1aP>
+    </div>
   </div>
 
   <!-- (P1aQ) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aQ)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aQ">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aQ"
+       [ngModel]=assessment.P1aQ>
+    </div>
   </div>
 
   <!-- (P1aR) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1aR)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1aR">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1aR"
+       [ngModel]=assessment.P1aR>
+    </div>
   </div>
 
   <!-- (P1baA) Speech Therapy: Days -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P1baA) Speech Therapy: Days
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P1baA">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P1baA"
+       [ngModel]=assessment.P1baA>
+    </div>
   </div>
 
   <!-- (P1baB) Speech Therapy: Minutes -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P1baB) Speech Therapy: Minutes
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P1baB">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P1baB"
+       [ngModel]=assessment.P1baB>
+    </div>
   </div>
 
   <!-- (P1bbA) Occupational Therapy: Days -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P1bbA) Occupational Therapy: Days
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P1bbA">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P1bbA"
+       [ngModel]=assessment.P1bbA>
+    </div>
   </div>
 
   <!-- (P1bbB) Occupational Therapy: Minutes -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P1bbB) Occupational Therapy: Minutes
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P1bbB">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P1bbB"
+       [ngModel]=assessment.P1bbB>
+    </div>
   </div>
 
   <!-- (P1bcA) Physical Therapy: Days -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P1bcA) Physical Therapy: Days
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P1bcA">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P1bcA"
+       [ngModel]=assessment.P1bcA>
+    </div>
   </div>
 
   <!-- (P1bcB) Physical Therapy: Minutes -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P1bcB) Occupational Therapy: Minutes
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P1bcB">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P1bcB"
+       [ngModel]=assessment.P1bcB>
+    </div>
   </div>
 
   <!-- (P1bdA) Respiratory Therapy: Days -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P1bdA) Respiratory Therapy: Days
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P1bdA">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P1bdA"
+       [ngModel]=assessment.P1bdA>
+    </div>
   </div>
 
   <!-- (P1bdB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1bdB)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1bdB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1bdB"
+       [ngModel]=assessment.P1bdB>
+    </div>
   </div>
 
   <!-- (P1beA) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1beA)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1beA">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1beA"
+       [ngModel]=assessment.P1beA>
+    </div>
   </div>
 
   <!-- (P1beB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1beB)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1beB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1beB"
+       [ngModel]=assessment.P1beB>
+    </div>
   </div>
 
   <!-- (P1bfA) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1bfA)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1bfA">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1bfA"
+       [ngModel]=assessment.P1bfA>
+    </div>
   </div>
 
   <!-- (P1bfB) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P1bfB)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P1bfB">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P1bfB"
+       [ngModel]=assessment.P1bfB>
+    </div>
   </div>
 
   <!-- (P2a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P2a)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P2a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P2a"
+       [ngModel]=assessment.P2a>
+    </div>
   </div>
 
   <!-- (P2b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P2b)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P2b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P2b"
+       [ngModel]=assessment.P2b>
+    </div>
   </div>
 
   <!-- (P2c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P2c)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P2c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P2c"
+       [ngModel]=assessment.P2c>
+    </div>
   </div>
 
   <!-- (P2d) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P2d)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P2d">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P2d"
+       [ngModel]=assessment.P2d>
+    </div>
   </div>
 
   <!-- (P2e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P2e)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P2e">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P2e"
+       [ngModel]=assessment.P2e>
+    </div>
   </div>
 
   <!-- (P3a) Nursing Rehab: Range of Motion (Passive) -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P3a) Nursing Rehab: Range of Motion (Passive)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P3a">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P3a"
+       [ngModel]=assessment.P3a>
+    </div>
   </div>
 
   <!-- (P3b) Nursing Rehab: Range of Motion (Active) -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P3b) Nursing Rehab: Range of Motion (Active)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P3b">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P3b"
+       [ngModel]=assessment.P3b>
+    </div>
   </div>
 
   <!-- (P3c) Nursing Rehab: Splint or Brace Assistance -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P3c) Nursing Rehab: Splint or Brace Assistance
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P3c">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P3c"
+       [ngModel]=assessment.P3c>
+    </div>
   </div>
 
   <!-- (P3d) Nursing Rehab: Bed Mobility -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P3d) Nursing Rehab: Bed Mobility
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P3d">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P3d"
+       [ngModel]=assessment.P3d>
+    </div>
   </div>
 
   <!-- (P3e) Nursing Rehab: Transfer -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P3e) Nursing Rehab: Transfer
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P3e">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P3e"
+       [ngModel]=assessment.P3e>
+    </div>
   </div>
 
   <!-- (P3f) Nursing Rehab: Walking -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P3f) Nursing Rehab: Walking
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P3f">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P3f"
+       [ngModel]=assessment.P3f>
+    </div>
   </div>
 
   <!-- (P3g) Nursing Rehab: Dressing or Grooming -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P3g) Nursing Rehab: Dressing or Grooming
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P3g">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P3g"
+       [ngModel]=assessment.P3g>
+    </div>
   </div>
 
   <!-- (P3h) Nursing Rehab: Eating or Swallowing -->
   <div class="form-group">
-    <label 
-      class="control-label">
-        (P3a) Nursing Rehab: Eating or Swallowing
+    <label class="control-label">
+        (P3h) Nursing Rehab: Eating or Swallowing
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P3h">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P3h"
+       [ngModel]=assessment.P3h>
+    </div>
   </div>
 
   <!-- (P3i) Nursing Rehab: Amputation or Prothesis Care-->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P3i) Nursing Rehab: Amputation or Prothesis Care
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P3i">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P3i"
+       [ngModel]=assessment.P3i>
+    </div>
   </div>
 
   <!-- (P3j) Nursing Rehab: Communication -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P3j) Nursing Rehab: Communication
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P3j">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P3j"
+       [ngModel]=assessment.P3j>
+    </div>
   </div>
 
   <!-- (P3k) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P3k)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P3k">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P3k"
+       [ngModel]=assessment.P3k>
+    </div>
   </div>
 
   <!-- (P4a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P4a)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P4a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P4a"
+       [ngModel]=assessment.P4a>
+    </div>
   </div>
 
   <!-- (P4b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P4b)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P4b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P4b"
+       [ngModel]=assessment.P4b>
+    </div>
   </div>
 
   <!-- (P4c) Trunk Restraint -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (P4c) Trunk Restraint
     </label>
-    <select class="form-control" formControlName="P4c">
+    <select
+     class="form-control" 
+     name="P4c"
+     [ngModel]=assessment.P4c>
       <option *ngFor="let used of options.timeUsed" 
         [value]="used.key">{{used.label}}
       </option>
@@ -5546,11 +6089,13 @@
 
   <!-- (P4d) Limb Restraint -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (P4d) Limb Restraint
     </label>
-    <select class="form-control" formControlName="P4d">
+    <select
+     class="form-control" 
+     name="P4d"
+     [ngModel]=assessment.P4d>
       <option *ngFor="let used of options.timeUsed" 
         [value]="used.key">{{used.label}}
       </option>
@@ -5559,193 +6104,209 @@
 
   <!-- (P4e) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P4e)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P4e">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P4e"
+       [ngModel]=assessment.P4e>
+    </div>
   </div>
 
   <!-- (P5) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P5)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P5">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P5"
+       [ngModel]=assessment.P5>
+    </div>
   </div>
 
   <!-- (P6) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P6)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P6">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P6"
+       [ngModel]=assessment.P6>
+    </div>
   </div>
 
   <!-- (P7) Physician Visits-->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P7) Physician Visits
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="P7">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P7"
+       [ngModel]=assessment.P7>
+    </div>
   </div>
 
   <!-- (P8) Physician Orders -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (P8) Physician Orders
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P8">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="P8"
+       [ngModel]=assessment.P8>
+    </div>
   </div>
 
   <!-- (P9) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (P9)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="P9">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="P9"
+       [ngModel]=assessment.P9>
+    </div>
   </div>
 
   <!-- (Q1a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (Q1a)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="Q1a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="Q1a"
+       [ngModel]=assessment.Q1a>
+    </div>
   </div>
 
   <!-- (Q1b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (Q1b)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="Q1b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="Q1b"
+       [ngModel]=assessment.Q1b>
+    </div>
   </div>
 
   <!-- (Q1c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (Q1c)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="Q1c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="Q1c"
+       [ngModel]=assessment.Q1c>
+    </div>
   </div>
 
   <!-- (Q2) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (Q2)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="Q2">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="Q2"
+       [ngModel]=assessment.Q2>
+    </div>
   </div>
 
   <!-- (R1a) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (R1a)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="R1a">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="R1a"
+       [ngModel]=assessment.R1a>
+    </div>
   </div>
 
   <!-- (R1b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (R1b)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="R1b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="R1b"
+       [ngModel]=assessment.R1b>
+    </div>
   </div>
 
   <!-- (R1c) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (R1c)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="R1c">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="R1c"
+       [ngModel]=assessment.R1c>
+    </div>
   </div>
 
   <!-- (R2b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (R2b)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="R2b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="R2b"
+       [ngModel]=assessment.R2b>
+    </div>
   </div>
 
   <!-- (R3a) Discharged to Facility/Level of Care -->
   <div class="form-group">
-    <label
-      class="control-label">
+    <label class="control-label">
       (R3a) Discharged to Facility/Level of Care
     </label>
-    <select class="form-control" formControlName="P4d">
+    <select
+     class="form-control" 
+     name="P4d"
+     [ngModel]=assessment.P4d>
       <option *ngFor="let to of options.dischargedTo" 
         [value]="to.key">{{to.label}}
       </option>
@@ -5754,94 +6315,100 @@
 
   <!-- (R3b) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (R3b)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="R3b">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="R3b"
+       [ngModel]=assessment.R3b>
+    </div>
   </div>
 
   <!-- (R4) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (R4)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="R4">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="R4"
+       [ngModel]=assessment.R4>
+    </div>
   </div>
 
   <!-- (Y2) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (Y2)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="Y2">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="Y2"
+       [ngModel]=assessment.Y2>
+    </div>
   </div>
 
   <!-- (Z12) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (Z12)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="Z12">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="Z12"
+       [ngModel]=assessment.Z12>
+    </div>
   </div>
 
   <!-- (IAR-1) Version -->
   <div class="form-group">
-    <label 
-      class="control-label">
+    <label class="control-label">
         (IAR-1) Version
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field"  
-      formControlName="IAR-1">
+    <div>
+      <input 
+       type="text"
+       class="form-field"  
+       name="IAR_1"
+       [ngModel]=assessment.IAR_1>
+    </div>
   </div>
 
   <!-- (Org ID) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (Org ID)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="Org ID">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="Org_ID"
+       [ngModel]=assessment.Org_ID>
+    </div>
   </div>
 
   <!-- (Assessment ID) -->
   <div class="form-group">
-    <label 
-      class="control-label-b">
+    <label class="control-label-b">
         (Assessment ID)
     </label>
-    <br>
-    <input 
-      type="text"
-      class="form-field-b"  
-      formControlName="Assessment ID">
+    <div>
+      <input 
+       type="text"
+       class="form-field-b"  
+       name="Assessment_ID"
+       [ngModel]=assessment.Assessment_ID>
+    </div>
   </div>
 </form>
-
 

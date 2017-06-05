@@ -1,11 +1,28 @@
+/* -----  ASSESSMENT HEADER STYLING  ----- */
+.assessment-head {
+  margin: 25px 0 15px 70px;
+}
+.assessment-title {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 25px;
+  display: inline-block;
+}
+.add-record-btn {
+  float: right;
+  margin-right: 70px;
+  cursor: pointer;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  height: 34px;
+  width: 127px;
+  font-size: 14px;
+  background-color: #06a2a2;
+  color: white;
+}
+
+/* -----  FORM STYLING  ----- */
 .form-group {
   margin-bottom: 20px;
   margin-left: 70px;
-}
-.assessment-title {
-  margin: 25px 0 20px 70px;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 25px;
 }
 .control-label {
   font-family: "Arial";
