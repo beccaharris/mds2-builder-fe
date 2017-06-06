@@ -4,7 +4,7 @@
   <h3 class="assessment-title">
     Admission Assessment 
   </h3>
-  <button type="button" class="add-record-btn">
+  <button type="button" class="add-record-btn" (click)="addRecord(assessment)">
     Add Record
   </button>
 </div>
@@ -19,10 +19,10 @@
        class="form-field"
        type="text"
        name="Master No"
-       [ngModel]=assessment.Master_No>
+       [(ngModel)]=assessment.Master_No>
     </div>
   </div>
-  
+  <pre>{{assessment.Master_No | json}}</pre>
   <!-- (resident_identifier) 10-digit Resident Identifier -->   
   <div class="form-group">
     <label class="control-label">
