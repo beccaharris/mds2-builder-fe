@@ -12,18 +12,17 @@ import { Assessment } from './assessment.model';
 })
 
 export class AssessmentComponent implements OnInit {
-  options = DropdownOptions
-  assessment: IAssessment = new Assessment()
 
-  constructor(
-    private assessmentService:AssessmentService
-  ){}
+  assessment: IAssessment = new Assessment();
+  options = DropdownOptions;
 
-  ngOnInit(){
-    this.assessmentService.removeRecordArray()
-  }
+  constructor(private assessmentService:AssessmentService)
+  {}
+
+  ngOnInit()
+  {}
   
-  addRecord(assessment:IAssessment){
-    this.assessmentService.addAssessment(assessment)
+  addRecord(assessment:IAssessment) {
+    this.assessmentService.addAssessment(assessment);
   }
 }

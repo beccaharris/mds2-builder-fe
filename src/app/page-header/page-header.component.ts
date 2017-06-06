@@ -11,22 +11,24 @@ import { CsvService } from '../services/csv-service/csv.service';
   templateUrl: './page-header.component.html',
   styleUrls: ['./page-header.component.scss']
 })
+
 export class PageHeaderComponent implements OnInit {
 
-  facility_name = "1111111111";
-  data: any;
-  filename: string;
+  facilityName = "1111111111";
 
-  constructor(private assessmentService: AssessmentService,
-              private csvService: CsvService) { }
+  constructor(
+    private assessmentService: AssessmentService,
+    private csvService: CsvService
+  ){}
 
-  ngOnInit() {
-  }
+  ngOnInit() 
+  {}
 
   download() {
-    this.data = this.assessmentService.getRecordArray();
-    this.filename = this.facility_name+"_CCIM_"+moment().format("YYYYMMDD");
-    this.csvService.download(this.data,this.filename);
+    let assessments = this.assessmentService.assessments;
+    let filename = this.facilityName+"_CCIM_"+moment().format("YYYYMMDD");
+
+    this.csvService.download(assessments, filename);
   }
 
 }
