@@ -4,7 +4,7 @@ import { IAssessment } from "app/assessment/assessment.types";
 @Injectable()
 export class AssessmentService {
 
-  _assessmentArray: Array<any> = [];
+  _assessmentArray: Array<IAssessment> = new Array();
  
   /**
    * Return all assessments
