@@ -1,6 +1,6 @@
 export interface IAssessment {
  Master_No: string;
- Resident_Identifier: string;
+ "Resident Identifier": string;
  A3: string;
  AA7: string;
  AA8: string;

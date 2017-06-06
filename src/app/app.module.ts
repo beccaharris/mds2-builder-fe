@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { LocalStorageModule } from 'angular-2-local-storage';
 
 import { AppRoutingModule } from './app-routing.module'
 
@@ -32,6 +33,10 @@ import { RecordsComponent } from './records/records.component'
     NgbModule.forRoot(),
     ReactiveFormsModule,
     FormsModule,
+    LocalStorageModule.withConfig({
+      prefix: 'app',
+      storageType: 'localStorage'
+    }),
     AppRoutingModule
   ],
   providers: [
