@@ -9,31 +9,31 @@
   </button>
 </div>
 
-  <!-- (master_no) Master No. from CCIM -->
+  <!-- (Master No) Master No. from CCIM -->
   <div class="form-group">
     <label class="control-label">
-      (master_no) Master No. from CCIM
+      (Master No) Master No. from CCIM
     </label>
     <div>
       <input 
        class="form-field"
        type="text"
        name="Master No"
-       [(ngModel)]=assessment.Master_No>
+       [(ngModel)]="assessment['Master No']">
     </div>
   </div>
-  <pre>{{assessment.Master_No | json}}</pre>
-  <!-- (resident_identifier) 10-digit Resident Identifier -->   
+  
+  <!-- (Resident Identifier) 10-digit Resident Identifier -->   
   <div class="form-group">
     <label class="control-label">
-      (resident_identifier) 10-digit Resident Identifier
+      (Resident Identifier) 10-digit Resident Identifier
     </label>
     <div>
       <input 
        class="form-field"
        type="text"
        name="Resident Identifier"
-       [ngModel]="assessment['Resident Identifier']">
+       [(ngModel)]="assessment['Resident Identifier']">
     </div>
   </div>
   
@@ -47,7 +47,7 @@
        class="form-field"
        type="text"
        name="A3"
-       [ngModel]=assessment.A3>
+       [(ngModel)]="assessment['A3']">
     </div>
   </div>
 
@@ -59,7 +59,7 @@
     <select 
      class="form-control"
      name="AA7"
-     [ngModel]=assessment.AA7>
+     [(ngModel)]="assessment['AA7']">
       <option *ngFor="let type of options.admissionType" 
         [value]="type.key">{{type.label}}
       </option>
@@ -74,7 +74,7 @@
     <select 
      class="form-control"
      name="AA8"
-     [ngModel]=assessment.AA8>
+     [(ngModel)]="assessment['AA8']">
       <option *ngFor="let reason of options.assessmentReason" 
         [value]="reason.key">{{reason.label}}
       </option>
@@ -89,7 +89,7 @@
     <select 
      class="form-control"
      name="AA9"
-     [ngModel]=assessment.AA9>
+     [(ngModel)]="assessment['AA9']">
       <option *ngFor="let type of options.dischargeType" 
         [value]="type.key">{{type.label}}
       </option>
@@ -106,7 +106,7 @@
        class="form-field"
        type="text"
        name="AB1"
-       [ngModel]=assessment.AB1>
+       [(ngModel)]="assessment['AB1']">
     </div>
   </div>
 
@@ -120,7 +120,7 @@
        class="form-field"
        type="text"
        name="AB10a"
-       [ngModel]=assessment.AB10a>
+       [(ngModel)]="assessment['AB10a']">
     </div>
   </div>
 
@@ -134,7 +134,7 @@
        class="form-field"
        type="text"
        name="AB10b"
-       [ngModel]=assessment.AB10b>
+       [(ngModel)]="assessment['AB10b']">
     </div>
   </div>
 
@@ -148,7 +148,7 @@
        class="form-field"
        type="text"
        name="AB10c"
-       [ngModel]=assessment.AB10c>
+       [(ngModel)]="assessment['AB10c']">
     </div>
   </div>
 
@@ -162,7 +162,7 @@
        class="form-field"
        type="text"
        name="AB10d"
-       [ngModel]=assessment.AB10d>
+       [(ngModel)]="assessment['AB10d']">
     </div>
   </div>
 
@@ -176,7 +176,7 @@
        class="form-field"
        type="text"
        name="AB10e"
-       [ngModel]=assessment.AB10e>
+       [(ngModel)]="assessment['AB10e']">
     </div>
   </div>
 
@@ -190,7 +190,7 @@
        class="form-field"
        type="text"
        name="AB10f"
-       [ngModel]=assessment.AB10f>
+       [(ngModel)]="assessment['AB10f']">
     </div>
   </div>
 
@@ -204,7 +204,7 @@
        class="form-field"
        type="text"
        name="AB2a"
-       [ngModel]=assessment.AB2a>
+       [(ngModel)]="assessment['AB2a']">
     </div>
   </div>
 
@@ -218,7 +218,7 @@
        class="form-field"
        type="text"
        name="AB2b"
-       [ngModel]=assessment.AB2b>
+       [(ngModel)]="assessment['AB2b']">
     </div>
   </div>
 
@@ -232,7 +232,7 @@
        class="form-field"
        type="text"
        name="AB3"
-       [ngModel]=assessment.AB3>
+       [(ngModel)]="assessment['AB3']">
     </div>
   </div>
 
@@ -246,7 +246,7 @@
        class="form-field"
        type="text"
        name="AB5a"
-       [ngModel]=assessment.AB5a>
+       [(ngModel)]="assessment['AB5a']">
     </div>
   </div>
 
@@ -260,7 +260,7 @@
        class="form-field"
        type="text"
        name="AB5b"
-       [ngModel]=assessment.AB5b>
+       [(ngModel)]="assessment['AB5b']">
     </div>
   </div>
 
@@ -274,7 +274,7 @@
        class="form-field"
        type="text"
        name="AB5c"
-       [ngModel]=assessment.AB5c>
+       [(ngModel)]="assessment['AB5c']">
     </div>
   </div>
 
@@ -288,7 +288,7 @@
        class="form-field"
        type="text"
        name="AB5d"
-       [ngModel]=assessment.AB5d>
+       [(ngModel)]="assessment['AB5d']">
     </div>
   </div>
 
@@ -302,7 +302,7 @@
        class="form-field"
        type="text"
        name="AB5e"
-       [ngModel]=assessment.AB5e>
+       [(ngModel)]="assessment['AB5e']">
     </div>
   </div>
 
@@ -316,7 +316,7 @@
        class="form-field"
        type="text"
        name="AB7"
-       [ngModel]=assessment.AB7>
+       [(ngModel)]="assessment['AB7']">
     </div>
   </div>
 
@@ -330,7 +330,7 @@
        class="form-field"
        type="text"
        name="AB8"
-       [ngModel]=assessment.AB8>
+       [(ngModel)]="assessment['AB8']">
     </div>
   </div>
 
@@ -344,7 +344,7 @@
        class="form-field"
        type="text"
        name="AB9"
-       [ngModel]=assessment.AB9>
+       [(ngModel)]="assessment['AB9']">
     </div>
   </div>
 
@@ -358,7 +358,7 @@
        class="form-field"
        type="text"
        name="AC1a"
-       [ngModel]=assessment.AC1a>
+       [(ngModel)]="assessment['AC1a']">
     </div>
   </div>
 
@@ -372,7 +372,7 @@
        class="form-field"
        type="text"
        name="AC1b"
-       [ngModel]=assessment.AC1b>
+       [(ngModel)]="assessment['AC1b']">
     </div>
   </div>
 
@@ -386,7 +386,7 @@
        class="form-field"
        type="text"
        name="AC1c"
-       [ngModel]=assessment.AC1c>
+       [(ngModel)]="assessment['AC1c']">
     </div>
   </div>
 
@@ -400,7 +400,7 @@
        class="form-field"
        type="text"
        name="AC1d"
-       [ngModel]=assessment.AC1d>
+       [(ngModel)]="assessment['AC1d']">
     </div>
   </div>
 
@@ -414,7 +414,7 @@
        class="form-field"
        type="text"
        name="AC1e"
-       [ngModel]=assessment.AC1e>
+       [(ngModel)]="assessment['AC1e']">
     </div>
   </div>
 
@@ -428,7 +428,7 @@
        class="form-field"
        type="text"
        name="AC1f"
-       [ngModel]=assessment.AC1f>
+       [(ngModel)]="assessment['AC1f']">
     </div>
   </div>
 
@@ -442,7 +442,7 @@
        class="form-field"
        type="text"
        name="AC1g"
-       [ngModel]=assessment.AC1g>
+       [(ngModel)]="assessment['AC1g']">
     </div>
   </div>
 
@@ -456,7 +456,7 @@
        class="form-field"
        type="text"
        name="AC1i"
-       [ngModel]=assessment.AC1i>
+       [(ngModel)]="assessment['AC1i']">
     </div>
   </div>
 
@@ -470,7 +470,7 @@
        class="form-field"
        type="text"
        name="AC1j"
-       [ngModel]=assessment.AC1j>
+       [(ngModel)]="assessment['AC1j']">
     </div>
   </div>
 
@@ -484,7 +484,7 @@
        class="form-field"
        type="text"
        name="AC1k"
-       [ngModel]=assessment.AC1k>
+       [(ngModel)]="assessment['AC1k']">
     </div>
   </div>
 
@@ -498,7 +498,7 @@
        class="form-field"
        type="text"
        name="AC1m"
-       [ngModel]=assessment.AC1m>
+       [(ngModel)]="assessment['AC1m']">
     </div>
   </div>
 
@@ -512,7 +512,7 @@
        class="form-field"
        type="text"
        name="AC1n"
-       [ngModel]=assessment.AC1n>
+       [(ngModel)]="assessment['AC1n']">
     </div>
   </div>
 
@@ -526,7 +526,7 @@
        class="form-field"
        type="text"
        name="AC1o"
-       [ngModel]=assessment.AC1o>
+       [(ngModel)]="assessment['AC1o']">
     </div>
   </div>
 
@@ -540,7 +540,7 @@
        class="form-field"
        type="text"
        name="AC1p"
-       [ngModel]=assessment.AC1p>
+       [(ngModel)]="assessment['AC1p']">
     </div>
   </div>
 
@@ -554,7 +554,7 @@
        class="form-field"
        type="text"
        name="AC1q"
-       [ngModel]=assessment.AC1q>
+       [(ngModel)]="assessment['AC1q']">
     </div>
   </div>
 
@@ -568,7 +568,7 @@
        class="form-field"
        type="text"
        name="AC1s"
-       [ngModel]=assessment.AC1s>
+       [(ngModel)]="assessment['AC1s']">
     </div>
   </div>
 
@@ -582,7 +582,7 @@
        class="form-field"
        type="text"
        name="AC1t"
-       [ngModel]=assessment.AC1t>
+       [(ngModel)]="assessment['AC1t']">
     </div>
   </div>
 
@@ -596,7 +596,7 @@
        class="form-field"
        type="text"
        name="AC1u"
-       [ngModel]=assessment.AC1u>
+       [(ngModel)]="assessment['AC1u']">
     </div>
   </div>
 
@@ -610,7 +610,7 @@
        class="form-field"
        type="text"
        name="AC1v"
-       [ngModel]=assessment.AC1v>
+       [(ngModel)]="assessment['AC1v']">
     </div>
   </div>
 
@@ -624,7 +624,7 @@
        class="form-field"
        type="text"
        name="AC1w"
-       [ngModel]=assessment.AC1w>
+       [(ngModel)]="assessment['AC1w']">
     </div>
   </div>
 
@@ -638,7 +638,7 @@
        class="form-field"
        type="text"
        name="AD1"
-       [ngModel]=assessment.AD1>
+       [(ngModel)]="assessment['AD1']">
     </div>
   </div>
 
@@ -652,7 +652,7 @@
        class="form-field-b"
        type="text"
        name="AD2"
-       [ngModel]=assessment.AD2>
+       [(ngModel)]="assessment['AD2']">
     </div>
   </div>
 
@@ -664,7 +664,7 @@
     <select 
      class="form-control"
      name="B1"
-     [ngModel]=assessment.B1>
+     [(ngModel)]="assessment['B1']">
       <option *ngFor="let state of options.comatoseState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -679,7 +679,7 @@
     <select 
      class="form-control" 
      name="B2a"
-     [ngModel]=assessment.B2a>
+     [(ngModel)]="assessment['B2a']">
       <option *ngFor="let state of options.memoryState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -696,7 +696,7 @@
        class="form-field"
        type="text"
        name="B2b"
-       [ngModel]=assessment.B2b>
+       [(ngModel)]="assessment['B2b']">
     </div>
   </div>
 
@@ -710,7 +710,7 @@
        class="form-field"
        type="text"
        name="B3a"
-       [ngModel]=assessment.B3a>
+       [(ngModel)]="assessment['B3a']">
     </div>
   </div>
 
@@ -724,7 +724,7 @@
        class="form-field"
        type="text"
        name="B3b"
-       [ngModel]=assessment.B3b>
+       [(ngModel)]="assessment['B3b']">
     </div>
   </div>
 
@@ -738,7 +738,7 @@
        class="form-field"
        type="text"
        name="B3c"
-       [ngModel]=assessment.B3c>
+       [(ngModel)]="assessment['B3c']">
     </div>
   </div>
 
@@ -752,7 +752,7 @@
        class="form-field"
        type="text"
        name="B3d"
-       [ngModel]=assessment.B3d>
+       [(ngModel)]="assessment['B3d']">
     </div>
   </div>
 
@@ -764,7 +764,7 @@
     <select 
      class="form-control"
      name="B4"
-     [ngModel]=assessment.B4>
+     [(ngModel)]="assessment['B4']">
       <option *ngFor="let state of options.independenceState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -781,7 +781,7 @@
        class="form-field"
        type="text"
        name="B5a"
-       [ngModel]=assessment.B5a>
+       [(ngModel)]="assessment['B5a']">
     </div>
   </div>
 
@@ -795,7 +795,7 @@
        class="form-field"
        type="text"
        name="B5b"
-       [ngModel]=assessment.B5b>
+       [(ngModel)]="assessment['B5b']">
     </div>
   </div>
 
@@ -809,7 +809,7 @@
        class="form-field"
        type="text"
        name="B5c"
-       [ngModel]=assessment.B5c>
+       [(ngModel)]="assessment['B5c']">
     </div>
   </div>
 
@@ -823,7 +823,7 @@
        class="form-field"
        type="text"
        name="B5d"
-       [ngModel]=assessment.B5d>
+       [(ngModel)]="assessment['B5d']">
     </div>
   </div>
 
@@ -837,7 +837,7 @@
        class="form-field"
        type="text"
        name="B5e"
-       [ngModel]=assessment.B5e>
+       [(ngModel)]="assessment['B5e']">
     </div>
   </div>
 
@@ -851,7 +851,7 @@
        class="form-field"
        type="text"
        name="B5f"
-       [ngModel]=assessment.B5f>
+       [(ngModel)]="assessment['B5f']">
     </div>
   </div>
 
@@ -865,7 +865,7 @@
        class="form-field"
        type="text"
        name="B6"
-       [ngModel]=assessment.B6>
+       [(ngModel)]="assessment['B6']">
     </div>
   </div>
 
@@ -877,7 +877,7 @@
     <select 
      class="form-control"
      name="C1"
-     [ngModel]=assessment.C1>
+     [(ngModel)]="assessment['C1']">
       <option *ngFor="let ability of options.hearingAbility" 
         [value]="ability.key">{{ability.label}}
       </option>
@@ -894,7 +894,7 @@
        class="form-field-b"
        type="text"
        name="C2a"
-      [ngModel]=assessment.C2a>
+      [(ngModel)]="assessment['C2a']">
     </div>
   </div>
 
@@ -908,7 +908,7 @@
        class="form-field-b"
        type="text"
        name="C2b"
-      [ngModel]=assessment.C2b>
+      [(ngModel)]="assessment['C2b']">
     </div>
   </div>
 
@@ -922,7 +922,7 @@
        class="form-field-b"
        type="text"
        name="C2c"
-      [ngModel]=assessment.C2c>
+      [(ngModel)]="assessment['C2c']">
     </div>
   </div>
 
@@ -936,7 +936,7 @@
        class="form-field-b"
        type="text"
        name="C3a"
-      [ngModel]=assessment.C3a>
+      [(ngModel)]="assessment['C3a']">
     </div>
   </div>
 
@@ -948,7 +948,7 @@
     <select 
      class="form-control"
      name="C3b"
-     [ngModel]=assessment.C3b>
+     [(ngModel)]="assessment['C3b']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -963,7 +963,7 @@
     <select 
      class="form-control"
      name="C3c"
-     [ngModel]=assessment.C3c>
+     [(ngModel)]="assessment['C3c']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -978,7 +978,7 @@
     <select 
      class="form-control"
      name="C3d"
-     [ngModel]=assessment.C3d>
+     [(ngModel)]="assessment['C3d']">
      <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
      </option>
@@ -993,7 +993,7 @@
     <select 
      class="form-control"
      name="C3e"
-     [ngModel]=assessment.C3e>
+     [(ngModel)]="assessment['C3e']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -1008,7 +1008,7 @@
     <select 
      class="form-control"
      name="C3f"
-     [ngModel]=assessment.C3f>
+     [(ngModel)]="assessment['C3f']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -1023,7 +1023,7 @@
     <select 
      class="form-control"
      name="C4"
-     [ngModel]=assessment.C4>
+     [(ngModel)]="assessment['C4']">
       <option *ngFor="let ability of options.understoodAbility" 
         [value]="ability.key">{{ability.label}}
       </option>
@@ -1038,7 +1038,7 @@
     <select 
      class="form-control"
      name="C5"
-     [ngModel]=assessment.C5>
+     [(ngModel)]="assessment['C5']">
       <option *ngFor="let
        clarity of options.speechClarity" 
         [value]="clarity.key">{{clarity.label}}
@@ -1054,7 +1054,7 @@
     <select 
      class="form-control"
      name="C6"
-     [ngModel]=assessment.C6>
+     [(ngModel)]="assessment['C6']">
       <option *ngFor="let ability of options.understandingAbility" 
         [value]="ability.key">{{ability.label}}
       </option>
@@ -1071,7 +1071,7 @@
        class="form-field-b"
        type="text"
        name="C7"
-      [ngModel]=assessment.C7>
+      [(ngModel)]="assessment['C7']">
     </div>
   </div>
 
@@ -1083,7 +1083,7 @@
     <select 
      class="form-control"
      name="D1"
-     [ngModel]=assessment.D1>
+     [(ngModel)]="assessment['D1']">
       <option *ngFor="let ability of options.seeingAbility" 
         [value]="ability.key">{{ability.label}}
       </option>
@@ -1098,7 +1098,7 @@
     <select 
      class="form-control"
      name="D2a"
-     [ngModel]=assessment.D2a>
+     [(ngModel)]="assessment['D2a']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -1113,7 +1113,7 @@
     <select 
      class="form-control"
      name="D2b"
-     [ngModel]=assessment.D2b>
+     [(ngModel)]="assessment['D2b']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -1128,7 +1128,7 @@
     <select 
      class="form-control"
      name="D3"
-     [ngModel]=assessment.D3>
+     [(ngModel)]="assessment['D3']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -1143,7 +1143,7 @@
     <select 
      class="form-control"
      name="E1a"
-     [ngModel]=assessment.E1a>
+     [(ngModel)]="assessment['E1a']">
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1158,7 +1158,7 @@
     <select 
      class="form-control"
      name="E1b"
-     [ngModel]=assessment.E1b>
+     [(ngModel)]="assessment['E1b']">
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1173,7 +1173,7 @@
     <select 
      class="form-control"
      name="E1c"
-     [ngModel]=assessment.E1c>
+     [(ngModel)]="assessment['E1c']">
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1188,7 +1188,7 @@
     <select 
      class="form-control"
      name="E1d"
-     [ngModel]=assessment.E1d>
+     [(ngModel)]="assessment['E1d']">
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1203,7 +1203,7 @@
     <select 
      class="form-control"
      name="E1e"
-     [ngModel]=assessment.E1e>
+     [(ngModel)]="assessment['E1e']">
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1218,7 +1218,7 @@
     <select 
      class="form-control"
      name="E1f"
-     [ngModel]=assessment.E1f>
+     [(ngModel)]="assessment['E1f']">
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1233,7 +1233,7 @@
     <select 
      class="form-control"
      name="E1g"
-     [ngModel]=assessment.E1g>
+     [(ngModel)]="assessment['E1g']">
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1248,7 +1248,7 @@
     <select 
      class="form-control"
      name="E1h"
-     [ngModel]=assessment.E1h>
+     [(ngModel)]="assessment['E1h']">
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1263,7 +1263,7 @@
     <select 
      class="form-control"
      name="E1i"
-     [ngModel]=assessment.E1i>
+     [(ngModel)]="assessment['E1i']">
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1278,7 +1278,7 @@
     <select 
      class="form-control"
      name="E1j"
-     [ngModel]=assessment.E1j>
+     [(ngModel)]="assessment['E1j']">
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1293,7 +1293,7 @@
     <select 
      class="form-control"
      name="E1k"
-     [ngModel]=assessment.E1k>
+     [(ngModel)]="assessment['E1k']">
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1308,7 +1308,7 @@
     <select 
      class="form-control"
      name="E1l"
-     [ngModel]=assessment.E1l>
+     [(ngModel)]="assessment['E1l']">
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1323,7 +1323,7 @@
     <select 
      class="form-control"
      name="E1m"
-     [ngModel]=assessment.E1m>
+     [(ngModel)]="assessment['E1m']">
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1338,7 +1338,7 @@
     <select 
      class="form-control"
      name="E1n"
-     [ngModel]=assessment.E1n>
+     [(ngModel)]="assessment['E1n']">
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1353,7 +1353,7 @@
     <select 
      class="form-control"
      name="E1o"
-     [ngModel]=assessment.E1o>
+     [(ngModel)]="assessment['E1o']">
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1368,7 +1368,7 @@
     <select 
      class="form-control"
      name="E1p"
-     [ngModel]=assessment.E1p>
+     [(ngModel)]="assessment['E1p']">
       <option *ngFor="let presence of options.indicatorPresence" 
         [value]="presence.key">{{presence.label}}
       </option>
@@ -1383,7 +1383,7 @@
     <select 
      class="form-control"
      name="E2"
-     [ngModel]=assessment.E2>
+     [(ngModel)]="assessment['E2']">
       <option *ngFor="let persistence of options.moodPersistence" 
         [value]="persistence.key">{{persistence.label}}
       </option>
@@ -1400,7 +1400,7 @@
        class="form-field-b" 
        type="text"
        name="E3"
-       [ngModel]=assessment.E3>
+       [(ngModel)]="assessment['E3']">
     </div>
   </div>
 
@@ -1412,7 +1412,7 @@
     <select 
      class="form-control"
      name="E4aA"
-     [ngModel]=assessment.E4aA>
+     [(ngModel)]="assessment['E4aA']">
       <option *ngFor="let symptoms of options.behaviouralSymptoms" 
         [value]="symptoms.key">{{symptoms.label}}
       </option>
@@ -1429,7 +1429,7 @@
        class="form-field-b" 
        type="text" 
        name="E4aB"
-       [ngModel]=assessment.E4aB>
+       [(ngModel)]="assessment['E4aB']">
     </div>
   </div>
 
@@ -1441,7 +1441,7 @@
     <select 
      class="form-control"
      name="E4bA"
-     [ngModel]=assessment.E4bA>
+     [(ngModel)]="assessment['E4bA']">
       <option *ngFor="let symptoms of options.behaviouralSymptoms" 
         [value]="symptoms.key">{{symptoms.label}}
       </option>
@@ -1458,7 +1458,7 @@
        class="form-field-b"
        type="text" 
        name="E4bB"
-       [ngModel]=assessment.E4bB>
+       [(ngModel)]="assessment['E4bB']">
     </div>
   </div>
 
@@ -1470,7 +1470,7 @@
     <select 
      class="form-control"
      name="E4cA"
-     [ngModel]=assessment.E4cA>
+     [(ngModel)]="assessment['E4cA']">
       <option *ngFor="let symptoms of options.behaviouralSymptoms" 
         [value]="symptoms.key">{{symptoms.label}}
       </option>
@@ -1487,7 +1487,7 @@
         type="text"
         class="form-field-b"  
         name="E4cB"
-        [ngModel]=assessment.E4cB>
+        [(ngModel)]="assessment['E4cB']">
     </div>
   </div>
 
@@ -1499,7 +1499,7 @@
     <select 
      class="form-control"
      name="E4dA"
-     [ngModel]=assessment.E4dA>
+     [(ngModel)]="assessment['E4dA']">
       <option *ngFor="let symptoms of options.behaviouralSymptoms" 
         [value]="symptoms.key">{{symptoms.label}}
       </option>
@@ -1516,7 +1516,7 @@
         type="text"
         class="form-field-b"  
         name="E4dB"
-        [ngModel]=assessment.E4dB>
+        [(ngModel)]="assessment['E4dB']">
     </div>
   </div>
 
@@ -1528,7 +1528,7 @@
     <select 
      class="form-control"
      name="E4eA"
-     [ngModel]=assessment.E4eA>
+     [(ngModel)]="assessment['E4eA']">
       <option *ngFor="let symptoms of options.behaviouralSymptoms" 
         [value]="symptoms.key">{{symptoms.label}}
       </option>
@@ -1545,7 +1545,7 @@
         type="text"
         class="form-field-b"  
         name="E4eB"
-        [ngModel]=assessment.E4eB>
+        [(ngModel)]="assessment['E4eB']">
     </div>
   </div>
 
@@ -1559,7 +1559,7 @@
        class="form-field"
        type="text"
        name="E5"
-       [ngModel]=assessment.E5>
+       [(ngModel)]="assessment['E5']">
     </div>
   </div>
 
@@ -1573,7 +1573,7 @@
        class="form-field"
        type="text"
        name="F1a"
-       [ngModel]=assessment.F1a>
+       [(ngModel)]="assessment['F1a']">
     </div>
   </div>
 
@@ -1587,7 +1587,7 @@
        class="form-field"
        type="text"
        name="F1b"
-       [ngModel]=assessment.F1b>
+       [(ngModel)]="assessment['F1b']">
     </div>
   </div>
 
@@ -1601,7 +1601,7 @@
        class="form-field"
        type="text"
        name="F1c"
-       [ngModel]=assessment.F1c>
+       [(ngModel)]="assessment['F1c']">
     </div>
   </div>
 
@@ -1615,7 +1615,7 @@
        class="form-field"
        type="text"
        name="F1d"
-       [ngModel]=assessment.F1d>
+       [(ngModel)]="assessment['F1d']">
     </div>
   </div>
 
@@ -1629,7 +1629,7 @@
        class="form-field"
        type="text"
        name="F1e"
-       [ngModel]=assessment.F1e>
+       [(ngModel)]="assessment['F1e']">
     </div>
   </div>
 
@@ -1643,7 +1643,7 @@
        class="form-field"
        type="text"
        name="F1f"
-       [ngModel]=assessment.F1f>
+       [(ngModel)]="assessment['F1f']">
     </div>
   </div>
 
@@ -1657,7 +1657,7 @@
        class="form-field"
        type="text"
        name="F2a"
-       [ngModel]=assessment.F2a>
+       [(ngModel)]="assessment['F2a']">
     </div>
   </div>
 
@@ -1671,7 +1671,7 @@
        class="form-field"
        type="text"
        name="F2b"
-       [ngModel]=assessment.F2b>
+       [(ngModel)]="assessment['F2b']">
     </div>
   </div>
 
@@ -1685,7 +1685,7 @@
        class="form-field"
        type="text"
        name="F2c"
-       [ngModel]=assessment.F2c>
+       [(ngModel)]="assessment['F2c']">
     </div>
   </div>
 
@@ -1699,7 +1699,7 @@
        class="form-field"
        type="text"
        name="F2d"
-       [ngModel]=assessment.F2d>
+       [(ngModel)]="assessment['F2d']">
     </div>
   </div>
 
@@ -1713,7 +1713,7 @@
        class="form-field"
        type="text"
        name="F2e"
-       [ngModel]=assessment.F2e>
+       [(ngModel)]="assessment['F2e']">
     </div>
   </div>
 
@@ -1727,7 +1727,7 @@
        class="form-field"
        type="text"
        name="F2f"
-       [ngModel]=assessment.F2f>
+       [(ngModel)]="assessment['F2f']">
     </div>
   </div>
 
@@ -1741,7 +1741,7 @@
        class="form-field"
        type="text"
        name="F2g"
-       [ngModel]=assessment.F2g>
+       [(ngModel)]="assessment['F2g']">
     </div>
   </div>
 
@@ -1755,7 +1755,7 @@
        class="form-field"
        type="text"
        name="F3a"
-       [ngModel]=assessment.F3a>
+       [(ngModel)]="assessment['F3a']">
     </div>
   </div>
 
@@ -1769,7 +1769,7 @@
        class="form-field"
        type="text"
        name="F3b"
-       [ngModel]=assessment.F3b>
+       [(ngModel)]="assessment['F3b']">
     </div>
   </div>
 
@@ -1783,7 +1783,7 @@
        class="form-field"
        type="text"
        name="F3c"
-       [ngModel]=assessment.F3c>
+       [(ngModel)]="assessment['F3c']">
     </div>
   </div>
 
@@ -1795,7 +1795,7 @@
     <select
      class="form-control" 
      name="G1aA"
-     [ngModel]=assessment.G1aA>
+     [(ngModel)]="assessment['G1aA']">
       <option *ngFor="let state of options.performanceState" 
        [value]="state.key">{{state.label}}
       </option>
@@ -1812,7 +1812,7 @@
        class="form-field"
        type="text"
        name="G1aB"
-       [ngModel]=assessment.G1aB>
+       [(ngModel)]="assessment['G1aB']">
     </div>
   </div>
 
@@ -1824,7 +1824,7 @@
     <select
      class="form-control" 
      name="G1bA"
-     [ngModel]=assessment.G1bA>
+     [(ngModel)]="assessment['G1bA']">
       <option *ngFor="let state of options.performanceState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -1839,7 +1839,7 @@
     <select 
      class="form-control" 
      name="G1bB"
-     [ngModel]=assessment.G1bB>
+     [(ngModel)]="assessment['G1bB']">
       <option *ngFor="let required of options.helpRequired" 
         [value]="required.key">{{required.label}}
       </option>
@@ -1856,7 +1856,7 @@
        type="text"
        class="form-field-b"  
        name="G1cA"
-       [ngModel]=assessment.G1cA>
+       [(ngModel)]="assessment['G1cA']">
     </div>
   </div>
 
@@ -1870,7 +1870,7 @@
        type="text"
        class="form-field-b"  
        name="G1cB"
-       [ngModel]=assessment.G1cB>
+       [(ngModel)]="assessment['G1cB']">
     </div>
   </div>
 
@@ -1884,7 +1884,7 @@
        type="text"
        class="form-field-b"  
        name="G1dA"
-       [ngModel]=assessment.G1dA>
+       [(ngModel)]="assessment['G1dA']">
     </div>
   </div>
 
@@ -1898,7 +1898,7 @@
        type="text"
        class="form-field-b"  
        name="G1dB"
-       [ngModel]=assessment.G1dB>
+       [(ngModel)]="assessment['G1dB']">
     </div>
   </div>
 
@@ -1910,7 +1910,7 @@
     <select 
      class="form-control" 
      name="G1eA"
-     [ngModel]=assessment.G1eA>
+     [(ngModel)]="assessment['G1eA']">
       <option *ngFor="let state of options.performanceState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -1927,7 +1927,7 @@
        type="text"
        class="form-field-b"  
        name="G1eB"
-       [ngModel]=assessment.G1eB>
+       [(ngModel)]="assessment['G1eB']">
     </div>
   </div>
 
@@ -1941,7 +1941,7 @@
        type="text"
        class="form-field-b"  
        name="G1fA"
-       [ngModel]=assessment.G1fA>
+       [(ngModel)]="assessment['G1fA']">
     </div>
   </div>
 
@@ -1955,7 +1955,7 @@
        type="text"
        class="form-field-b"  
        name="G1fB"
-       [ngModel]=assessment.G1fB>
+       [(ngModel)]="assessment['G1fB']">
     </div>
   </div>
 
@@ -1967,7 +1967,7 @@
     <select 
      class="form-control" 
      name="G1gA"
-     [ngModel]=assessment.G1gA>
+     [(ngModel)]="assessment['G1gA']">
       <option *ngFor="let state of options.performanceState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -1984,7 +1984,7 @@
        type="text"
        class="form-field-b"  
        name="G1gB"
-       [ngModel]=assessment.G1gB>
+       [(ngModel)]="assessment['G1gB']">
     </div>
   </div>
 
@@ -1996,7 +1996,7 @@
     <select 
      class="form-control" 
      name="G1hA"
-     [ngModel]=assessment.G1hA>
+     [(ngModel)]="assessment['G1hA']">
       <option *ngFor="let state of options.performanceState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -2013,7 +2013,7 @@
        type="text"
        class="form-field-b"  
        name="G1hB"
-       [ngModel]=assessment.G1hB>
+       [(ngModel)]="assessment['G1hB']">
     </div>
   </div>
 
@@ -2025,7 +2025,7 @@
     <select 
      class="form-control" 
      name="G1iA"
-     [ngModel]=assessment.G1iA>
+     [(ngModel)]="assessment['G1iA']">
       <option *ngFor="let state of options.performanceState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -2042,7 +2042,7 @@
        type="text"
        class="form-field-b"  
        name="G1iB"
-       [ngModel]=assessment.G1iB>
+       [(ngModel)]="assessment['G1iB']">
     </div>
   </div>
 
@@ -2056,7 +2056,7 @@
        type="text"
        class="form-field-b"  
        name="G1jA"
-       [ngModel]=assessment.G1jA>
+       [(ngModel)]="assessment['G1jA']">
     </div>
   </div>
 
@@ -2070,7 +2070,7 @@
        type="text"
        class="form-field-b"  
        name="G1jB"
-       [ngModel]=assessment.G1jB>
+       [(ngModel)]="assessment['G1jB']">
     </div>
   </div>
 
@@ -2084,7 +2084,7 @@
        type="text"
        class="form-field-b"  
        name="G2a"
-       [ngModel]=assessment.G2a>
+       [(ngModel)]="assessment['G2a']">
     </div>
   </div>
 
@@ -2098,7 +2098,7 @@
        type="text"
        class="form-field-b"  
        name="G2B"
-       [ngModel]=assessment.G2b>
+       [(ngModel)]="assessment['G2b']">
     </div>
   </div>
 
@@ -2112,7 +2112,7 @@
        type="text"
        class="form-field-b"  
        name="G3A"
-       [ngModel]=assessment.G3a>
+       [(ngModel)]="assessment['G3a']">
     </div>
   </div>
 
@@ -2126,7 +2126,7 @@
        type="text"
        class="form-field-b"  
        name="G3b"
-       [ngModel]=assessment.G3b>
+       [(ngModel)]="assessment['G3b']">
     </div>
   </div>
 
@@ -2138,7 +2138,7 @@
     <select 
      class="form-control" 
      name="G4aA"
-     [ngModel]=assessment.G4aA>
+     [(ngModel)]="assessment['G4aA']">
       <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
@@ -2155,7 +2155,7 @@
        type="text"
        class="form-field-b"  
        name="G4aB"
-       [ngModel]=assessment.G4aB>
+       [(ngModel)]="assessment['G4aB']">
     </div>
   </div>
 
@@ -2167,7 +2167,7 @@
     <select 
      class="form-control" 
      name="G4bA"
-     [ngModel]=assessment.G4bA>
+     [(ngModel)]="assessment['G4bA']">
       <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
@@ -2184,7 +2184,7 @@
        type="text"
        class="form-field-b"  
        name="G4bB"
-       [ngModel]=assessment.G4bB>
+       [(ngModel)]="assessment['G4bB']">
     </div>
   </div>
 
@@ -2196,7 +2196,7 @@
     <select 
      class="form-control" 
      name="G4cA"
-     [ngModel]=assessment.G4cA>
+     [(ngModel)]="assessment['G4cA']">
       <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
@@ -2213,7 +2213,7 @@
        type="text"
        class="form-field-b"  
        name="G4cB"
-       [ngModel]=assessment.G4cB>
+       [(ngModel)]="assessment['G4cB']">
     </div>
   </div>
 
@@ -2225,7 +2225,7 @@
     <select 
      class="form-control" 
      name="G4dA"
-     [ngModel]=assessment.G4dA>
+     [(ngModel)]="assessment['G4dA']">
       <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
@@ -2242,7 +2242,7 @@
        type="text"
        class="form-field-b"  
        name="G4dB"
-       [ngModel]=assessment.G4dB>
+       [(ngModel)]="assessment['G4dB']">
     </div>
   </div>
 
@@ -2254,7 +2254,7 @@
     <select 
      class="form-control" 
      name="G4eA"
-     [ngModel]=assessment.G4eA>
+     [(ngModel)]="assessment['G4eA']">
       <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
@@ -2271,7 +2271,7 @@
        type="text"
        class="form-field-b"  
        name="G4eB"
-       [ngModel]=assessment.G4eB>
+       [(ngModel)]="assessment['G4eB']">
     </div>
   </div>
 
@@ -2283,7 +2283,7 @@
     <select 
      class="form-control" 
      name="G4fA"
-     [ngModel]=assessment.G4fA>
+     [(ngModel)]="assessment['G4fA']">
       <option *ngFor="let range of options.motionRange" 
         [value]="range.key">{{range.label}}
       </option>
@@ -2300,7 +2300,7 @@
        type="text"
        class="form-field-b"  
        name="G4fB"
-       [ngModel]=assessment.G4fB>
+       [(ngModel)]="assessment['G4fB']">
     </div>
   </div>
 
@@ -2314,7 +2314,7 @@
        type="text"
        class="form-field-b"  
        name="G5a"
-       [ngModel]=assessment.G5a>
+       [(ngModel)]="assessment['G5a']">
     </div>
   </div>
 
@@ -2328,7 +2328,7 @@
        type="text"
        class="form-field-b"  
        name="G5b"
-       [ngModel]=assessment.G5b>
+       [(ngModel)]="assessment['G5b']">
     </div>
   </div>
 
@@ -2342,7 +2342,7 @@
        type="text"
        class="form-field-b"  
        name="g5c"
-       [ngModel]=assessment.G5c>
+       [(ngModel)]="assessment['G5c']">
     </div>
   </div>
 
@@ -2356,7 +2356,7 @@
        type="text"
        class="form-field-b"  
        name="G5d"
-       [ngModel]=assessment.G5d>
+       [(ngModel)]="assessment['G5d']">
     </div>
   </div>
 
@@ -2370,7 +2370,7 @@
        type="text"
        class="form-field-b"  
        name="G6a"
-       [ngModel]=assessment.G6a>
+       [(ngModel)]="assessment['G6a']">
     </div>
   </div>
 
@@ -2384,7 +2384,7 @@
        type="text"
        class="form-field-b"  
        name="G6b"
-       [ngModel]=assessment.G6b>
+       [(ngModel)]="assessment['G6b']">
     </div>
   </div>
 
@@ -2398,7 +2398,7 @@
        type="text"
        class="form-field-b"  
        name="G6c"
-       [ngModel]=assessment.G6c>
+       [(ngModel)]="assessment['G6c']">
     </div>
   </div>
 
@@ -2412,7 +2412,7 @@
        type="text"
        class="form-field-b"  
        name="G6d"
-       [ngModel]=assessment.G6d>
+       [(ngModel)]="assessment['G6d']">
     </div>
   </div>
 
@@ -2426,7 +2426,7 @@
        type="text"
        class="form-field-b"  
        name="G6e"
-       [ngModel]=assessment.G6e>
+       [(ngModel)]="assessment['G6e']">
     </div>
   </div>
 
@@ -2440,7 +2440,7 @@
        type="text"
        class="form-field-b"  
        name="G7"
-       [ngModel]=assessment.G7>
+       [(ngModel)]="assessment['G7']">
     </div>
   </div>
 
@@ -2454,7 +2454,7 @@
        type="text"
        class="form-field-b"  
        name="g8a"
-       [ngModel]=assessment.G8a>
+       [(ngModel)]="assessment['G8a']">
     </div>
   </div>
 
@@ -2468,7 +2468,7 @@
        type="text"
        class="form-field-b"  
        name="G8b"
-       [ngModel]=assessment.G8b>
+       [(ngModel)]="assessment['G8b']">
     </div>
   </div>
 
@@ -2482,7 +2482,7 @@
        type="text"
        class="form-field-b"  
        name="G8c"
-       [ngModel]=assessment.G8c>
+       [(ngModel)]="assessment['G8c']">
     </div>
   </div>
 
@@ -2496,7 +2496,7 @@
        type="text"
        class="form-field-b"  
        name="G8d"
-       [ngModel]=assessment.G8d>
+       [(ngModel)]="assessment['G8d']">
     </div>
   </div>
 
@@ -2510,7 +2510,7 @@
        type="text"
        class="form-field-b"  
        name="G9"
-       [ngModel]=assessment.G9>
+       [(ngModel)]="assessment['G9']">
     </div>
   </div>
 
@@ -2522,7 +2522,7 @@
     <select 
      class="form-control" 
      name="H1a"
-     [ngModel]=assessment.H1a>
+     [(ngModel)]="assessment['H1a']">
       <option *ngFor="let state of options.continenceState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -2537,7 +2537,7 @@
     <select 
      class="form-control" 
      name="H1b"
-     [ngModel]=assessment.H1b>
+     [(ngModel)]="assessment['H1b']">
       <option *ngFor="let state of options.continenceState" 
         [value]="state.key">{{state.label}}
       </option>
@@ -2554,7 +2554,7 @@
        type="text"
        class="form-field-b"  
        name="H2a"
-       [ngModel]=assessment.H2a>
+       [(ngModel)]="assessment['H2a']">
     </div>
   </div>
 
@@ -2568,7 +2568,7 @@
        type="text"
        class="form-field-b"  
        name="H2b"
-       [ngModel]=assessment.H2b>
+       [(ngModel)]="assessment['H2b']">
     </div>
   </div>
 
@@ -2582,7 +2582,7 @@
        type="text"
        class="form-field-b"  
        name="H2c"
-       [ngModel]=assessment.H2c>
+       [(ngModel)]="assessment['H2c']">
     </div>
   </div>
 
@@ -2594,7 +2594,7 @@
     <select 
      class="form-control" 
      name="H2d"
-     [ngModel]=assessment.H2d>
+     [(ngModel)]="assessment['H2d']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -2609,7 +2609,7 @@
     <select 
      class="form-control" 
      name="H3a"
-     [ngModel]=assessment.H3a>
+     [(ngModel)]="assessment['H3a']">
       <option *ngFor="let plan of options.toiletingPlan" 
         [value]="plan.key">{{plan.label}}
       </option>
@@ -2624,7 +2624,7 @@
     <select 
      class="form-control" 
      name="H3b"
-     [ngModel]=assessment.H3b>
+     [(ngModel)]="assessment['H3b']">
       <option *ngFor="let program of options.bladderRetrainingProgram" 
         [value]="program.key">{{program.label}}
       </option>
@@ -2641,7 +2641,7 @@
        type="text"
        class="form-field-b"  
        name="H3c"
-       [ngModel]=assessment.H3c>
+       [(ngModel)]="assessment['H3c']">
     </div>
   </div>
 
@@ -2653,7 +2653,7 @@
     <select 
      class="form-control" 
      name="H3d"
-     [ngModel]=assessment.H3d>
+     [(ngModel)]="assessment['H3d']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -2670,7 +2670,7 @@
        type="text"
        class="form-field-b"  
        name="H3e"
-       [ngModel]=assessment.H3e>
+       [(ngModel)]="assessment['H3e']">
     </div>
   </div>
 
@@ -2684,7 +2684,7 @@
        type="text"
        class="form-field-b"  
        name="H3f"
-       [ngModel]=assessment.H3f>
+       [(ngModel)]="assessment['H3f']">
     </div>
   </div>
 
@@ -2698,7 +2698,7 @@
        type="text"
        class="form-field-b"  
        name="H3g"
-       [ngModel]=assessment.H3g>
+       [(ngModel)]="assessment['H3g']">
     </div>
   </div>
 
@@ -2712,7 +2712,7 @@
        type="text"
        class="form-field-b"  
        name="H3h"
-       [ngModel]=assessment.H3h>
+       [(ngModel)]="assessment['H3h']">
     </div>
   </div>
 
@@ -2724,7 +2724,7 @@
     <select
      class="form-control" 
      name="H3i"
-     [ngModel]=assessment.H3i>
+     [(ngModel)]="assessment['H3i']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -2741,7 +2741,7 @@
        type="text"
        class="form-field-b"  
        name="H4"
-       [ngModel]=assessment.H4>
+       [(ngModel)]="assessment['H4']">
     </div>
   </div>
 
@@ -2753,7 +2753,7 @@
     <select
      class="form-control" 
      name="I1a"
-     [ngModel]=assessment.I1a>
+     [(ngModel)]="assessment['I1a']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -2770,7 +2770,7 @@
        type="text"
        class="form-field-b"  
        name="I1aA"
-       [ngModel]=assessment.I1aA>
+       [(ngModel)]="assessment['I1aA']">
     </div>
   </div>
 
@@ -2784,7 +2784,7 @@
        type="text"
        class="form-field-b"  
        name="I1b"
-       [ngModel]=assessment.I1b>
+       [(ngModel)]="assessment['I1b']">
     </div>
   </div>
 
@@ -2798,7 +2798,7 @@
        type="text"
        class="form-field-b"  
        name="I1bB"
-       [ngModel]=assessment.I1bB>
+       [(ngModel)]="assessment['I1bB']">
     </div>
   </div>
   <!-- (I1c) -->
@@ -2811,7 +2811,7 @@
        type="text"
        class="form-field-b"  
        name="I1c"
-       [ngModel]=assessment.I1c>
+       [(ngModel)]="assessment['I1c']">
     </div>
   </div>
 
@@ -2825,7 +2825,7 @@
        type="text"
        class="form-field-b"  
        name="I1cC"
-       [ngModel]=assessment.I1cC>
+       [(ngModel)]="assessment['I1cC']">
     </div>
   </div>
 
@@ -2839,7 +2839,7 @@
        type="text"
        class="form-field-b"  
        name="I1d"
-       [ngModel]=assessment.I1d>
+       [(ngModel)]="assessment['I1d']">
     </div>
   </div>
 
@@ -2853,7 +2853,7 @@
        type="text"
        class="form-field-b"  
        name="I1dD"
-       [ngModel]=assessment.I1dD>
+       [(ngModel)]="assessment['I1dD']">
     </div>
   </div>
 
@@ -2867,7 +2867,7 @@
        type="text"
        class="form-field-b"  
        name="I1e"
-       [ngModel]=assessment.I1e>
+       [(ngModel)]="assessment['I1e']">
     </div>
   </div>
 
@@ -2881,7 +2881,7 @@
        type="text"
        class="form-field-b"  
        name="I1eE"
-       [ngModel]=assessment.I1eE>
+       [(ngModel)]="assessment['I1eE']">
     </div>
   </div>
 
@@ -2895,7 +2895,7 @@
        type="text"
        class="form-field-b"  
        name="I1f"
-       [ngModel]=assessment.I1f>
+       [(ngModel)]="assessment['I1f']">
     </div>
   </div>
 
@@ -2909,7 +2909,7 @@
        type="text"
        class="form-field-b"  
        name="I1fF"
-       [ngModel]=assessment.I1fF>
+       [(ngModel)]="assessment['I1fF']">
     </div>
   </div>
 
@@ -2923,7 +2923,7 @@
        type="text"
        class="form-field-b"  
        name="I1g"
-       [ngModel]=assessment.I1g>
+       [(ngModel)]="assessment['I1g']">
     </div>
   </div>
 
@@ -2937,7 +2937,7 @@
        type="text"
        class="form-field-b"  
        name="I1gG"
-       [ngModel]=assessment.I1gG>
+       [(ngModel)]="assessment['I1gG']">
     </div>
   </div>
 
@@ -2951,7 +2951,7 @@
        type="text"
        class="form-field-b"  
        name="I1h"
-       [ngModel]=assessment.I1h>
+       [(ngModel)]="assessment['I1h']">
     </div>
   </div>
 
@@ -2965,7 +2965,7 @@
        type="text"
        class="form-field-b"  
        name="I1hH"
-       [ngModel]=assessment.I1hH>
+       [(ngModel)]="assessment['I1hH']">
     </div>
   </div>
 
@@ -2979,7 +2979,7 @@
        type="text"
        class="form-field-b"  
        name="I1i"
-       [ngModel]=assessment.I1i>
+       [(ngModel)]="assessment['I1i']">
     </div>
   </div>
 
@@ -2993,7 +2993,7 @@
        type="text"
        class="form-field-b"  
        name="I1iI"
-       [ngModel]=assessment.I1iI>
+       [(ngModel)]="assessment['I1iI']">
     </div>
   </div>
 
@@ -3007,7 +3007,7 @@
        type="text"
        class="form-field-b"  
        name="I1j"
-       [ngModel]=assessment.I1j>
+       [(ngModel)]="assessment['I1j']">
     </div>
   </div>
 
@@ -3021,7 +3021,7 @@
        type="text"
        class="form-field-b"  
        name="I1jJ"
-       [ngModel]=assessment.I1jJ>
+       [(ngModel)]="assessment['I1jJ']">
     </div>
   </div>
 
@@ -3035,7 +3035,7 @@
        type="text"
        class="form-field-b"  
        name="I1k"
-       [ngModel]=assessment.I1k>
+       [(ngModel)]="assessment['I1k']">
     </div>
   </div>
   <!-- (I1kK) -->
@@ -3048,7 +3048,7 @@
        type="text"
        class="form-field-b"  
        name="I1kK"
-       [ngModel]=assessment.I1kK>
+       [(ngModel)]="assessment['I1kK']">
     </div>
   </div>
 
@@ -3062,7 +3062,7 @@
        type="text"
        class="form-field-b"  
        name="I1l"
-       [ngModel]=assessment.I1l>
+       [(ngModel)]="assessment['I1l']">
     </div>
   </div>
 
@@ -3076,7 +3076,7 @@
        type="text"
        class="form-field-b"  
        name="I1lL"
-       [ngModel]=assessment.I1lL>
+       [(ngModel)]="assessment['I1lL']">
     </div>
   </div>
 
@@ -3090,7 +3090,7 @@
        type="text"
        class="form-field-b"  
        name="I1m"
-       [ngModel]=assessment.I1m>
+       [(ngModel)]="assessment['I1m']">
     </div>
   </div>
 
@@ -3104,7 +3104,7 @@
        type="text"
        class="form-field-b"  
        name="I1mM"
-       [ngModel]=assessment.I1mM>
+       [(ngModel)]="assessment['I1mM']">
     </div>
   </div>
 
@@ -3118,7 +3118,7 @@
        type="text"
        class="form-field-b"  
        name="I1n"
-       [ngModel]=assessment.I1n>
+       [(ngModel)]="assessment['I1n']">
     </div>
   </div>
 
@@ -3132,7 +3132,7 @@
        type="text"
        class="form-field-b"  
        name="I1nN"
-       [ngModel]=assessment.I1nN>
+       [(ngModel)]="assessment['I1nN']">
     </div>
   </div>
 
@@ -3146,7 +3146,7 @@
        type="text"
        class="form-field-b"  
        name="I1o"
-       [ngModel]=assessment.I1o>
+       [(ngModel)]="assessment['I1o']">
     </div>
   </div>
 
@@ -3160,7 +3160,7 @@
        type="text"
        class="form-field-b"  
        name="I1oO"
-       [ngModel]=assessment.I1oO>
+       [(ngModel)]="assessment['I1oO']">
     </div>
   </div>
 
@@ -3174,7 +3174,7 @@
        type="text"
        class="form-field-b"  
        name="I1p"
-       [ngModel]=assessment.I1p>
+       [(ngModel)]="assessment['I1p']">
     </div>
   </div>
 
@@ -3188,7 +3188,7 @@
        type="text"
        class="form-field-b"  
        name="I1pP"
-       [ngModel]=assessment.I1pP>
+       [(ngModel)]="assessment['I1pP']">
     </div>
   </div>
 
@@ -3202,7 +3202,7 @@
        type="text"
        class="form-field-b"  
        name="I1q"
-       [ngModel]=assessment.I1q>
+       [(ngModel)]="assessment['I1q']">
     </div>
   </div>
 
@@ -3216,7 +3216,7 @@
        type="text"
        class="form-field-b"  
        name="I1qQ"
-       [ngModel]=assessment.I1qQ>
+       [(ngModel)]="assessment['I1qQ']">
     </div>
   </div>
 
@@ -3230,7 +3230,7 @@
        type="text"
        class="form-field-b"  
        name="I1r"
-       [ngModel]=assessment.I1r>
+       [(ngModel)]="assessment['I1r']">
     </div>
   </div>
 
@@ -3244,7 +3244,7 @@
        type="text"
        class="form-field-b"  
        name="I1rR"
-       [ngModel]=assessment.I1rR>
+       [(ngModel)]="assessment['I1rR']">
     </div>
   </div>
 
@@ -3256,7 +3256,7 @@
     <select
      class="form-control" 
      name="I1s"
-     [ngModel]=assessment.I1s>
+     [(ngModel)]="assessment['I1s']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3273,7 +3273,7 @@
        type="text"
        class="form-field-b"  
        name="I1sS"
-       [ngModel]=assessment.I1sS>
+       [(ngModel)]="assessment['I1sS']">
     </div>
   </div>
 
@@ -3285,7 +3285,7 @@
     <select
      class="form-control" 
      name="I1t"
-     [ngModel]=assessment.I1t>
+     [(ngModel)]="assessment['I1t']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3302,7 +3302,7 @@
        type="text"
        class="form-field-b"  
        name="I1tT"
-       [ngModel]=assessment.I1tT>
+       [(ngModel)]="assessment['I1tT']">
     </div>
   </div>
 
@@ -3316,7 +3316,7 @@
        type="text"
        class="form-field-b"  
        name="I1u"
-       [ngModel]=assessment.I1u>
+       [(ngModel)]="assessment['I1u']">
     </div>
   </div>
 
@@ -3330,7 +3330,7 @@
        type="text"
        class="form-field-b"  
        name="I1uU"
-       [ngModel]=assessment.I1uU>
+       [(ngModel)]="assessment['I1uU']">
     </div>
   </div>
 
@@ -3344,7 +3344,7 @@
        type="text"
        class="form-field-b"  
        name="I1v"
-       [ngModel]=assessment.I1v>
+       [(ngModel)]="assessment['I1v']">
     </div>
   </div>
 
@@ -3356,7 +3356,7 @@
     <select
      class="form-control" 
      name="I1w"
-     [ngModel]=assessment.I1w>
+     [(ngModel)]="assessment['I1w']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3373,7 +3373,7 @@
        type="text"
        class="form-field-b"  
        name="I1x"
-       [ngModel]=assessment.I1x>
+       [(ngModel)]="assessment['I1x']">
     </div>
   </div>
 
@@ -3387,7 +3387,7 @@
        type="text"
        class="form-field-b"  
        name="I1y"
-       [ngModel]=assessment.I1y>
+       [(ngModel)]="assessment['I1y']">
     </div>
   </div>
 
@@ -3401,7 +3401,7 @@
        type="text"
        class="form-field-b"  
        name="I1z"
-       [ngModel]=assessment.I1z>
+       [(ngModel)]="assessment['I1z']">
     </div>
   </div>
 
@@ -3415,7 +3415,7 @@
        type="text"
        class="form-field-b"  
        name="I2a"
-       [ngModel]=assessment.I2a>
+       [(ngModel)]="assessment['I2a']">
     </div>
   </div>
 
@@ -3429,7 +3429,7 @@
        type="text"
        class="form-field-b"  
        name="I2b"
-       [ngModel]=assessment.I2b>
+       [(ngModel)]="assessment['I2b']">
     </div>
   </div>
 
@@ -3443,7 +3443,7 @@
        type="text"
        class="form-field-b"  
        name="I2c"
-       [ngModel]=assessment.I2c>
+       [(ngModel)]="assessment['I2c']">
     </div>
   </div>
 
@@ -3457,7 +3457,7 @@
        type="text"
        class="form-field-b"  
        name="I2d"
-       [ngModel]=assessment.I2d>
+       [(ngModel)]="assessment['I2d']">
     </div>
   </div>
 
@@ -3471,7 +3471,7 @@
        type="text"
        class="form-field-b"  
        name="I2e"
-       [ngModel]=assessment.I2e>
+       [(ngModel)]="assessment['I2e']">
     </div>
   </div>
 
@@ -3483,7 +3483,7 @@
     <select
      class="form-control" 
      name="I2f"
-     [ngModel]=assessment.I2f>
+     [(ngModel)]="assessment['I2f']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3498,7 +3498,7 @@
     <select
      class="form-control" 
      name="I2g"
-     [ngModel]=assessment.I2g>
+     [(ngModel)]="assessment['I2g']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3513,7 +3513,7 @@
     <select
      class="form-control" 
      name="I2h"
-     [ngModel]=assessment.I2h>
+     [(ngModel)]="assessment['I2h']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3530,7 +3530,7 @@
        type="text"
        class="form-field-b"  
        name="I2i"
-       [ngModel]=assessment.I2i>
+       [(ngModel)]="assessment['I2i']">
     </div>
   </div>
 
@@ -3544,7 +3544,7 @@
        type="text"
        class="form-field-b"  
        name="I2j"
-       [ngModel]=assessment.I2j>
+       [(ngModel)]="assessment['I2j']">
     </div>
   </div>
 
@@ -3556,7 +3556,7 @@
     <select
      class="form-control" 
      name="I2k"
-     [ngModel]=assessment.I2k>
+     [(ngModel)]="assessment['I2k']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -3573,7 +3573,7 @@
        type="text"
        class="form-field-b"  
        name="I2l"
-       [ngModel]=assessment.I2l>
+       [(ngModel)]="assessment['I2l']">
     </div>
   </div>
 
@@ -3587,7 +3587,7 @@
        type="text"
        class="form-field-b"  
        name="I2m"
-       [ngModel]=assessment.I2m>
+       [(ngModel)]="assessment['I2m']">
     </div>
   </div>
 
@@ -3601,7 +3601,7 @@
        type="text"
        class="form-field-b"  
        name="I3a"
-       [ngModel]=assessment.I3a>
+       [(ngModel)]="assessment['I3a']">
     </div>
   </div>
 
@@ -3615,7 +3615,7 @@
        type="text"
        class="form-field-b"  
        name="I3b"
-       [ngModel]=assessment.I3b>
+       [(ngModel)]="assessment['I3b']">
     </div>
   </div>
 
@@ -3629,7 +3629,7 @@
        type="text"
        class="form-field-b"  
        name="I3c"
-       [ngModel]=assessment.I3c>
+       [(ngModel)]="assessment['I3c']">
     </div>
   </div>
 
@@ -3643,7 +3643,7 @@
        type="text"
        class="form-field-b"  
        name="I3d"
-       [ngModel]=assessment.I3d>
+       [(ngModel)]="assessment['I3d']">
     </div>
   </div>
 
@@ -3657,7 +3657,7 @@
        type="text"
        class="form-field-b"  
        name="I3e"
-       [ngModel]=assessment.I3e>
+       [(ngModel)]="assessment['I3e']">
     </div>
   </div>
 
@@ -3671,7 +3671,7 @@
        type="text"
        class="form-field-b"  
        name="I3f"
-       [ngModel]=assessment.I3f>
+       [(ngModel)]="assessment['I3f']">
     </div>
   </div>
 
@@ -3685,7 +3685,7 @@
        type="text"
        class="form-field-b"  
        name="J1a"
-       [ngModel]=assessment.J1a>
+       [(ngModel)]="assessment['J1a']">
     </div>
   </div>
 
@@ -3699,7 +3699,7 @@
        type="text"
        class="form-field-b"  
        name="J1b"
-       [ngModel]=assessment.J1b>
+       [(ngModel)]="assessment['J1b']">
     </div>
   </div>
 
@@ -3711,7 +3711,7 @@
     <select
      class="form-control" 
      name="J1c"
-     [ngModel]=assessment.J1c>
+     [(ngModel)]="assessment['J1c']">
       <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
@@ -3728,7 +3728,7 @@
        type="text"
        class="form-field-b"  
        name="J1d"
-       [ngModel]=assessment.J1d>
+       [(ngModel)]="assessment['J1d']">
     </div>
   </div>
 
@@ -3740,7 +3740,7 @@
     <select
      class="form-control" 
      name="J1e"
-     [ngModel]=assessment.J1e>
+     [(ngModel)]="assessment['J1e']">
       <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
@@ -3757,7 +3757,7 @@
        type="text"
        class="form-field-b"  
        name="J1f"
-       [ngModel]=assessment.J1f>
+       [(ngModel)]="assessment['J1f']">
     </div>
   </div>
 
@@ -3771,7 +3771,7 @@
        type="text"
        class="form-field-b"  
        name="J1g"
-       [ngModel]=assessment.J1g>
+       [(ngModel)]="assessment['J1g']">
     </div>
   </div>
 
@@ -3783,7 +3783,7 @@
     <select
      class="form-control" 
      name="J1h"
-     [ngModel]=assessment.J1h>
+     [(ngModel)]="assessment['J1h']">
       <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
@@ -3798,7 +3798,7 @@
     <select
      class="form-control" 
      name="J1i"
-     [ngModel]=assessment.J1i>
+     [(ngModel)]="assessment['J1i']">
       <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
@@ -3813,7 +3813,7 @@
     <select
      class="form-control" 
      name="J1j"
-     [ngModel]=assessment.J1j>
+     [(ngModel)]="assessment['J1j']">
       <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
@@ -3830,7 +3830,7 @@
        type="text"
        class="form-field-b"  
        name="J1k"
-       [ngModel]=assessment.J1k>
+       [(ngModel)]="assessment['J1k']">
     </div>
   </div>
 
@@ -3844,7 +3844,7 @@
        type="text"
        class="form-field-b"  
        name="J1l"
-       [ngModel]=assessment.J1l>
+       [(ngModel)]="assessment['J1l']">
     </div>
   </div>
 
@@ -3858,7 +3858,7 @@
        type="text"
        class="form-field-b"  
        name="J1m"
-       [ngModel]=assessment.J1m>
+       [(ngModel)]="assessment['J1m']">
     </div>
   </div>
 
@@ -3872,7 +3872,7 @@
        type="text"
        class="form-field-b"  
        name="J1n"
-       [ngModel]=assessment.J1n>
+       [(ngModel)]="assessment['J1n']">
     </div>
   </div>
 
@@ -3884,7 +3884,7 @@
     <select
      class="form-control" 
      name="J1o"
-     [ngModel]=assessment.J1o>
+     [(ngModel)]="assessment['J1o']">
       <option *ngFor="let occurrence of options.sevenDaysOccurrence" 
         [value]="occurrence.key">{{occurrence.label}}
       </option>
@@ -3899,7 +3899,7 @@
     <select
      class="form-control" 
      name="J2a"
-     [ngModel]=assessment.J2a>
+     [(ngModel)]="assessment['J2a']">
       <option *ngFor="let frequency of options.painFrequency" 
         [value]="frequency.key">{{frequency.label}}
       </option>
@@ -3914,7 +3914,7 @@
     <select
      class="form-control" 
      name="J2b"
-     [ngModel]=assessment.J2b>
+     [(ngModel)]="assessment['J2b']">
       <option *ngFor="let intensity of options.painIntensity" 
         [value]="intensity.key">{{intensity.label}}
       </option>
@@ -3931,7 +3931,7 @@
        type="text"
        class="form-field-b"  
        name="J3a"
-       [ngModel]=assessment.J3a>
+       [(ngModel)]="assessment['J3a']">
     </div>
   </div>
 
@@ -3945,7 +3945,7 @@
        type="text"
        class="form-field-b"  
        name="J3b"
-       [ngModel]=assessment.J3b>
+       [(ngModel)]="assessment['J3b']">
     </div>
   </div>
 
@@ -3959,7 +3959,7 @@
        type="text"
        class="form-field-b"  
        name="J3c"
-       [ngModel]=assessment.J3c>
+       [(ngModel)]="assessment['J3c']">
     </div>
   </div>
 
@@ -3973,7 +3973,7 @@
        type="text"
        class="form-field-b"  
        name="J3d"
-       [ngModel]=assessment.J3d>
+       [(ngModel)]="assessment['J3d']">
     </div>
   </div>
 
@@ -3987,7 +3987,7 @@
        type="text"
        class="form-field-b"  
        name="J3e"
-       [ngModel]=assessment.J3e>
+       [(ngModel)]="assessment['J3e']">
     </div>
   </div>
 
@@ -4001,7 +4001,7 @@
        type="text"
        class="form-field-b"  
        name="J3f"
-       [ngModel]=assessment.J3f>
+       [(ngModel)]="assessment['J3f']">
     </div>
   </div>
 
@@ -4015,7 +4015,7 @@
        type="text"
        class="form-field-b"  
        name="J3g"
-       [ngModel]=assessment.J3g>
+       [(ngModel)]="assessment['J3g']">
     </div>
   </div>
 
@@ -4029,7 +4029,7 @@
        type="text"
        class="form-field-b"  
        name="J3h"
-       [ngModel]=assessment.J3h>
+       [(ngModel)]="assessment['J3h']">
     </div>
   </div>
 
@@ -4043,7 +4043,7 @@
        type="text"
        class="form-field-b"  
        name="J3i"
-       [ngModel]=assessment.J3i>
+       [(ngModel)]="assessment['J3i']">
     </div>
   </div>
 
@@ -4057,7 +4057,7 @@
        type="text"
        class="form-field-b"  
        name="J3j"
-       [ngModel]=assessment.J3j>
+       [(ngModel)]="assessment['J3j']">
     </div>
   </div>
 
@@ -4069,7 +4069,7 @@
     <select
      class="form-control" 
      name="J4a"
-     [ngModel]=assessment.J4a>
+     [(ngModel)]="assessment['J4a']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4086,7 +4086,7 @@
        type="text"
        class="form-field-b"  
        name="J4b"
-       [ngModel]=assessment.J4b>
+       [(ngModel)]="assessment['J4b']">
     </div>
   </div>
 
@@ -4098,7 +4098,7 @@
     <select
      class="form-control" 
      name="J4c"
-     [ngModel]=assessment.J4c>
+     [(ngModel)]="assessment['J4c']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4113,7 +4113,7 @@
     <select
      class="form-control" 
      name="J4d"
-     [ngModel]=assessment.J4d>
+     [(ngModel)]="assessment['J4d']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4130,7 +4130,7 @@
        type="text"
        class="form-field-b"  
        name="J5a"
-       [ngModel]=assessment.J5a>
+       [(ngModel)]="assessment['J5a']">
     </div>
   </div>
 
@@ -4144,7 +4144,7 @@
        type="text"
        class="form-field-b"  
        name="J5b"
-       [ngModel]=assessment.J5b>
+       [(ngModel)]="assessment['J5b']">
     </div>
   </div>
 
@@ -4156,7 +4156,7 @@
     <select
      class="form-control" 
      name="J5c"
-     [ngModel]=assessment.J5c>
+     [(ngModel)]="assessment['J5c']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4173,7 +4173,7 @@
        type="text"
        class="form-field-b"  
        name="K1a"
-       [ngModel]=assessment.K1a>
+       [(ngModel)]="assessment['K1a']">
     </div>
   </div>
 
@@ -4187,7 +4187,7 @@
        type="text"
        class="form-field-b"  
        name="K1b"
-       [ngModel]=assessment.K1b>
+       [(ngModel)]="assessment['K1b']">
     </div>
   </div>
 
@@ -4201,7 +4201,7 @@
        type="text"
        class="form-field-b"  
        name="K1c"
-       [ngModel]=assessment.K1c>
+       [(ngModel)]="assessment['K1c']">
     </div>
   </div>
 
@@ -4215,7 +4215,7 @@
        type="text"
        class="form-field-b"  
        name="K2a"
-       [ngModel]=assessment.K2a>
+       [(ngModel)]="assessment['K2a']">
     </div>
   </div>
 
@@ -4229,7 +4229,7 @@
        type="text"
        class="form-field-b"  
        name="K2b"
-       [ngModel]=assessment.K2b>
+       [(ngModel)]="assessment['K2b']">
     </div>
   </div>
 
@@ -4241,7 +4241,7 @@
     <select
      class="form-control" 
      name="K3a"
-     [ngModel]=assessment.K3a>
+     [(ngModel)]="assessment['K3a']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4258,7 +4258,7 @@
        type="text"
        class="form-field-b"  
        name="K3b"
-       [ngModel]=assessment.K3b>
+       [(ngModel)]="assessment['K3b']">
     </div>
   </div>
 
@@ -4272,7 +4272,7 @@
        type="text"
        class="form-field-b"  
        name="K4a"
-       [ngModel]=assessment.K4a>
+       [(ngModel)]="assessment['K4a']">
     </div>
   </div>
   <!-- (K4b) -->
@@ -4285,7 +4285,7 @@
        type="text"
        class="form-field-b"  
        name="K4b"
-       [ngModel]=assessment.K4b>
+       [(ngModel)]="assessment['K4b']">
     </div>
   </div>
 
@@ -4299,7 +4299,7 @@
        type="text"
        class="form-field-b"  
        name="K4c"
-       [ngModel]=assessment.K4c>
+       [(ngModel)]="assessment['K4c']">
     </div>
   </div>
 
@@ -4311,7 +4311,7 @@
     <select
      class="form-control" 
      name="K5a"
-     [ngModel]=assessment.K5a>
+     [(ngModel)]="assessment['K5a']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4326,7 +4326,7 @@
     <select
      class="form-control" 
      name="K5b"
-     [ngModel]=assessment.K5b>
+     [(ngModel)]="assessment['K5b']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4343,7 +4343,7 @@
        type="text"
        class="form-field-b"  
        name="K5c"
-       [ngModel]=assessment.K5c>
+       [(ngModel)]="assessment['K5c']">
     </div>
   </div>
 
@@ -4357,7 +4357,7 @@
        type="text"
        class="form-field-b"  
        name="K5d"
-       [ngModel]=assessment.K5d>
+       [(ngModel)]="assessment['K5d']">
     </div>
   </div>
 
@@ -4371,7 +4371,7 @@
        type="text"
        class="form-field-b"  
        name="K5e"
-       [ngModel]=assessment.K5e>
+       [(ngModel)]="assessment['K5e']">
     </div>
   </div>
 
@@ -4385,7 +4385,7 @@
        type="text"
        class="form-field-b"  
        name="K5f"
-       [ngModel]=assessment.K5f>
+       [(ngModel)]="assessment['K5f']">
     </div>
   </div>
 
@@ -4399,7 +4399,7 @@
        type="text"
        class="form-field-b"  
        name="K5g"
-       [ngModel]=assessment.K5g>
+       [(ngModel)]="assessment['K5g']">
     </div>
   </div>
 
@@ -4411,7 +4411,7 @@
     <select
      class="form-control" 
      name="K5h"
-     [ngModel]=assessment.K5h>
+     [(ngModel)]="assessment['K5h']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4426,7 +4426,7 @@
     <select
      class="form-control" 
      name="K6a"
-     [ngModel]=assessment.K6a>
+     [(ngModel)]="assessment['K6a']">
       <option *ngFor="let percent of options.caloriePercent" 
         [value]="percent.key">{{percent.label}}
       </option>
@@ -4441,7 +4441,7 @@
     <select
      class="form-control" 
      name="K6b"
-     [ngModel]=assessment.K6b>
+     [(ngModel)]="assessment['K6b']">
       <option *ngFor="let count of options.calorieCount" 
         [value]="count.key">{{count.label}}
       </option>
@@ -4458,7 +4458,7 @@
        type="text"
        class="form-field-b"  
        name="L1a"
-       [ngModel]=assessment.L1a>
+       [(ngModel)]="assessment['L1a']">
     </div>
   </div>
 
@@ -4472,7 +4472,7 @@
        type="text"
        class="form-field-b"  
        name="L1b"
-       [ngModel]=assessment.L1b>
+       [(ngModel)]="assessment['L1b']">
     </div>
   </div>
 
@@ -4484,7 +4484,7 @@
     <select
      class="form-control" 
      name="L1c"
-     [ngModel]=assessment.L1c>
+     [(ngModel)]="assessment['L1c']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4499,7 +4499,7 @@
     <select
      class="form-control" 
      name="L1d"
-     [ngModel]=assessment.L1d>
+     [(ngModel)]="assessment['L1d']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4514,7 +4514,7 @@
     <select
      class="form-control" 
      name="L1e"
-     [ngModel]=assessment.L1e>
+     [(ngModel)]="assessment['L1e']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4531,7 +4531,7 @@
        type="text"
        class="form-field-b"  
        name="L1f"
-       [ngModel]=assessment.L1f>
+       [(ngModel)]="assessment['L1f']">
     </div>
   </div>
 
@@ -4543,7 +4543,7 @@
     <select
      class="form-control" 
      name="M1a"
-     [ngModel]=assessment.M1a>
+     [(ngModel)]="assessment['M1a']">
       <option *ngFor="let number of options.ulcerNumber" 
         [value]="number.key">{{number.label}}
       </option>
@@ -4558,7 +4558,7 @@
     <select
      class="form-control" 
      name="M1b"
-     [ngModel]=assessment.M1b>
+     [(ngModel)]="assessment['M1b']">
       <option *ngFor="let number of options.ulcerNumber" 
         [value]="number.key">{{number.label}}
       </option>
@@ -4573,7 +4573,7 @@
     <select
      class="form-control" 
      name="M1c"
-     [ngModel]=assessment.M1c>
+     [(ngModel)]="assessment['M1c']">
       <option *ngFor="let number of options.ulcerNumber" 
         [value]="number.key">{{number.label}}
       </option>
@@ -4588,7 +4588,7 @@
     <select
      class="form-control" 
      name="M1d"
-     [ngModel]=assessment.M1d>
+     [(ngModel)]="assessment['M1d']">
       <option *ngFor="let number of options.ulcerNumber" 
         [value]="number.key">{{number.label}}
       </option>
@@ -4603,7 +4603,7 @@
     <select
      class="form-control" 
      name="M2a"
-     [ngModel]=assessment.M2a>
+     [(ngModel)]="assessment['M2a']">
       <option *ngFor="let stage of options.ulcerStage" 
         [value]="stage.key">{{stage.label}}
       </option>
@@ -4620,7 +4620,7 @@
        type="text"
        class="form-field-b"  
        name="M2b"
-       [ngModel]=assessment.M2b>
+       [(ngModel)]="assessment['M2b']">
     </div>
   </div>
 
@@ -4632,7 +4632,7 @@
     <select
      class="form-control" 
      name="M3"
-     [ngModel]=assessment.M3>
+     [(ngModel)]="assessment['M3']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4647,7 +4647,7 @@
     <select
      class="form-control" 
      name="M4a"
-     [ngModel]=assessment.M4a>
+     [(ngModel)]="assessment['M4a']">
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4664,7 +4664,7 @@
        type="text"
        class="form-field-b"  
        name="M4b"
-       [ngModel]=assessment.M4b>
+       [(ngModel)]="assessment['M4b']">
     </div>
   </div>
 
@@ -4676,7 +4676,7 @@
     <select
      class="form-control" 
      name="M4c"
-     [ngModel]=assessment.M4c>
+     [(ngModel)]="assessment['M4c']">
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4693,7 +4693,7 @@
        type="text"
        class="form-field-b"  
        name="M4d"
-       [ngModel]=assessment.M4d>
+       [(ngModel)]="assessment['M4d']">
     </div>
   </div>
 
@@ -4707,7 +4707,7 @@
        type="text"
        class="form-field-b"  
        name="M4e"
-       [ngModel]=assessment.M4e>
+       [(ngModel)]="assessment['M4e']">
     </div>
   </div>
 
@@ -4721,7 +4721,7 @@
        type="text"
        class="form-field-b"  
        name="M4f"
-       [ngModel]=assessment.M4f>
+       [(ngModel)]="assessment['M4f']">
     </div>
   </div>
 
@@ -4733,7 +4733,7 @@
     <select
      class="form-control" 
      name="M4g"
-     [ngModel]=assessment.M4g>
+     [(ngModel)]="assessment['M4g']">
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4748,7 +4748,7 @@
     <select
      class="form-control" 
      name="M5a"
-     [ngModel]=assessment.M5a>
+     [(ngModel)]="assessment['M5a']">
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4763,7 +4763,7 @@
     <select
      class="form-control" 
      name="M5b"
-     [ngModel]=assessment.M5b>
+     [(ngModel)]="assessment['M5b']">
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4778,7 +4778,7 @@
     <select
      class="form-control" 
      name="M5c"
-     [ngModel]=assessment.M5c>
+     [(ngModel)]="assessment['M5c']">
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4793,7 +4793,7 @@
     <select
      class="form-control" 
      name="M5d"
-     [ngModel]=assessment.M5d>
+     [(ngModel)]="assessment['M5d']">
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4808,7 +4808,7 @@
     <select
      class="form-control" 
      name="M5e"
-     [ngModel]=assessment.M5e>
+     [(ngModel)]="assessment['M5e']">
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4823,7 +4823,7 @@
     <select
      class="form-control" 
      name="M5f"
-     [ngModel]=assessment.M5f>
+     [(ngModel)]="assessment['M5f']">
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4838,7 +4838,7 @@
     <select
      class="form-control" 
      name="M5g"
-     [ngModel]=assessment.M5g>
+     [(ngModel)]="assessment['M5g']">
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4853,7 +4853,7 @@
     <select
      class="form-control" 
      name="M5h"
-     [ngModel]=assessment.M5h>
+     [(ngModel)]="assessment['M5h']">
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4870,7 +4870,7 @@
        type="text"
        class="form-field-b"  
        name="M5i"
-       [ngModel]=assessment.M5i>
+       [(ngModel)]="assessment['M5i']">
     </div>
   </div>
 
@@ -4884,7 +4884,7 @@
        type="text"
        class="form-field-b"  
        name="M6a"
-       [ngModel]=assessment.M6a>
+       [(ngModel)]="assessment['M6a']">
     </div>
   </div>
 
@@ -4896,7 +4896,7 @@
     <select
      class="form-control" 
      name="M6b"
-     [ngModel]=assessment.M6b>
+     [(ngModel)]="assessment['M6b']">
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4911,7 +4911,7 @@
     <select
      class="form-control"
      name="M6c"
-     [ngModel]=assessment.M6c>
+     [(ngModel)]="assessment['M6c']">
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4928,7 +4928,7 @@
        type="text"
        class="form-field-b"  
        name="M6d"
-       [ngModel]=assessment.M6d>
+       [(ngModel)]="assessment['M6d']">
     </div>
   </div>
 
@@ -4942,7 +4942,7 @@
        type="text"
        class="form-field-b"  
        name="M6d"
-       [ngModel]=assessment.M6d>
+       [(ngModel)]="assessment['M6d']">
     </div>
   </div>
 
@@ -4954,7 +4954,7 @@
     <select
      class="form-control" 
      name="M6f"
-     [ngModel]=assessment.M6f>
+     [(ngModel)]="assessment['M6f']">
       <option *ngFor="let problems of options.evidenceOfProblems" 
         [value]="problems.key">{{problems.label}}
       </option>
@@ -4969,7 +4969,7 @@
     <select
      class="form-control" 
      name="N1a"
-     [ngModel]=assessment.N1a>
+     [(ngModel)]="assessment['N1a']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4984,7 +4984,7 @@
     <select
      class="form-control" 
      name="N1b"
-     [ngModel]=assessment.N1b>
+     [(ngModel)]="assessment['N1b']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -4999,7 +4999,7 @@
     <select
      class="form-control" 
      name="N1c"
-     [ngModel]=assessment.N1c>
+     [(ngModel)]="assessment['N1c']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -5014,7 +5014,7 @@
     <select
      class="form-control" 
      name="N2"
-     [ngModel]=assessment.N2>
+     [(ngModel)]="assessment['N2']">
       <option *ngFor="let time of options.activityTime" 
         [value]="time.key">{{time.label}}
       </option>
@@ -5031,7 +5031,7 @@
        type="text"
        class="form-field-b"  
        name="N3a"
-       [ngModel]=assessment.N3a>
+       [(ngModel)]="assessment['N3a']">
     </div>
   </div>
 
@@ -5045,7 +5045,7 @@
        type="text"
        class="form-field-b"  
        name="N3b"
-       [ngModel]=assessment.N3b>
+       [(ngModel)]="assessment['N3b']">
     </div>
   </div>
 
@@ -5059,7 +5059,7 @@
        type="text"
        class="form-field-b"  
        name="N3c"
-       [ngModel]=assessment.N3c>
+       [(ngModel)]="assessment['N3c']">
     </div>
   </div>
 
@@ -5073,7 +5073,7 @@
        type="text"
        class="form-field-b"  
        name="N3d"
-       [ngModel]=assessment.N3d>
+       [(ngModel)]="assessment['N3d']">
     </div>
   </div>
 
@@ -5087,7 +5087,7 @@
        type="text"
        class="form-field-b"  
        name="N4a"
-       [ngModel]=assessment.N4a>
+       [(ngModel)]="assessment['N4a']">
     </div>
   </div>
 
@@ -5101,7 +5101,7 @@
        type="text"
        class="form-field-b"  
        name="N4b"
-       [ngModel]=assessment.N4b>
+       [(ngModel)]="assessment['N4b']">
     </div>
   </div>
 
@@ -5115,7 +5115,7 @@
        type="text"
        class="form-field-b"  
        name="N4c"
-       [ngModel]=assessment.N4c>
+       [(ngModel)]="assessment['N4c']">
     </div>
   </div>
 
@@ -5129,7 +5129,7 @@
        type="text"
        class="form-field-b"  
        name="N4d"
-       [ngModel]=assessment.N4d>
+       [(ngModel)]="assessment['N4d']">
     </div>
   </div>
 
@@ -5143,7 +5143,7 @@
        type="text"
        class="form-field-b"  
        name="N4e"
-       [ngModel]=assessment.N4e>
+       [(ngModel)]="assessment['N4e']">
     </div>
   </div>
 
@@ -5157,7 +5157,7 @@
        type="text"
        class="form-field-b"  
        name="N4f"
-       [ngModel]=assessment.N4f>
+       [(ngModel)]="assessment['N4f']">
     </div>
   </div>
 
@@ -5171,7 +5171,7 @@
        type="text"
        class="form-field-b"  
        name="N4g"
-       [ngModel]=assessment.N4g>
+       [(ngModel)]="assessment['N4g']">
     </div>
   </div>
 
@@ -5185,7 +5185,7 @@
        type="text"
        class="form-field-b"  
        name="N4h"
-       [ngModel]=assessment.N4h>
+       [(ngModel)]="assessment['N4h']">
     </div>
   </div>
 
@@ -5199,7 +5199,7 @@
        type="text"
        class="form-field-b"  
        name="N4i"
-       [ngModel]=assessment.N4i>
+       [(ngModel)]="assessment['N4i']">
     </div>
   </div>
 
@@ -5213,7 +5213,7 @@
        type="text"
        class="form-field-b"  
        name="N4j"
-       [ngModel]=assessment.N4j>
+       [(ngModel)]="assessment['N4j']">
     </div>
   </div>
 
@@ -5227,7 +5227,7 @@
        type="text"
        class="form-field-b"  
        name="N4k"
-       [ngModel]=assessment.N4k>
+       [(ngModel)]="assessment['N4k']">
     </div>
   </div>
 
@@ -5241,7 +5241,7 @@
        type="text"
        class="form-field-b"  
        name="N4l"
-       [ngModel]=assessment.N4l>
+       [(ngModel)]="assessment['N4l']">
     </div>
   </div>
 
@@ -5255,7 +5255,7 @@
        type="text"
        class="form-field-b"  
        name="N5a"
-       [ngModel]=assessment.N5a>
+       [(ngModel)]="assessment['N5a']">
     </div>
   </div>
 
@@ -5269,7 +5269,7 @@
        type="text"
        class="form-field-b"  
        name="N5b"
-       [ngModel]=assessment.N5b>
+       [(ngModel)]="assessment['N5b']">
     </div>
   </div>
 
@@ -5283,7 +5283,7 @@
        type="text"
        class="form-field-b"  
        name="O1"
-       [ngModel]=assessment.O1>
+       [(ngModel)]="assessment['O1']">
     </div>
   </div>
 
@@ -5297,7 +5297,7 @@
        type="text"
        class="form-field-b"  
        name="O2"
-       [ngModel]=assessment.O2>
+       [(ngModel)]="assessment['O2']">
     </div>
   </div>
 
@@ -5311,7 +5311,7 @@
        type="text"
        class="form-field"  
        name="O3"
-       [ngModel]=assessment.O3>
+       [(ngModel)]="assessment['O3']">
     </div>
   </div>
 
@@ -5325,7 +5325,7 @@
        type="text"
        class="form-field-b"  
        name="O4a"
-       [ngModel]=assessment.O4a>
+       [(ngModel)]="assessment['O4a']">
     </div>
   </div>
 
@@ -5339,7 +5339,7 @@
        type="text"
        class="form-field"  
        name="O4b"
-       [ngModel]=assessment.O4b>
+       [(ngModel)]="assessment['O4b']">
     </div>
   </div>
 
@@ -5353,7 +5353,7 @@
        type="text"
        class="form-field"  
        name="O4c"
-       [ngModel]=assessment.O4c>
+       [(ngModel)]="assessment['O4c']">
     </div>
   </div>
 
@@ -5367,7 +5367,7 @@
        type="text"
        class="form-field"  
        name="O4d"
-       [ngModel]=assessment.O4d>
+       [(ngModel)]="assessment['O4d']">
     </div>
   </div>
 
@@ -5381,7 +5381,7 @@
        type="text"
        class="form-field-b"  
        name="O4e"
-       [ngModel]=assessment.O4e>
+       [(ngModel)]="assessment['O4e']">
     </div>
   </div>
 
@@ -5395,7 +5395,7 @@
        type="text"
        class="form-field-b"  
        name="O4f"
-       [ngModel]=assessment.O4f>
+       [(ngModel)]="assessment['O4f']">
     </div>
   </div>
 
@@ -5409,7 +5409,7 @@
        type="text"
        class="form-field-b"  
        name="P1aA"
-       [ngModel]=assessment.P1aA>
+       [(ngModel)]="assessment['P1aA']">
     </div>
   </div>
 
@@ -5423,7 +5423,7 @@
        type="text"
        class="form-field-b"  
        name="P1aB"
-       [ngModel]=assessment.P1aB>
+       [(ngModel)]="assessment['P1aB']">
     </div>
   </div>
 
@@ -5437,7 +5437,7 @@
        type="text"
        class="form-field-b"  
        name="P1aC"
-       [ngModel]=assessment.P1aC>
+       [(ngModel)]="assessment['P1aC']">
     </div>
   </div>
 
@@ -5451,7 +5451,7 @@
        type="text"
        class="form-field-b"  
        name="P1aD"
-       [ngModel]=assessment.P1aD>
+       [(ngModel)]="assessment['P1aD']">
     </div>
   </div>
 
@@ -5465,7 +5465,7 @@
        type="text"
        class="form-field-b"  
        name="P1aE"
-       [ngModel]=assessment.P1aE>
+       [(ngModel)]="assessment['P1aE']">
     </div>
   </div>
 
@@ -5479,7 +5479,7 @@
        type="text"
        class="form-field-b"  
        name="P1aF"
-       [ngModel]=assessment.P1aF>
+       [(ngModel)]="assessment['P1aF']">
     </div>
   </div>
 
@@ -5493,7 +5493,7 @@
        type="text"
        class="form-field-b"  
        name="P1aG"
-       [ngModel]=assessment.P1aG>
+       [(ngModel)]="assessment['P1aG']">
     </div>
   </div>
 
@@ -5507,7 +5507,7 @@
        type="text"
        class="form-field-b"  
        name="P1aH"
-       [ngModel]=assessment.P1aH>
+       [(ngModel)]="assessment['P1aH']">
     </div>
   </div>
 
@@ -5521,7 +5521,7 @@
        type="text"
        class="form-field-b"  
        name="P1aI"
-       [ngModel]=assessment.P1aI>
+       [(ngModel)]="assessment['P1aI']">
     </div>
   </div>
 
@@ -5535,7 +5535,7 @@
        type="text"
        class="form-field-b"  
        name="P1aJ"
-       [ngModel]=assessment.P1aJ>
+       [(ngModel)]="assessment['P1aJ']">
     </div>
   </div>
 
@@ -5549,7 +5549,7 @@
        type="text"
        class="form-field-b"  
        name="P1aK"
-       [ngModel]=assessment.P1aK>
+       [(ngModel)]="assessment['P1aK']">
     </div>
   </div>
 
@@ -5563,7 +5563,7 @@
        type="text"
        class="form-field-b"  
        name="P1aL"
-       [ngModel]=assessment.P1aL>
+       [(ngModel)]="assessment['P1aL']">
     </div>
   </div>
 
@@ -5577,7 +5577,7 @@
        type="text"
        class="form-field-b"  
        name="P1aM"
-       [ngModel]=assessment.P1aM>
+       [(ngModel)]="assessment['P1aM']">
     </div>
   </div>
 
@@ -5591,7 +5591,7 @@
        type="text"
        class="form-field-b"  
        name="P1aN"
-       [ngModel]=assessment.P1aN>
+       [(ngModel)]="assessment['P1aN']">
     </div>
   </div>
 
@@ -5603,7 +5603,7 @@
     <select
      class="form-control" 
      name="P1aO"
-     [ngModel]=assessment.P1aO>
+     [(ngModel)]="assessment['P1aO']">
       <option *ngFor="let answer of options.yesNoAnswer" 
         [value]="answer.key">{{answer.label}}
       </option>
@@ -5620,7 +5620,7 @@
        type="text"
        class="form-field-b"  
        name="P1aP"
-       [ngModel]=assessment.P1aP>
+       [(ngModel)]="assessment['P1aP']">
     </div>
   </div>
 
@@ -5634,7 +5634,7 @@
        type="text"
        class="form-field-b"  
        name="P1aQ"
-       [ngModel]=assessment.P1aQ>
+       [(ngModel)]="assessment['P1aQ']">
     </div>
   </div>
 
@@ -5648,7 +5648,7 @@
        type="text"
        class="form-field-b"  
        name="P1aR"
-       [ngModel]=assessment.P1aR>
+       [(ngModel)]="assessment['P1aR']">
     </div>
   </div>
 
@@ -5662,7 +5662,7 @@
        type="text"
        class="form-field"  
        name="P1baA"
-       [ngModel]=assessment.P1baA>
+       [(ngModel)]="assessment['P1baA']">
     </div>
   </div>
 
@@ -5676,7 +5676,7 @@
        type="text"
        class="form-field"  
        name="P1baB"
-       [ngModel]=assessment.P1baB>
+       [(ngModel)]="assessment['P1baB']">
     </div>
   </div>
 
@@ -5690,7 +5690,7 @@
        type="text"
        class="form-field"  
        name="P1bbA"
-       [ngModel]=assessment.P1bbA>
+       [(ngModel)]="assessment['P1bbA']">
     </div>
   </div>
 
@@ -5704,7 +5704,7 @@
        type="text"
        class="form-field"  
        name="P1bbB"
-       [ngModel]=assessment.P1bbB>
+       [(ngModel)]="assessment['P1bbB']">
     </div>
   </div>
 
@@ -5718,7 +5718,7 @@
        type="text"
        class="form-field"  
        name="P1bcA"
-       [ngModel]=assessment.P1bcA>
+       [(ngModel)]="assessment['P1bcA']">
     </div>
   </div>
 
@@ -5732,7 +5732,7 @@
        type="text"
        class="form-field"  
        name="P1bcB"
-       [ngModel]=assessment.P1bcB>
+       [(ngModel)]="assessment['P1bcB']">
     </div>
   </div>
 
@@ -5746,7 +5746,7 @@
        type="text"
        class="form-field"  
        name="P1bdA"
-       [ngModel]=assessment.P1bdA>
+       [(ngModel)]="assessment['P1bdA']">
     </div>
   </div>
 
@@ -5760,7 +5760,7 @@
        type="text"
        class="form-field-b"  
        name="P1bdB"
-       [ngModel]=assessment.P1bdB>
+       [(ngModel)]="assessment['P1bdB']">
     </div>
   </div>
 
@@ -5774,7 +5774,7 @@
        type="text"
        class="form-field-b"  
        name="P1beA"
-       [ngModel]=assessment.P1beA>
+       [(ngModel)]="assessment['P1beA']">
     </div>
   </div>
 
@@ -5788,7 +5788,7 @@
        type="text"
        class="form-field-b"  
        name="P1beB"
-       [ngModel]=assessment.P1beB>
+       [(ngModel)]="assessment['P1beB']">
     </div>
   </div>
 
@@ -5802,7 +5802,7 @@
        type="text"
        class="form-field-b"  
        name="P1bfA"
-       [ngModel]=assessment.P1bfA>
+       [(ngModel)]="assessment['P1bfA']">
     </div>
   </div>
 
@@ -5816,7 +5816,7 @@
        type="text"
        class="form-field-b"  
        name="P1bfB"
-       [ngModel]=assessment.P1bfB>
+       [(ngModel)]="assessment['P1bfB']">
     </div>
   </div>
 
@@ -5830,7 +5830,7 @@
        type="text"
        class="form-field-b"  
        name="P2a"
-       [ngModel]=assessment.P2a>
+       [(ngModel)]="assessment['P2a']">
     </div>
   </div>
 
@@ -5844,7 +5844,7 @@
        type="text"
        class="form-field-b"  
        name="P2b"
-       [ngModel]=assessment.P2b>
+       [(ngModel)]="assessment['P2b']">
     </div>
   </div>
 
@@ -5858,7 +5858,7 @@
        type="text"
        class="form-field-b"  
        name="P2c"
-       [ngModel]=assessment.P2c>
+       [(ngModel)]="assessment['P2c']">
     </div>
   </div>
 
@@ -5872,7 +5872,7 @@
        type="text"
        class="form-field-b"  
        name="P2d"
-       [ngModel]=assessment.P2d>
+       [(ngModel)]="assessment['P2d']">
     </div>
   </div>
 
@@ -5886,7 +5886,7 @@
        type="text"
        class="form-field-b"  
        name="P2e"
-       [ngModel]=assessment.P2e>
+       [(ngModel)]="assessment['P2e']">
     </div>
   </div>
 
@@ -5900,7 +5900,7 @@
        type="text"
        class="form-field"  
        name="P3a"
-       [ngModel]=assessment.P3a>
+       [(ngModel)]="assessment['P3a']">
     </div>
   </div>
 
@@ -5914,7 +5914,7 @@
        type="text"
        class="form-field"  
        name="P3b"
-       [ngModel]=assessment.P3b>
+       [(ngModel)]="assessment['P3b']">
     </div>
   </div>
 
@@ -5928,7 +5928,7 @@
        type="text"
        class="form-field"  
        name="P3c"
-       [ngModel]=assessment.P3c>
+       [(ngModel)]="assessment['P3c']">
     </div>
   </div>
 
@@ -5942,7 +5942,7 @@
        type="text"
        class="form-field"  
        name="P3d"
-       [ngModel]=assessment.P3d>
+       [(ngModel)]="assessment['P3d']">
     </div>
   </div>
 
@@ -5956,7 +5956,7 @@
        type="text"
        class="form-field"  
        name="P3e"
-       [ngModel]=assessment.P3e>
+       [(ngModel)]="assessment['P3e']">
     </div>
   </div>
 
@@ -5970,7 +5970,7 @@
        type="text"
        class="form-field"  
        name="P3f"
-       [ngModel]=assessment.P3f>
+       [(ngModel)]="assessment['P3f']">
     </div>
   </div>
 
@@ -5984,7 +5984,7 @@
        type="text"
        class="form-field"  
        name="P3g"
-       [ngModel]=assessment.P3g>
+       [(ngModel)]="assessment['P3g']">
     </div>
   </div>
 
@@ -5998,7 +5998,7 @@
        type="text"
        class="form-field"  
        name="P3h"
-       [ngModel]=assessment.P3h>
+       [(ngModel)]="assessment['P3h']">
     </div>
   </div>
 
@@ -6012,7 +6012,7 @@
        type="text"
        class="form-field"  
        name="P3i"
-       [ngModel]=assessment.P3i>
+       [(ngModel)]="assessment['P3i']">
     </div>
   </div>
 
@@ -6026,7 +6026,7 @@
        type="text"
        class="form-field"  
        name="P3j"
-       [ngModel]=assessment.P3j>
+       [(ngModel)]="assessment['P3j']">
     </div>
   </div>
 
@@ -6040,7 +6040,7 @@
        type="text"
        class="form-field-b"  
        name="P3k"
-       [ngModel]=assessment.P3k>
+       [(ngModel)]="assessment['P3k']">
     </div>
   </div>
 
@@ -6054,7 +6054,7 @@
        type="text"
        class="form-field-b"  
        name="P4a"
-       [ngModel]=assessment.P4a>
+       [(ngModel)]="assessment['P4a']">
     </div>
   </div>
 
@@ -6068,7 +6068,7 @@
        type="text"
        class="form-field-b"  
        name="P4b"
-       [ngModel]=assessment.P4b>
+       [(ngModel)]="assessment['P4b']">
     </div>
   </div>
 
@@ -6080,7 +6080,7 @@
     <select
      class="form-control" 
      name="P4c"
-     [ngModel]=assessment.P4c>
+     [(ngModel)]="assessment['P4c']">
       <option *ngFor="let used of options.timeUsed" 
         [value]="used.key">{{used.label}}
       </option>
@@ -6095,7 +6095,7 @@
     <select
      class="form-control" 
      name="P4d"
-     [ngModel]=assessment.P4d>
+     [(ngModel)]="assessment['P4d']">
       <option *ngFor="let used of options.timeUsed" 
         [value]="used.key">{{used.label}}
       </option>
@@ -6112,7 +6112,7 @@
        type="text"
        class="form-field-b"  
        name="P4e"
-       [ngModel]=assessment.P4e>
+       [(ngModel)]="assessment['P4e']">
     </div>
   </div>
 
@@ -6126,7 +6126,7 @@
        type="text"
        class="form-field-b"  
        name="P5"
-       [ngModel]=assessment.P5>
+       [(ngModel)]="assessment['P5']">
     </div>
   </div>
 
@@ -6140,7 +6140,7 @@
        type="text"
        class="form-field-b"  
        name="P6"
-       [ngModel]=assessment.P6>
+       [(ngModel)]="assessment['P6']">
     </div>
   </div>
 
@@ -6154,7 +6154,7 @@
        type="text"
        class="form-field"  
        name="P7"
-       [ngModel]=assessment.P7>
+       [(ngModel)]="assessment['P7']">
     </div>
   </div>
 
@@ -6168,7 +6168,7 @@
        type="text"
        class="form-field"  
        name="P8"
-       [ngModel]=assessment.P8>
+       [(ngModel)]="assessment['P8']">
     </div>
   </div>
 
@@ -6182,7 +6182,7 @@
        type="text"
        class="form-field-b"  
        name="P9"
-       [ngModel]=assessment.P9>
+       [(ngModel)]="assessment['P9']">
     </div>
   </div>
 
@@ -6196,7 +6196,7 @@
        type="text"
        class="form-field-b"  
        name="Q1a"
-       [ngModel]=assessment.Q1a>
+       [(ngModel)]="assessment['Q1a']">
     </div>
   </div>
 
@@ -6210,7 +6210,7 @@
        type="text"
        class="form-field-b"  
        name="Q1b"
-       [ngModel]=assessment.Q1b>
+       [(ngModel)]="assessment['Q1b']">
     </div>
   </div>
 
@@ -6224,7 +6224,7 @@
        type="text"
        class="form-field-b"  
        name="Q1c"
-       [ngModel]=assessment.Q1c>
+       [(ngModel)]="assessment['Q1c']">
     </div>
   </div>
 
@@ -6238,7 +6238,7 @@
        type="text"
        class="form-field-b"  
        name="Q2"
-       [ngModel]=assessment.Q2>
+       [(ngModel)]="assessment['Q2']">
     </div>
   </div>
 
@@ -6252,7 +6252,7 @@
        type="text"
        class="form-field-b"  
        name="R1a"
-       [ngModel]=assessment.R1a>
+       [(ngModel)]="assessment['R1a']">
     </div>
   </div>
 
@@ -6266,7 +6266,7 @@
        type="text"
        class="form-field-b"  
        name="R1b"
-       [ngModel]=assessment.R1b>
+       [(ngModel)]="assessment['R1b']">
     </div>
   </div>
 
@@ -6280,7 +6280,7 @@
        type="text"
        class="form-field-b"  
        name="R1c"
-       [ngModel]=assessment.R1c>
+       [(ngModel)]="assessment['R1c']">
     </div>
   </div>
 
@@ -6294,7 +6294,7 @@
        type="text"
        class="form-field-b"  
        name="R2b"
-       [ngModel]=assessment.R2b>
+       [(ngModel)]="assessment['R2b']">
     </div>
   </div>
 
@@ -6306,7 +6306,7 @@
     <select
      class="form-control" 
      name="P4d"
-     [ngModel]=assessment.P4d>
+     [(ngModel)]="assessment['P4d']">
       <option *ngFor="let to of options.dischargedTo" 
         [value]="to.key">{{to.label}}
       </option>
@@ -6323,7 +6323,7 @@
        type="text"
        class="form-field-b"  
        name="R3b"
-       [ngModel]=assessment.R3b>
+       [(ngModel)]="assessment['R3b']">
     </div>
   </div>
 
@@ -6337,7 +6337,7 @@
        type="text"
        class="form-field-b"  
        name="R4"
-       [ngModel]=assessment.R4>
+       [(ngModel)]="assessment['R4']">
     </div>
   </div>
 
@@ -6351,7 +6351,7 @@
        type="text"
        class="form-field-b"  
        name="Y2"
-       [ngModel]=assessment.Y2>
+       [(ngModel)]="assessment['Y2']">
     </div>
   </div>
 
@@ -6365,7 +6365,7 @@
        type="text"
        class="form-field-b"  
        name="Z12"
-       [ngModel]=assessment.Z12>
+       [(ngModel)]="assessment['Z12']">
     </div>
   </div>
 
@@ -6378,8 +6378,8 @@
       <input 
        type="text"
        class="form-field"  
-       name="IAR_1"
-       [ngModel]=assessment.IAR_1>
+       name="IAR-1"
+       [(ngModel)]="assessment['IAR-1']">
     </div>
   </div>
 
@@ -6392,8 +6392,8 @@
       <input 
        type="text"
        class="form-field-b"  
-       name="Org_ID"
-       [ngModel]=assessment.Org_ID>
+       name="Org ID"
+       [(ngModel)]="assessment['Org ID']">
     </div>
   </div>
 
@@ -6406,8 +6406,8 @@
       <input 
        type="text"
        class="form-field-b"  
-       name="Assessment_ID"
-       [ngModel]=assessment.Assessment_ID>
+       name="Assessment ID"
+       [(ngModel)]="assessment['Assessment ID']">
     </div>
   </div>
 </form>
