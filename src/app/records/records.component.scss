@@ -1,0 +1,33 @@
+.table-div {
+    padding-top: 10px;
+    margin: 0 70px 0 70px;
+}
+.records-table {
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap;
+}
+.header-row {
+    border-bottom: 2px solid #c7c7c7;
+}
+.header-1,
+.header-2,
+.header-3,
+.header-4,
+.header-5 {
+    padding-left: 15px; 
+    padding-bottom: 7px;
+    font-weight: normal;
+    color: #365ebf;
+    font-size: 14px;
+    margin-left: 10px
+}
+
+/* ----- Specific column widths ----- */
+
+.header-1 {
+    width: 15%;
+}
+.header-2 {
+    width: 15%;
+}
