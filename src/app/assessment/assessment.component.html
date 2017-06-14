@@ -4275,6 +4275,7 @@
        [(ngModel)]="assessment['K4a']">
     </div>
   </div>
+  
   <!-- (K4b) -->
   <div class="form-group">
     <label class="control-label-b">
@@ -4289,18 +4290,19 @@
     </div>
   </div>
 
-  <!-- (K4c) -->
+  <!-- (K4c) Leaves 25 percent or more food uneaten at most meals -->
   <div class="form-group">
-    <label class="control-label-b">
-        (K4c) 
+    <label class="control-label">
+        (K4c) Leaves 25 percent or more food uneaten at most meals
     </label>
-    <div>
-      <input 
-       type="text"
-       class="form-field-b"  
-       name="K4c"
-       [(ngModel)]="assessment['K4c']">
-    </div>
+    <select
+     class="form-control"
+     name="K4c"
+     [(ngModel)]="assessment['K4c']"> 
+     <option *ngFor="let answer of options.yesNoAnswer" 
+        [value]="answer.key">{{answer.label}}
+      </option>
+    </select>
   </div>
 
   <!-- (K5a) Parenteral/IV -->
