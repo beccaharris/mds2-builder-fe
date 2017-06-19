@@ -281,7 +281,7 @@ export class Assessment  {
   "J1o" = '0';
   "J2a" = '0';
   /* When uploading; MOH is not accepting any value other than '' for J2b */
-  "J2b" = '0';
+  "J2b" = 'nil';
   "J3a" = '';
   "J3b" = '';
   "J3c" = '';
