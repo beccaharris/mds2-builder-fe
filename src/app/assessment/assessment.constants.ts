@@ -104,8 +104,8 @@ export const DropdownOptions = {
   indicatorPresence: [
     { key: '--', label: '--'},
     { key: '0', label: '0 - Indicator not exhibited in last 30 days'},
-    { key: '0', label: '1 - Indicator of this type exhibited up to five days a week'},
-    { key: '0', label: '2 - Indicator of this type exhibited daily or almost daily'}
+    { key: '1', label: '1 - Indicator of this type exhibited up to five days a week'},
+    { key: '2', label: '2 - Indicator of this type exhibited daily or almost daily'}
   ],
   
   /* ---- For E2 ---- */
